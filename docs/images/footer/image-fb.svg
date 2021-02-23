@@ -1,0 +1,7 @@
+<svg width="10" height="20" viewBox="0 0 10 20" id="image-fb" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path fill="#0684bd" id="axa"
+            d="M447.016 2210.015c-1.157.032-2.11.422-2.86 1.172s-1.14 1.688-1.172 2.813v3.984h-3v4.031h3v7.97h4.032v-7.97h3v-4.03h-3v-2.485c0-.375.077-.71.234-1.008a.887.887 0 01.75-.492h2.016v-3.985z" />
+    </defs>
+    <use xlink:href="#axa" transform="translate(-440 -2210)" />
+</svg>

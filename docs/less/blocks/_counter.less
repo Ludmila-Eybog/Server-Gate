@@ -1,0 +1,38 @@
+.counter {
+    position: absolute;
+    font-size: 20px;
+    font-weight: 600;
+    font-family: 'RF Rufo', sans-serif;
+    color: #a2a2a2;
+    line-height: 1;
+}
+
+.counter span {
+    font-size: 30px;
+    color: var(--yellow);
+}
+
+.carousel1-counter {
+    left: 50%;
+    bottom: 22px;
+    transform: translateX(-50%);
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.testimonial-counter {
+    right: 18px;
+    bottom: -33px;
+    
+    @media (min-width: 1024px) {
+        padding: 0 52px;
+        right: auto;
+        bottom: 30px;
+    }
+
+    @media (min-width: 1250px) {
+        bottom: 50px;
+    }
+}

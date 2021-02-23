@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Arimo';
+    src: local('Arimo'), local('arimo-regular'), url('arimo.woff2') format('woff2'), url('arimo.woff') format('woff'), url('arimo-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Arimo';
+    src: local('Arimo Bold'), local('Arimo-Bold'), url('arimobold.woff2') format('woff2'), url('arimobold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Arimo';
+    src: local('Arimo Medium'), local('Arimo-Medium'), url('arimomedium.woff2') format('woff2'), url('arimomedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}

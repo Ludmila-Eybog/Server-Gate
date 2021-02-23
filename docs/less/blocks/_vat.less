@@ -1,0 +1,48 @@
+.header_vat {
+    display: none; 
+
+    @media (min-width: 1024px) {
+        display: flex;
+    }
+}
+
+.choice_vat {
+    display: flex;
+    margin-bottom: 12px;
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.vat-link {
+    position: relative;
+    padding-right: 22px;
+
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'RF Rufo', sans-serif;
+    color: var(--light-grey);
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -0.25px;
+    cursor: pointer;
+
+    &:hover {
+        .header_offer {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}
+
+.vat-link_color {
+    color: var(--yellow);
+}
+
+.vat-link_img {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    transform: translateY(25%);
+}

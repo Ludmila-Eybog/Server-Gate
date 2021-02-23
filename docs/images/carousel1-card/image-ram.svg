@@ -1,0 +1,4 @@
+ <svg viewBox="0 0 24 13" id="image-ram" xmlns="http://www.w3.org/2000/svg">
+    <path fill="#bac0ca" 
+        d="M407 571h-3v-3h3zm4 0h-3v-3h3zm4 0h-3v-3h3zm4 0h-3v-3h3zm6-7v7h-3v3h-2v1h-2v-1h-1v1h-2v-1h-1v1h-2v-1h-1v1h-2v-1h-1v1h-2v-1h-1v1h-2v-1h-2v-7c0-1.103.897-2 2-2h1v-1a2 2 0 012-2h17a2 2 0 012 2zm-5 3h-17v5h17zm3-3h-17v1h14c1.102 0 2 .897 2 2v2h1z" transform="translate(-401 -562)"/>
+</svg>

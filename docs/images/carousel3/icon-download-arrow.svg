@@ -1,0 +1,7 @@
+ <svg viewBox="0 0 16 18" id="image-download" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <path id="awa" fill="#fff"
+            d="M896 1591.016l-3.984-4.032h3V1577h1.968v9.984h3zm8.016 1.968V1595h-16.032v-2.016z" />
+    </defs>
+    <use xlink:href="#awa" transform="translate(-888 -1577)" />
+</svg>

@@ -1,0 +1,47 @@
+.header_nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_list {
+    display: flex;
+    align-items: center;
+}
+
+.nav_list-item {
+    display: flex;
+
+    &:not(:last-child) {
+        margin-right: 27px;
+    }
+}
+
+.nav_list-link {
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'Arimo', Arial, sans-serif;
+    color: var(--white);
+    line-height: 2.67;
+
+    &:hover {
+        color: rgba(255, 255, 255, 0.65);
+    }
+}
+
+.nav_phone {
+    display: flex;
+    align-items: center;
+}
+
+.nav_phone-link {
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'RF Rufo', sans-serif;
+    color: var(--white);
+    // line-height: 40px;
+    line-height: 1.67;
+
+    &:hover {
+        color: rgba(255, 255, 255, 0.65);
+    }
+}

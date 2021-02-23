@@ -1,0 +1,87 @@
+/******иконка Гамбургер*****/
+
+.gamburger {
+    position: relative;
+    // display: block;
+    margin-right: 8px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--blue);
+    font-size: 0;
+    overflow: hidden;
+    z-index: 20;
+    // transition: 0.15s;
+    //    cursor: pointer;
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
+}
+
+.gamburger:focus {
+    outline: none;
+}
+
+.gamburger-line {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 24px;
+    height: 3px;
+    background-color: var(--white);
+
+    // position: relative;
+}
+
+.gamburger-line::before,
+.gamburger-line::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    // display: block;
+    width: 24px;
+    height: 3px;
+    background-color: var(--white);
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+
+.gamburger-line::before {
+    top: -7px;
+}
+
+.gamburger-line::after {
+    bottom: -7px;
+}
+
+.gamburger.active .gamburger-line {
+    background-color: transparent;
+    // position: fixed;
+}
+
+.gamburger.active .gamburger-line::before {
+    background-color: var(--white);
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+.gamburger.active .gamburger-line::after {
+    background-color: var(--white);
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+/******конец иконки Гамбургер******/
+#menu-toggle {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    display: block;
+
+    @media(min-width: 1024px) {
+        display: none;
+    }
+}

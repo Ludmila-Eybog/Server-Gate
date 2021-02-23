@@ -1,0 +1,19 @@
+.general {
+    background-color: var(--grey_background);
+    // overflow: hidden;
+    
+    @media (min-width: 1024px) {
+        width: 100%;
+        height: 740px;
+        background-image: url(../images/choice/serv-bg.jpg);
+        background-image: -webkit-image-set(url(../images/choice/serv-bg.jpg) 1x, url(../images/choice/serv-bg@2x.jpg) 2x);
+        background-image: image-set("../images/choice/serv-bg.jpg", "../images/choice/serv-bg@2x.jpg"2x);
+        background-color: var(--white);
+        background-size: cover;
+        background-position: -335px;
+    }
+    
+    @media(min-width: 1250px) {
+        background-position: center;
+    }
+}
