@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-// *::selection {
-//     background-color: var(--yellow);
-// }
-
 html {
     scroll-behavior: smooth;
 }
@@ -29,7 +25,6 @@ body {
     font-family: 'RF Rufo', sans-serif;
     font-family: 'Arimo', Arial, sans-serif;
     color: var(--grey_text);
-    // line-height: 1.5;
 
     &:root {
         --blue: #0684bd;
@@ -43,19 +38,18 @@ body {
     }
 }
 
-.color {
-    color: var(--blue);
-
-    // &:hover {
-    //     color: #b2d3f5;
-    // }
-}
-
 .color-black {
     color: var(--black);
 }
 
-// h1,
+.color-yellow {
+    color: var(--yellow);
+}
+
+.color-blue {
+    color: var(--blue);
+}
+
 h2,
 h3,
 h4,
@@ -67,20 +61,13 @@ span {
     padding: 0;
 }
 
-h3 span {
-    color: var(--yellow);
-}
-
-// h5 span {
-//     color:var(--blue);
-// }
-
 p {
     line-height: 1.5;
 }
 
 a,
-a:hover a:active,
+a:hover, 
+a:active,
 a:focus,
 a:visited {
     text-decoration: none;
@@ -96,9 +83,8 @@ ul {
 }
 
 img {
-    // max-width: 100%;
     display: block;
-    max-width: 100%; //  добавить в МАСТЕР!!!
+    max-width: 100%; 
     height: auto;
 }
 
@@ -142,7 +128,6 @@ button {
     margin: 0 auto;
     padding: 0 15px;
     width: 100%;
-    // max-width: 993px;
 
     @media (min-width: 1024px) {
         max-width: 950px;
@@ -205,33 +190,15 @@ button {
     }
 }
 
-// .title-5_break {
-//     display: none;
-
-//     @media (min-width: 1024px) {
-//         display: block;
-//     } 
-// }
-
 .center {
     text-align: center;
 }
 
-// opacity: 0;
-// pointer-events: none;
-// transition: opacity 0.2s ease 0.2s;
-// visibility: hidden;
+// 4 точки перелома:
+// @media(min-width: 390px) {}
 
-// opacity: 1;
-// pointer-events: visible; 
-// transition: opacity 0.2s ease 0.2s;
-// visibility: visible;
+// @media(min-width: 768px) {}
 
+// @media (min-width: 1024px) {}
 
-@media(min-width: 390px) {}
-
-@media(min-width: 768px) {}
-
-@media (min-width: 1024px) {}
-
-@media(min-width: 1250px) {}
+// @media(min-width: 1250px) {}

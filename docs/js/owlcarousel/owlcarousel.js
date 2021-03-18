@@ -22,7 +22,7 @@ $(document).ready(function () {
             },
             390: {
                 items: 1,
-                stagePadding: 35  
+                stagePadding: 35
             },
             500: {
                 items: 1,
@@ -40,7 +40,7 @@ $(document).ready(function () {
             1024: {
                 items: 3,
                 loop: false,
-                stagePadding: 0   //  проверить!!!
+                stagePadding: 0
             }
         }
     });
@@ -50,18 +50,10 @@ $(document).ready(function () {
         items: 8,
         nav: true,
         loop: true,
-        // margin: 12,
         margin: 0,
         dots: false,
         navSpeed: 800,
-        // navText: ['', ''],
         responsive: {
-            // 0: {
-            // items: 0
-            // },
-            // 650: {
-            //     items: 2
-            // },
             1024: {
                 items: 3
             },
@@ -77,10 +69,8 @@ $(document).ready(function () {
         nav: true,
         loop: true,
         margin: 10,
-        // margin: 0,
         dots: false,
         navSpeed: 800,
-        // navText: ['', ''],
 
         // COUNTER of Carousel- счетчик слайдов /см. ниже/
         onInitialized: counter, //When the plugin has initialized.
@@ -89,11 +79,8 @@ $(document).ready(function () {
 
         responsive: {
             0: {
-            items: 1
+                items: 1
             },
-            // 600: {
-            //     items: 3
-            // },
             1024: {
                 items: 1
             }

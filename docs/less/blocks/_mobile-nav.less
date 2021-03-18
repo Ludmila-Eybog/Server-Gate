@@ -12,13 +12,20 @@
     opacity: 0;
     transform: translateX(100%);
     transition: transform .5s, opacity 0.1s .5s;
+    // Есть вертикальый скролл:
+    overflow: auto;
     z-index: 10;
+
+    @media (min-width: 1024px) {
+        display: none;
+    }
 }
 
-.mobile-nav.active {
+//  Мобильное меню активно (.active-menu) только, когда открываем его (кликаем по гамбургеру)
+.active-menu .mobile-nav {
     opacity: 1;
     transform: translateX(0%);
-    transition: .15s;
+    transition: .5s;
 }
 
 .mobile-nav_top {
@@ -29,11 +36,9 @@
     margin-bottom: 20px;
     font-size: 20px;
     font-weight: 700;
-    // line-height: 25px;
 }
 
 .mobile-nav_config {
-    // padding: 15px 0;
     padding: 18px 0;
     border-top: 1px solid #ededed;
     border-bottom: 1px solid #ededed;

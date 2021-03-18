@@ -28,9 +28,9 @@
         padding-bottom: 6px;
     }
 
-        @media (min-width: 1250px) {
-            padding-bottom: 10px;
-        }
+    @media (min-width: 1250px) {
+        padding-bottom: 10px;
+    }
 }
 
 .ch_list-item {
@@ -64,7 +64,6 @@
     font-family: 'RF Rufo', sans-serif;
     color: var(--light-grey);
     text-transform: uppercase;
-    // line-height: 1.05;
 
     &::after {
         position: absolute;
@@ -109,7 +108,7 @@
         top: 1px;
         left: 20px;
     }
-    
+
     @media(min-width: 768px) {
         left: 50px;
     }
@@ -163,7 +162,6 @@
         content: "";
         width: 16px;
         height: 2px;
-        // height: 12px;
         top: 50%;
         right: -24px;
         background-color: var(--light-grey);
@@ -183,25 +181,24 @@
 }
 
 
-
 // ------     BANNER
 .choice_carousel-banner {
     display: none;
 
-    position: relative;
-    padding: 0 30px;
-    width: 220px;
-    border-radius: 3px;
-    background-color: #0784be;
-    background-repeat: no-repeat;
-    box-shadow: rgba(10, 54, 88, 0.11) 0px 0px 27px;
-
     @media (min-width: 1024px) {
+        position: relative;
         display: block;
+        padding: 0 30px;
         padding-top: 87px;
+        width: 220px;
+        border-radius: 3px;
+
+        background-color: #0784be;
         background-image: url(../images/choice/image-bg-pat_adapt.svg);
         background-size: 182px 24%;
         background-position: 0 73px;
+        background-repeat: no-repeat;
+        box-shadow: rgba(10, 54, 88, 0.11) 0px 0px 27px;
     }
 
     @media(min-width: 1250px) {
@@ -229,22 +226,18 @@
 }
 
 .choice_carousel-banner-title {
+    margin-bottom: 9px;
     font-size: 30px;
     font-weight: 600;
     font-family: 'RF Rufo', sans-serif;
     color: var(--white);
     text-transform: uppercase;
     line-height: 1;
-    // letter-spacing: 0.3px;
     letter-spacing: 0.1px;
-
-    margin-bottom: 9px;
 
     &:nth-child(2) {
         margin-bottom: 19px;
     }
-
-    &:nth-child(3) {}
 }
 
 .choice_carousel-banner-text {

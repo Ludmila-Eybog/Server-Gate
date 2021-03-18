@@ -16,30 +16,38 @@
         });
     }
     //-показать мобильное меню
-    const bodyElement = document.querySelector('body')
+    // const bodyElement = document.querySelector('body')
+    const htmlElement = document.querySelector('html')
     // const overlayElement = document.querySelector('#overlay')
     const mobileMenuToggle = document.querySelector('#menu-toggle')
-    const mobileMenu = document.querySelector('.mobile-nav')
+    // const mobileMenu = document.querySelector('.mobile-nav')
 
     // когда кликаем, эл-там добавляется 'active'
     mobileMenuToggle.addEventListener('click', function () {
         if (this.classList.contains('active')) {
-            mobileMenu.classList.add('active')
+            // mobileMenu.classList.add('active')
             // overlayElement.classList.add('active')
-            bodyElement.classList.add('noscroll')
+            // bodyElement.classList.add('noscroll', 'active-menu')
+
+            // скролим до конца вверх-влево экрана (чтобы гамбургер был виден полностью)
+            window.scrollTo(0, 0);
+
+            htmlElement.classList.add('noscroll', 'active-menu')
         } else {
-            mobileMenu.classList.remove('active')
+            // mobileMenu.classList.remove('active')
             // overlayElement.classList.remove('active')
-            bodyElement.classList.remove('noscroll')
+            // bodyElement.classList.remove('noscroll', 'active-menu')
+            htmlElement.classList.remove('noscroll', 'active-menu')
         }
     })
 
-    //     Запрещаем скролл, когда открыто мобильное меню
+    //     Запрещаем скролл у html, когда открыто мобильное меню
     mobileMenu.addEventListener('click', function () {
         this.classList.remove('active')
         // overlayElement.classList.remove('active')
         mobileMenuToggle.classList.remove('active')
-        bodyElement.classList.remove('noscroll')
+        // bodyElement.classList.remove('noscroll')
+        htmlElement.classList.remove('noscroll')
     })
 
     // при изменении ширины окна-экрана убираем 'active' и 'noscroll'
@@ -47,7 +55,8 @@
         mobileMenu.classList.remove('active')
         // overlayElement.classList.remove('active')
         mobileMenuToggle.classList.remove('active')
-        bodyElement.classList.remove('noscroll')
+        // bodyElement.classList.remove('noscroll')
+        htmlElement.classList.remove('noscroll')
     })
 })();
 
