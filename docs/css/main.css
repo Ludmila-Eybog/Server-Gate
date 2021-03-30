@@ -181,14 +181,12 @@ button {
 }
 .mobile-nav {
   position: fixed;
-  top: 0;
+  top: 50px;
   left: 0;
   right: 0;
   bottom: 0;
-  padding-top: 50px;
   width: 100%;
   min-width: 320px;
-  height: 100%;
   background-color: var(--white);
   opacity: 0;
   -webkit-transform: translateX(100%);
@@ -371,6 +369,7 @@ button {
   .header_order {
     margin: 18px 0 19px;
     height: 40px;
+    background-color: transparent;
   }
 }
 .header_order-left {
