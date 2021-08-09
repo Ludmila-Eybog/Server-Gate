@@ -1,0 +1,78 @@
+.range-slider {
+  width: 100%;
+  font-size: 24px;
+  font-family: 'RF Rufo', sans-serif;
+  font-weight: 600;
+}
+
+.range-slider__input-wrapp {
+  padding: 6px 20px;
+  width: 100%;
+  background-color: var(--white);
+  border-radius: 4px;
+  border: 2px solid #e6ecf2;
+
+  @media (min-width: 1024px) {
+    padding: 7px 20px;
+  }
+}
+
+.range-slider__input {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'RF Rufo', sans-serif;
+  color: var(--black);
+  border: none;
+}
+
+//  ------------------------------------------------
+
+// Переписываем св-ва из библиотеки Range-slider
+// Блок с Ползунком Range-slider
+.irs--round {
+  height: 16px;
+}
+
+// Поле с вводом значения суммы
+.irs--round .irs-single {
+  display: none;
+}
+
+.irs--round .irs-single:before {
+  display: none;
+}
+
+// Бегунок
+.irs--round .irs-handle {
+  top: -14px;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 6px solid var(--white);
+  background-color: var(--blue);
+  box-shadow: 0 3px 15px rgba(176, 191, 215, 66%);
+  cursor: pointer;
+}
+
+.irs--round .irs-handle.state_hover,
+.irs--round .irs-handle:hover {
+  background-color: var(--blue);
+}
+
+// Видимая часть линии-полоски
+.irs--round .irs-bar {
+  top: -2px;
+  height: 4px;
+  cursor: pointer;
+  background-color: var(--blue);
+}
+
+//  Вся (100%) линия-полоска
+.irs--round .irs-line {
+  display: none;
+}
+
+.irs--round .irs-min,
+.irs--round .irs-max {
+  display: none;
+}

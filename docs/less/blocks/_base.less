@@ -1,55 +1,65 @@
 *,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 .noscroll {
-    overflow: hidden;
+  overflow: hidden;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 html,
 body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-family: 'RF Rufo', sans-serif;
-    font-family: 'Arimo', Arial, sans-serif;
-    color: var(--grey_text);
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: 'RF Rufo', sans-serif;
+  font-family: 'Arimo', Arial, sans-serif;
+  color: var(--grey-text);
 
-    &:root {
-        --blue: #0684bd;
-        --white: #fff;
-        --black: #000;
-        --grey_text: #606060;
-        --light-grey: #bac0ca;
-        --yellow: #ff9000;
-        --grey_button-arrow: #a7acb5;
-        --grey_background: #f4f6f8;
-    }
+  &:root {
+    --blue: #0684bd;
+    --blue-dark: #0575a8;
+    --blue-hover: #0575a8;
+    --white: #fff;
+    --black: #000;
+    --grey-text: #606060;
+    --grey-forms: #969ca4;
+    --light-grey: #bac0ca;
+    --grey-button-arrow: #a7acb5;
+    --grey-background: #f4f6f8;
+    --grey-drop: #353535;
+    --yellow: #ff9000;
+    --yellow-hover: #f47402;
+  }
 }
 
 .color-black {
-    color: var(--black);
+  color: var(--black);
 }
 
 .color-yellow {
-    color: var(--yellow);
+  color: var(--yellow);
 }
 
 .color-blue {
-    color: var(--blue);
+  color: var(--blue);
 }
 
+.color-light-grey {
+  color: var(--light-grey);
+}
+
+h1,
 h2,
 h3,
 h4,
@@ -57,141 +67,169 @@ h5,
 p,
 ul,
 span {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 p {
-    line-height: 1.5;
+  line-height: 1.5;
 }
 
 a,
-a:hover, 
+a:hover,
 a:active,
 a:focus,
 a:visited {
-    text-decoration: none;
-    outline: none;
-    transition: all .2s ease;
-    cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
 }
 
 ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 img {
-    display: block;
-    max-width: 100%; 
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 button,
 input {
-    outline: none;
+  outline: none;
 }
 
 button {
-    padding: 0;
-    border: none;
-    cursor: pointer;
+  padding: 0;
+  border: none;
+  cursor: pointer;
 }
 
-.btn_white {
-    display: inline-block;
-    background-color: var(--white);
-    border: 2px solid var(--white);
-    border-radius: 3px;
+.button {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'RF Rufo', sans-serif;
+  color: var(--white);
+  background-color: var(--blue);
+  text-transform: uppercase;
+  text-align: center;
+}
 
-    font-size: 22px;
-    font-weight: 600;
-    font-family: 'RF Rufo', sans-serif;
-    color: var(--black);
-    line-height: 36px;
-    text-transform: uppercase;
-    transition: all 0.2s ease;
+.btn-white {
+  display: inline-block;
+  background-color: var(--white);
+  border: 2px solid var(--white);
+  border-radius: 3px;
 
-    &:hover {
-        color: var(--white);
-        background-color: transparent;
-    }
+  font-size: 22px;
+  color: var(--black);
+  line-height: 36px;
+  transition: all 0.2s ease;
 
-    @media(min-width: 768px) {
-        font-size: 24px;
-        line-height: 42px;
-    }
+  &:hover {
+    color: var(--white);
+    background-color: transparent;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 24px;
+    line-height: 42px;
+  }
 }
 
 .container {
-    margin: 0 auto;
-    padding: 0 15px;
-    width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
 
-    @media (min-width: 1024px) {
-        max-width: 950px;
-    }
+  @media (min-width: 1024px) {
+    max-width: 950px;
+  }
 
-    @media(min-width: 1250px) {
-        max-width: 1170px;
-    }
+  @media (min-width: 1250px) {
+    max-width: 1170px;
+  }
+}
+
+.title-1 {
+  margin-bottom: 10px;
+  font-family: 'RF Rufo', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--black);
+  line-height: 1;
+  letter-spacing: -0.16px;
+  text-transform: uppercase;
+
+  @media (min-width: 1024px) {
+    margin-bottom: 7px;
+  }
+
+  @media (min-width: 1024px) {
+    margin-bottom: 10px;
+    font-size: 48px;
+    font-weight: 600;
+  }
 }
 
 .title-2 {
-    font-size: 28px;
-    font-family: 'RF Rufo', sans-serif;
-    font-weight: 600;
-    color: var(--white);
-    line-height: 1;
-    text-transform: uppercase;
+  font-size: 28px;
+  font-family: 'RF Rufo', sans-serif;
+  font-weight: 600;
+  color: var(--white);
+  line-height: 1;
+  text-transform: uppercase;
 
-    @media(min-width: 768px) {
-        font-size: 42px;
-    }
+  @media (min-width: 768px) {
+    font-size: 42px;
+  }
 }
 
 .title-3 {
-    font-size: 28px;
-    font-family: 'RF Rufo', sans-serif;
-    font-weight: 600;
-    color: var(--black);
-    line-height: 1;
-    text-transform: uppercase;
+  font-size: 28px;
+  font-family: 'RF Rufo', sans-serif;
+  font-weight: 600;
+  color: var(--black);
+  line-height: 1;
+  text-transform: uppercase;
 
-    @media (min-width: 1024px) {
-        font-size: 32px;
-    }
+  @media (min-width: 1024px) {
+    font-size: 32px;
+  }
 }
 
 .title-4 {
-    font-size: 24px;
-    font-family: 'RF Rufo', sans-serif;
-    font-weight: 600;
-    color: var(--black);
-    text-transform: uppercase;
-    // line-height: 1;
+  font-size: 24px;
+  font-family: 'RF Rufo', sans-serif;
+  font-weight: 600;
+  color: var(--black);
+  text-transform: uppercase;
+  // line-height: 1;
 
-    @media (min-width: 1024px) {
-        font-size: 26px;
-    }
+  @media (min-width: 1024px) {
+    font-size: 26px;
+  }
 }
 
 .title-5 {
-    font-size: 22px;
-    font-family: 'RF Rufo', sans-serif;
-    font-weight: 600;
-    color: var(--black);
-    line-height: 1;
-    text-transform: uppercase;
+  font-size: 22px;
+  font-family: 'RF Rufo', sans-serif;
+  font-weight: 600;
+  color: var(--black);
+  line-height: 1;
+  text-transform: uppercase;
 
-    @media (min-width: 1024px) {
-        font-size: 24px;
-    }
+  @media (min-width: 1024px) {
+    font-size: 24px;
+  }
 }
 
 .center {
-    text-align: center;
+  text-align: center;
 }
 
 // 4 точки перелома:

@@ -1,6 +1,6 @@
 // убеждаемся, что вся стр-ца загружена, все картинки загружены, плагин с каруселью загружен
 $(document).ready(function () {
-    // через селектор jquery находит элемент по id #carousel1 (или по классу .owl-carousel) и к нему применяется метод Карусель .owlCarousel
+    // через селектор jquery находит элемент по id #carousel1 (или по классу .owl-carousel) и к нему применяем метод Карусель.owlCarousel
     $("#carousel1").owlCarousel({
         items: 7,
         nav: true,
@@ -63,7 +63,7 @@ $(document).ready(function () {
         }
     });
 
-    // через селектор jquery находит элемент по id #carousel2 (или по классу .owl-carousel) и к нему применяется метод Карусель .owlCarousel
+    // через селектор jquery находит элемент по id #carousel3 (или по классу .owl-carousel) и к нему применяется метод Карусель .owlCarousel
     $("#carousel3").owlCarousel({
         items: 3,
         nav: true,
@@ -93,7 +93,6 @@ $(document).ready(function () {
         var element = event.target; // DOM element, in this example .owl-carousel
 
         var owlItems = $(element).find('.owl-item').length;
-        // console.log(owlItems);
 
         var items = event.item.count; // Number of items
         // var item = event.item.index + 1 ; // Position of the current item      - исходный код
@@ -123,7 +122,7 @@ $(document).ready(function () {
     // ВЫПАДАЮЩЕЕ ОКНО в Carousel1
     // With the above scripts loaded, you can call `tippy()` with a CSS
     // selector and a `content` prop:
-    tippy('.card-top_gear', {
+    tippy('[data-card-settings]', {
         placement: 'bottom',
         content: 'Сконфигурируйте свой сервер на основе данной модели',
         duration: 100,
@@ -139,7 +138,7 @@ $(document).ready(function () {
     // find element
     $owl = $('body').find('#carousel2');
 
-    // set the owl-carousel otions
+    // set the owl-carousel options
     var carousel_Settings = {
         touchDrag: true,
         mouseDrag: true
@@ -165,7 +164,6 @@ $(document).ready(function () {
     var id;
     $(window).resize(function () {
         clearTimeout(id);
-        // id = setTimeout(initialize, 500);
         id = setTimeout(initialize, 200);
     });
 

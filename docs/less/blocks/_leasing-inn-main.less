@@ -1,0 +1,332 @@
+.overlay {
+  display: none;
+  position: fixed;
+  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(2, 81, 118, 0.7);
+  // background: linear-gradient(
+  //   180deg,
+  //   #fff 0,
+  //   #fff 75%,
+  //   rgba(255, 255, 255, 0) 100%
+  // );
+  z-index: 15;
+}
+
+.overlay.active {
+  display: block;
+  transition: 1s;
+}
+
+.leasing {
+  padding: 25px 0 30px;
+  background-color: var(--grey-background);
+
+  @media (min-width: 1024px) {
+    padding: 17px 0 84px;
+  }
+}
+
+.leasing-list {
+  display: none;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    margin-bottom: 20px;
+  }
+}
+
+.leasing-list__item {
+  position: relative;
+  font-size: 14px;
+  color: var(--grey-text);
+
+  &:not(:last-child) {
+    padding-right: 16px;
+    margin-right: 7px;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      right: 0;
+      width: 10px;
+      height: 2px;
+      background-color: var(--light-grey);
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 6px;
+      right: 0;
+      width: 6px;
+      height: 6px;
+      border-left: 2px solid var(--light-grey);
+      border-bottom: 2px solid var(--light-grey);
+      transform: rotate(-135deg);
+    }
+  }
+}
+
+.leasing-list__link {
+  position: relative;
+  color: var(--grey-text);
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: 0;
+    background-color: var(--grey-text);
+    opacity: 0;
+    transition: opacity 0.2s ease 0.2s;
+  }
+
+  &:hover::after {
+    opacity: 1;
+  }
+}
+
+.leasing-subtitle {
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: var(--grey-text);
+  line-height: 1.3;
+
+  @media (min-width: 1024px) {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+}
+
+.leasing-subtitle__bold {
+  font-family: 'Arimo', Arial, sans-serif;
+  font-weight: 700;
+  color: var(--black);
+}
+
+//   ---   Leasing_steps
+
+.leasing-steps {
+  margin-bottom: 20px;
+  padding: 17px 20px 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 3px;
+  background-color: var(--blue);
+
+  @media (min-width: 390px) {
+    padding: 20px;
+    padding-bottom: 33px;
+  }
+
+  @media (min-width: 1024px) {
+    margin-bottom: 30px;
+    padding: 30px 32px 32px 40px;
+  }
+
+  @media (min-width: 1250px) {
+    flex-direction: row;
+  }
+}
+
+.leasing-steps-left {
+  margin-bottom: 30px;
+  max-width: 425px;
+
+  @media (min-width: 1024px) {
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: 1250px) {
+    margin-right: 45px;
+    margin-bottom: 0;
+    max-width: 265px;
+  }
+}
+
+.leasing-steps__title-3 {
+  position: relative;
+  margin-bottom: 15px;
+  padding-left: 38px;
+  font-size: 32px;
+  color: var(--white);
+  text-transform: none;
+
+  &::before {
+    position: absolute;
+    content: '5';
+    font-size: 72px;
+    left: 0px;
+    line-height: 0.78;
+  }
+
+  p {
+    line-height: 0.9;
+  }
+
+  @media (min-width: 1024px) {
+    margin-bottom: 22px;
+  }
+}
+
+.leasing-steps__subtitle {
+  font-size: 15px;
+  color: var(--white);
+
+  p {
+    line-height: 1.3;
+  }
+}
+
+.leasing-steps-right {
+  margin: 0 auto;
+  position: relative;
+  max-width: 310px;
+  width: 100%;
+
+  @media (min-width: 390px) {
+    height: 534px;
+
+    &:after {
+      position: absolute;
+      content: '';
+      top: 85px;
+      left: 69px;
+      width: 172px;
+      height: 410px;
+      background: url(../images/leasing/steps-arrows-mob.svg) center no-repeat;
+      z-index: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    max-width: 760px;
+    width: 100%;
+    height: 210px;
+
+    &:after {
+      top: 90px;
+      left: 100px;
+      width: 572px;
+      height: 82px;
+      background: url(../images/leasing/steps-arrows.svg) center no-repeat;
+    }
+  }
+}
+
+.step-item {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+
+  width: 200px;
+  height: 90px;
+  background-color: var(--white);
+  border-radius: 90px;
+  box-shadow: 0 0 27px rgba(10, 54, 88, 0.1);
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  @media (min-width: 390px) {
+    margin-bottom: 0;
+    position: absolute;
+    justify-content: center;
+
+    &:nth-child(odd) {
+      left: 0;
+    }
+
+    &:nth-child(even) {
+      left: 110px;
+    }
+
+    &:nth-child(2) {
+      top: 110px;
+    }
+
+    &:nth-child(3) {
+      top: 220px;
+    }
+
+    &:nth-child(4) {
+      top: 330px;
+    }
+
+    &:nth-child(5) {
+      top: 440px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &:nth-child(odd) {
+      top: 0;
+    }
+
+    &:nth-child(even) {
+      top: 120px;
+    }
+
+    &:nth-child(2) {
+      left: 140px;
+    }
+
+    &:nth-child(3) {
+      left: 280px;
+    }
+
+    &:nth-child(4) {
+      left: 420px;
+    }
+
+    &:nth-child(5) {
+      left: 560px;
+    }
+  }
+}
+
+.step-item__title {
+  position: relative;
+  padding-left: 65px;
+
+  @media (min-width: 390px) {
+    padding-left: 33px;
+  }
+}
+
+.step-item__num {
+  position: absolute;
+  font-size: 72px;
+  left: 25px;
+  bottom: 0;
+  line-height: 0.7;
+
+  @media (min-width: 390px) {
+    left: 0;
+  }
+}
+
+.leasing-button {
+  width: 240px;
+  height: 46px;
+  border-radius: 3px;
+  background-color: var(--yellow);
+
+  &:hover {
+    background-color: var(--yellow-hover);
+  }
+
+  @media (min-width: 1024px) {
+    margin-top: 3px;
+  }
+}

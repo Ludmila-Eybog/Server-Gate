@@ -1,64 +1,64 @@
 .mobile-nav {
-    position: fixed;
-    top: 50px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    min-width: 320px;
-    background-color: var(--white);
-    opacity: 0;
-    transform: translateX(100%);
-    transition: transform .5s, opacity 0.1s .5s;
-    // Есть вертикальый скролл:
-    overflow: auto;
-    z-index: 10;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  min-width: 320px;
+  background-color: var(--white);
+  opacity: 0;
+  transform: translateX(100%);
+  transition: transform 0.5s, opacity 0.1s 0.5s;
+  // Есть вертикальый скролл:
+  overflow: auto;
+  z-index: 10;
 
-    @media (min-width: 1024px) {
-        display: none;
-    }
+  @media (min-width: 1024px) {
+    display: none;
+  }
 }
 
 //  Мобильное меню активно (.active-menu) только, когда открываем его (кликаем по гамбургеру)
 .active-menu .mobile-nav {
-    opacity: 1;
-    transform: translateX(0%);
-    transition: .5s;
+  opacity: 1;
+  transform: translateX(0%);
+  transition: 0.5s;
 }
 
-.mobile-nav_top {
-    padding: 40px 50px 20px;
+.mobile-nav-top {
+  padding: 40px 50px 20px;
 }
 
-.mobile-nav_top .nav_menu-item {
-    margin-bottom: 20px;
-    font-size: 20px;
-    font-weight: 700;
+.mobile-nav-top .nav-menu__item {
+  margin-bottom: 20px;
+  font-size: 20px;
+  font-weight: 700;
 }
 
-.mobile-nav_config {
-    padding: 18px 0;
-    border-top: 1px solid #ededed;
-    border-bottom: 1px solid #ededed;
+.mobile-nav-config {
+  padding: 18px 0;
+  border-top: 1px solid #ededed;
+  border-bottom: 1px solid #ededed;
 }
 
-.mobile-nav_bottom {
-    padding: 21px 55px;
-    background-color: var(--blue);
+.mobile-nav-bottom {
+  padding: 21px 55px;
+  background-color: var(--blue);
 }
 
-.mobile-nav_bottom p {
-    margin-bottom: 6px;
-    display: block;
-    font-size: 14px;
-    color: var(--white);
+.mobile-nav-bottom p {
+  margin-bottom: 6px;
+  display: block;
+  font-size: 14px;
+  color: var(--white);
 }
 
-.mobile-nav_bottom a {
-    display: block;
-    font-family: 'RF Rufo', sans-serif;
-    font-weight: 600;
-    font-size: 20px;
-    color: var(--white);
-    text-transform: uppercase;
+.mobile-nav-bottom a {
+  display: block;
+  font-family: 'RF Rufo', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--white);
+  text-transform: uppercase;
 }

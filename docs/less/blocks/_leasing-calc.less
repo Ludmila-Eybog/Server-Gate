@@ -1,0 +1,252 @@
+.calc {
+  margin-bottom: 20px;
+  border-radius: 3px;
+  background-color: var(--white);
+  box-shadow: 0 0 27px rgba(10, 54, 88, 10%);
+
+  @media (min-width: 1024px) {
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.calc-left {
+  padding: 20px 15px;
+  flex-grow: 2;
+
+  @media (min-width: 768px) {
+    padding-bottom: 15px;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 30px 40px 30px 35px;
+  }
+}
+
+.calc-head {
+  margin-bottom: 22px;
+
+  @media (min-width: 1024px) {
+    margin-bottom: 30px;
+  }
+
+  @media (min-width: 1250px) {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.calc__title-3 {
+  font-size: 24px;
+
+  @media (min-width: 768px) {
+    font-size: 28px;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 32px;
+  }
+
+  @media (min-width: 1250px) {
+    margin-right: 28px;
+  }
+}
+
+.calc__subtitle {
+  position: relative;
+  padding-top: 5px;
+  font-size: 14px;
+  font-family: 'Arimo', Arial, sans-serif;
+  color: var(--grey-text);
+
+  @media (min-width: 1024px) {
+    padding: 2px 0 0 30px;
+    width: 270px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 14px;
+      height: 1px;
+      top: 30%;
+      left: 0;
+      background-color: var(--grey-text);
+    }
+  }
+}
+
+.calc-terms {
+  margin-bottom: 15px;
+
+  @media (min-width: 1024px) {
+    margin-bottom: 35px;
+  }
+}
+
+.calc__title {
+  margin-bottom: 5px;
+  font-size: 12px;
+  font-family: 'Arimo', Arial, sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.calc__content {
+  @media (min-width: 1250px) {
+    display: flex;
+  }
+}
+
+.calc__choice {
+  position: relative;
+  margin-right: 5px;
+  max-width: 320px;
+  width: 100%;
+  height: 44px;
+  line-height: 36px;
+
+  @media (min-width: 1024px) {
+    margin-right: 0;
+  }
+
+  @media (min-width: 1250px) {
+    margin-right: 12px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.calc__button {
+  position: absolute;
+  width: 50%;
+  border-radius: 4px;
+  border: 2px solid #e6ecf2;
+  color: var(--black);
+  text-transform: lowercase;
+  line-height: 1.7;
+  background-color: var(--white);
+
+  &:hover {
+  color: var(--blue);
+
+  }
+}
+.calc__button.active {
+  border: 2px solid var(--blue);
+  color: var(--white);
+  background-color: var(--blue);
+  transition: all .2s ease;
+
+   &:hover {
+    background-color: var(--blue-hover);
+   }
+}
+
+.calc__term-left {
+  left: 0;
+}
+
+.calc__term-right {
+  right: 0;
+}
+
+.calc__note {
+  padding-top: 3px;
+  max-width: 300px;
+  font-size: 14px;
+  font-family: 'Arimo', Arial, sans-serif;
+  font-style: italic;
+
+  @media (min-width: 768px) {
+    padding-top: 7px;
+    vertical-align: top;
+  }
+
+  @media (min-width: 1024px) {
+    padding-top: 4px;
+    max-width: 240px;
+  }
+}
+
+.calc-right {
+  border-radius: 3px;
+
+  @media (min-width: 1024px) {
+    width: 280px;
+  }
+}
+
+.leasing-result {
+  padding: 22px 20px;
+  background-color: var(--blue);
+
+  @media (min-width: 1024px) {
+    padding: 60px 30px;
+  }
+
+  @media (min-width: 1250px) {
+    padding-top: 25px;
+    padding-bottom: 28px;
+  }
+}
+
+.leasing-result-item {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  color: var(--white);
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  @media (min-width: 390px) {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  @media (min-width: 1024px) {
+    flex-direction: column-reverse;
+    align-items: start;
+  }
+}
+
+.leasing-result__number {
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  font-family: 'RF Rufo', sans-serif;
+  line-height: 0.8;
+
+  @media (min-width: 390px) {
+    margin-bottom: 5px;
+  }
+}
+
+.leasing-result__desc {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.85);
+
+  br {
+    display: block;
+  }
+
+  @media (min-width: 1024px) {
+    br {
+      display: none;
+    }
+  }
+}
+
+.leasing-btn {
+  width: 100%;
+  line-height: 50px;
+  border-radius: 0 0 3px 3px;
+  background-color: var(--yellow);
+
+  &:hover {
+    background-color: var(--yellow-hover);
+  }
+}

@@ -1,0 +1,267 @@
+.panel {
+  padding: 23px 17px 93px;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 3px;
+  background-color: var(--white);
+  box-shadow: 0 0 27px rgba(10, 54, 88, 0.1);
+
+  @media (min-width: 1024px) {
+    padding: 0 10px;
+  }
+}
+
+.panel-item {
+  position: relative;
+  padding-right: 70px;
+  padding-bottom: 20px;
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    padding: 58px 30px;
+    padding-bottom: 38px;
+    max-width: 225px;
+    width: 25%;
+
+    // Разделитель
+    // кроме первого и последнего ребенка
+    &:not(:nth-child(4n + 1)):after {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 35px;
+      left: 0px;
+      bottom: 35px;
+      width: 1px;
+      background-color: #f0f0f0;
+    }
+  }
+
+  @media (min-width: 1250px) {
+    max-width: 280px;
+  }
+}
+
+.panel-lastitem {
+  position: relative;
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    padding: 40px 30px 36px 30px;
+    display: flex;
+
+    &::before {
+      display: block;
+      position: absolute;
+      content: '';
+      top: 0px;
+      left: 30px;
+      right: 30px;
+      height: 1px;
+      background-color: #f0f0f0;
+    }
+  }
+
+  @media (min-width: 1250px) {
+    padding-left: 62px;
+  }
+}
+
+.panel-lastitem__wrap {
+  margin-bottom: 7px;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 25px;
+    margin-bottom: 0;
+    width: 158px;
+  }
+
+  @media (min-width: 1250px) {
+    margin-right: 53px;
+    width: 185px;
+  }
+}
+
+.panel__icon {
+  position: absolute;
+  top: 0px;
+  right: -3px;
+
+  @media (min-width: 390px) {
+    right: 0;
+  }
+
+  @media (min-width: 1024px) {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+.panel__icon-1 {
+  width: 90px;
+  height: 45px;
+
+  @media (min-width: 1024px) {
+    top: 30px;
+  }
+}
+
+.panel__icon-2 {
+  top: -3px;
+  width: 60px;
+  height: 60px;
+
+  @media (min-width: 1024px) {
+    top: 20px;
+  }
+}
+
+.panel__icon-3 {
+  top: 3px;
+  width: 61px;
+  height: 60px;
+
+  @media (min-width: 1024px) {
+    top: 20px;
+    width: 65px;
+    height: 64px;
+  }
+}
+
+.panel__icon-4 {
+  top: 3px;
+  width: 58px;
+  height: 58px;
+
+  @media (min-width: 1024px) {
+    width: 60px;
+    height: 60px;
+    top: 25px;
+  }
+}
+
+.panel__icon-5 {
+  position: absolute;
+  width: 67px;
+  height: 70px;
+  top: -3px;
+  // left: 62px;
+
+  @media (min-width: 1024px) {
+    position: static;
+    margin-top: -10px;
+    width: 71px;
+    height: 74px;
+  }
+}
+
+.panel__title-h5 {
+  margin-bottom: 7px;
+
+  @media (min-width: 1024px) {
+    margin-bottom: 15px;
+  }
+}
+
+.leasing_title-h5 {
+  padding-right: 20px;
+
+  @media (min-width: 1024px) {
+    padding-right: 0;
+  }
+}
+
+.panel__text {
+  display: block;
+  width: 100%;
+
+  font-size: 13px;
+  font-family: 'Arimo', Arial, sans-serif;
+  line-height: 1.55;
+  letter-spacing: 0.6px;
+}
+
+.panel-lastitem__text {
+  margin-bottom: 30px;
+  padding-right: 70px;
+  position: relative;
+  font-size: 13px;
+  font-family: 'Arimo', Arial, sans-serif;
+  color: var(--grey-text);
+  letter-spacing: 0.5px;
+
+  @media (min-width: 1024px) {
+    margin-bottom: 15px;
+    padding-right: 0px;
+    width: 410px;
+    font-size: 12px;
+    line-height: 1.4;
+  }
+
+  @media (min-width: 1250px) {
+    width: 460px;
+    font-size: 14px;
+    line-height: 1.55;
+  }
+}
+
+.panel-lastitem__lasttext {
+  position: absolute;
+  width: 100%;
+  bottom: -68px;
+  font-size: 12px;
+  text-align: center;
+  letter-spacing: -0.2px;
+
+  a {
+    font-size: 22px;
+    font-weight: 600;
+    font-family: 'RF Rufo', sans-serif;
+    color: var(--black);
+    line-height: 1;
+    letter-spacing: 0.1px;
+  }
+
+  @media (min-width: 390px) {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  @media (min-width: 1024px) {
+    position: static;
+    text-align: left;
+    letter-spacing: normal;
+
+    br {
+      display: none;
+    }
+
+    a {
+      font-size: 14px;
+      font-weight: 700;
+      font-family: 'Arimo', Arial, sans-serif;
+      letter-spacing: -0.5px;
+    }
+  }
+
+  @media (min-width: 1250px) {
+    font-size: 14px;
+    letter-spacing: 0.5px;
+
+    a {
+      font-size: 16px;
+    }
+  }
+}
+
+.panel-lastitem__btn {
+  text-align: center;
+
+  @media (min-width: 1024px) {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+  }
+}

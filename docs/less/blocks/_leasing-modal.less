@@ -1,0 +1,317 @@
+// Модальное Окно с Формой
+.modal {
+  padding: 80px 20px 60px;
+  display: none;
+  position: fixed;
+
+  border-radius: 3px;
+  background-color: var(--white);
+  box-shadow: 0 0 27px rgb(10, 54, 88, 11%);
+  z-index: 20;
+  // плавное появление окна
+  opacity: 0;
+  transition: 0.5s;
+
+  @media (min-width: 390px) {
+    padding: 64px 60px 30px;
+  }
+
+  @media (min-width: 1024px) {
+    padding-left: 55px;
+    padding-right: 55px;
+    width: 535px;
+    background-color: var(--grey-background);
+  }
+}
+
+.modal.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  @media (min-width: 1024px) {
+    top: 50%;
+    left: 50%;
+    bottom: unset;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.modal.animation {
+  // плавное появление окна
+  opacity: 1;
+}
+
+.modal__content {
+  width: 100%;
+}
+
+.modal__title-3 {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+
+  @media (min-width: 1024px) {
+    margin-bottom: 13px;
+    font-size: 34px;
+    font-weight: 600;
+  }
+}
+
+.modal__subtitle {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: var(--grey-forms);
+  line-height: 1.3;
+}
+
+// Форма Отправки
+
+.form {
+  margin-bottom: 25px;
+
+  @media (min-width: 1024px) {
+    margin-bottom: 33px;
+  }
+}
+
+.form__row {
+  margin-bottom: 20px;
+
+  &:not(:nth-last-child(2)) {
+    margin-bottom: 5px;
+  }
+
+  @media (min-width: 1024px) {
+    &:not(:nth-last-child(2)) {
+      margin-bottom: 7px;
+    }
+  }
+}
+
+.form__input {
+  display: block;
+  padding: 12px 15px;
+  width: 100%;
+  max-width: 100%;
+  height: 44px;
+  background-color: var(--grey-background);
+  border: 1px solid #e8ebef;
+  border-radius: 3px;
+  font-size: 16px;
+  color: var(--grey-forms); // при вводе в поле инпута
+  transition: 0.5s;
+  caret-color: var(--black); // цвет курсора в инпуте
+
+  // как только окно открыто
+  &::placeholder {
+    color: var(--grey-forms);
+    opacity: 1;
+  }
+
+  // При клике на поле ввода появляется курсор и placeholder убирает текст "Ваше имя", ...
+  &:focus {
+    border: 2px solid var(--yellow);
+
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    background-color: var(--white);
+  }
+}
+
+// Mеняю внешний вид вводимого сообщения
+input.form__input.error {
+  color: var(--blue-hover);
+}
+
+// Mеняю внешний вид сообщений об ошибке
+// для всех братьев
+.form__input ~ .error,
+.checkbox__default ~ .error {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--yellow-hover);
+}
+
+.form__btn-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  @media (min-width: 1024px) {
+    align-items: flex-end;
+  }
+}
+
+.form__button {
+  padding: 0 35px;
+  font-size: 28px;
+  line-height: 52px;
+  border: none;
+  border-radius: 3px;
+
+  &:hover {
+    background-color: var(--blue-hover);
+  }
+}
+
+// Ответ - Answer в рез-те валидации формы
+.form__success {
+  width: 425px;
+  font-size: 16px;
+  color: var(--blue);
+  text-align: center;
+}
+
+// Checkbox
+.checkbox {
+  padding-top: 24px;
+  display: flex;
+  flex-wrap: wrap; // перенести сообщение об ошибке на новую строку
+  border-top: 1px solid #e1e5ea;
+}
+
+.checkbox__default {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+}
+
+// Изменения по Клику на Сheckbox:
+.checkbox__default:checked ~ .checkbox__custom {
+  background-color: var(--blue);
+  border: none;
+
+  // Галочка в чекбоксе
+  &::after {
+    position: absolute;
+    content: '';
+    top: 4px;
+    left: 3px;
+    right: 0;
+    bottom: 0;
+    width: 13px;
+    height: 7px;
+    border-left: 2px solid var(--white);
+    border-bottom: 2px solid var(--white);
+    transform: rotate(-45deg);
+  }
+}
+
+.checkbox__default ~ .error {
+  padding-top: 10px;
+  order: 1; // "reverse" блоков в строке
+}
+
+.checkbox__custom {
+  position: relative;
+  margin-right: 10px;
+  display: inline-block;
+
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  border: 2px solid #9badb5;
+  background-color: var(--white);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border: 2px solid var(--blue);
+  }
+}
+
+.checkbox__custom-text {
+  font-size: 15px;
+  color: #6d6d6e;
+
+  @media (min-width: 1024px) {
+    font-size: 16px;
+  }
+}
+
+.checkbox__custom-link {
+  position: relative;
+  color: var(--blue);
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: -1px;
+    background-color: var(--blue);
+    transition: 0.2s ease;
+    opacity: 0.7;
+  }
+
+  &:hover::after {
+    opacity: 0;
+  }
+}
+
+// Кнопка Cross
+.modal__cross {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 0;
+  cursor: pointer;
+  background-color: var(--blue);
+
+  &::before {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 3px;
+    background-color: var(--white);
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    top: 50%;
+    left: 50%;
+    width: 24px;
+    height: 3px;
+    background-color: var(--white);
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  @media (min-width: 1024px) {
+    width: 20px;
+    height: 20px;
+    top: 13px;
+    left: unset;
+    right: 13px;
+    background-color: var(--grey-background);
+
+    &::before {
+      top: 50%;
+      left: -2px;
+      background-color: #b7b7b7;
+      transform: translate(0%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      top: 50%;
+      left: -2px;
+      background-color: #b7b7b7;
+      transform: translate(0%, -50%) rotate(-45deg);
+    }
+  }
+}

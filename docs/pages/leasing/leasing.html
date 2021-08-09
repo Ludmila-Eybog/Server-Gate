@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Страница Лизинг "ServerGate"</title>
+  <link rel="stylesheet" href="../../fonts/rf_rufo/stylesheet.css">
+  <link rel="stylesheet" href="../../fonts/arimo/arimo.css">
+  <link rel="stylesheet" href="../../css/ion.rangeSlider.min.css" />
+  <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+
+  <div class="overlay" data-overlay></div>
+
+  <!-- Окно мобильной навигации -->
+  <nav class="mobile-nav" data-mobile-nav>
+    <div class="mobile-nav-top">
+      <ul class="nav-menu__items">
+        <li class="nav-menu__item">
+          <a class="color-black" href="../../pages/servers/servers.html">Серверы</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="../../pages/parts/parts.html">Комплектующие</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="#">Сетевое оборудование</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="#">Услуги</a>
+        </li>
+      </ul>
+      <div class="nav-menu__item mobile-nav-config">
+        <a class="color-blue" href="#">Конфигуратор</a>
+      </div>
+      <ul class="nav-menu__items">
+        <li class="nav-menu__item">
+          <a class="color-black" href="../../pages/leasing/leasing.html">Лизинг оборудования</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="#">Гарантия</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="#">Доставка</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="#">Оплата</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="../../pages/about/about.html">О нас</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="../../pages/contacts/contacts.html">Контакты</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mobile-nav-bottom">
+      <p>
+        Не хотите сами искать оборудование? Просто позвоните нам и мы предложим оптимальный вариант под ваши
+        запросы
+      </p>
+      <a href="tel:84952867252">
+        8 495 286 72 52
+      </a>
+    </div>
+  </nav>
+  <!-- End Окно мобильной навигации -->
+
+  <header id="header">
+    <div class="nav-wrap">
+      <div class="container">
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a href="#" class="nav-list__link">Лизинг</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#" class="nav-list__link">Гарантия</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#" class="nav-list__link">Доставка</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#" class="nav-list__link">Оплата</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="../../pages/about/about.html" class="nav-list__link">О нас</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="../../pages/contacts/contacts.html" class="nav-list__link">Контакты</a>
+            </li>
+          </ul>
+          <div class="nav-phone">
+            <a href="tel:88002004488" class="nav-phone__link">8 800 200 44 88</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="container-header-width">
+      <div class="header-order-wrap">
+        <div class="header-logo">
+
+          <!-- Gamburger Icon -->
+          <button class="gamburger" data-menu-toggle>
+            <span class="gamburger-line">toggle menu</span>
+          </button>
+
+          <a href="../../index.html#header" class="logo">
+            <div class="logo__icon">
+              <img src="../../images/header/logo.png" alt="Логотип компании">
+            </div>
+            <div class="logo__text color-blue">
+              <div>Server</div>
+              <div>Gate</div>
+            </div>
+          </a>
+        </div>
+        <div class="header-order">
+          <form action="#!" class="header-search" type="GET">
+            <input class="header-search__input" type="text" name="theme" placeholder="Поиск по номенклатуре">
+            <button class="header-search__icon">
+              <svg width="18" height="18" viewBox="0 0 18 18" id="image-search" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1049.516 68c1.843.031 3.375.664 4.593 1.898 1.219 1.235 1.844 2.774 1.875 4.617a6.58 6.58 0 01-.398 2.297 5.999 5.999 0 01-1.149 1.922l.282.281h.797l4.968 4.97-1.5 1.5-4.968-4.97v-.796l-.282-.282c-.562.5-1.203.884-1.922 1.149a6.571 6.571 0 01-2.296.398c-1.845-.03-3.384-.656-4.618-1.875-1.234-1.219-1.867-2.75-1.898-4.594.03-1.843.664-3.382 1.898-4.617 1.234-1.234 2.773-1.867 4.618-1.898zm0 2.015c-1.282.032-2.344.47-3.188 1.313-.844.844-1.266 1.907-1.266 3.187 0 1.282.422 2.344 1.266 3.188.844.844 1.906 1.266 3.188 1.266 1.28 0 2.343-.422 3.187-1.266.844-.844 1.266-1.906 1.266-3.188 0-1.28-.422-2.343-1.266-3.187-.844-.844-1.906-1.281-3.187-1.313z"
+                  transform="translate(-1043 -68)" />
+              </svg>
+            </button>
+          </form>
+          <a href="#!" class="header-config">
+            <div class="header-config__title">Конфигуратор
+            </div>
+            <div class="header-config__text">Собери свой сервер
+            </div>
+          </a>
+          <a href="#!" class="header-personal header-item">
+            <div class="header-personal__icon">
+              <img src="../../images/header/personal-icon.svg" alt="Иконка Пользователь">
+            </div>
+            <div class="header-text">
+              Личный кабинет
+            </div>
+          </a>
+
+          <!-- Cart Dropdown -->
+          <div class="cart">
+            <a href="#!" class="header-item">
+              <div class="cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20.16 20">
+                  <path
+                    d="M1283,2157a2,2,0,1,0,2,2A2,2,0,0,0,1283,2157Zm-11.99,2a2,2,0,1,0,1.99-2A2,2,0,0,0,1271.01,2159Zm13.3-14h-12.15l2.24,4.73,0.13,0.27h7.02Zm-13.1-2H1287l0.16,0.96-3.86,7.01a1.991,1.991,0,0,1-1.75,1.03h-7.45l-0.9,1.63-0.03.12a0.254,0.254,0,0,0,.25.25H1285v2h-12a2.006,2.006,0,0,1-2-2,1.933,1.933,0,0,1,.25-0.96l1.35-2.45L1269,2143h-2v-2h3.27Z "
+                    transform="translate(-1267 -2141) " />
+                </svg>
+              </div>
+              <div class="header-text">
+                Корзина
+              </div>
+            </a>
+            <ul class="cart-list">
+              <li class="cart-list__item">
+                <a href="#">
+                  <div class="cart-list__title">
+                    <div class="cart-list__name">DELL POWEREDGE R440</div>
+                    <input class="input-short" type="number" placeholder="0" name="quantity" min="1" max="99" value="1">
+                    <div class="cart-list__price">117 700 ₽
+                    </div>
+                    <div class="cart-list__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 352 512 ">
+                        <path fill="#a6abb2"
+                          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28
+                        32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z ">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cart-list__desc">
+                    <p>2 x Intel Xeon E5-2630v2 (6Cx2.20 GHz)</p>
+                    <p>169 GB (8x16GB 1600MHz, до 384GB)</p>
+                    <p>Raid 0/1/10/40/60</p>
+                    <p>25x300GB SAS 10K (до 25 hdd 2.5)</p>
+                    <p>4х1GB, 2x10GB SFP</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="cart-list__item">
+                <a href="#">
+                  <div class="cart-list__title">
+                    <div class="cart-list__name">HPE PROLIANT DL380E GEN8</div>
+                    <input class="input-short" type="number" placeholder="0" name="quantity" min="1" max="99" value="2">
+                    <div class="cart-list__price">210 600 ₽
+                    </div>
+                    <div class="cart-list__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 352 512 ">
+                        <path fill="#a6abb2"
+                          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28
+                        32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z ">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cart-list__desc">
+                    <p>2 x Intel Xeon E5-2630v2 (6Cx2.20 GHz)</p>
+                    <p>169 GB (8x16GB 1600MHz, до 384GB)</p>
+                    <p>Raid 0/1/10/40/60</p>
+                    <p>25x300GB SAS 10K (до 25 hdd 2.5)</p>
+                    <p>4х1GB, 2x10GB SFP</p>
+                  </div>
+                </a>
+              </li>
+              <li class="cart-total">
+                <div class="cart-total__name">ИТОГО,
+                  <span class="color-light-grey">В ТОМ ЧИСЛЕ НДС 20%</span>
+                </div>
+                <div class="cart-total__price">328 300 ₽
+                </div>
+              </li>
+              <button class="button cart__btn">оформить заказ</button>
+            </ul>
+          </div>
+          <!-- End Cart Dropdown -->
+
+        </div>
+      </div>
+      <div class="header-equip">
+        <ul class="header-equip-menu">
+          <li class="header-equip__item">
+            <a class="header-equip__link" href="../../pages/servers/servers.html">Серверы</a>
+            <ul class="header-equip__submenu">
+              <li class="header-equip__submenu-item">
+                <a href="#">Серверы в сборе</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="#">Дисковые полки</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header-equip__item ">
+            <a class="header-equip__link" href="../../pages/parts/parts.html">Комплектующие</a>
+            <ul class="header-equip__submenu">
+              <li class="header-equip__submenu-item">
+                <a href="#">Процессоры</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="#">Оперативная память</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="#">Жесткие диски и <span>SSD</span></a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="#"><span>RAID</span>-контроллеры и кэш-память</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="#">Блоки питания (<span>PSU</span>)</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="#">Рельсы в стойку</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="#">Сетевые контроллеры</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="#">Радиаторы</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="#">Запчасти к серверам</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header-equip__item">
+            <a class="header-equip__link" href="#">Сетевое оборудование</a>
+          </li>
+          <li class="header-equip__item">
+            <a class="header-equip__link" href="#">Услуги</a>
+          </li>
+        </ul>
+
+        <!-- VAT -->
+        <div class="vat">
+          <a class="vat__link color-light-grey" href="#">
+            ЦЕНЫ ВКЛЮЧАЮТ
+            <span class="vat__link-color">НДС 20%</span>
+            <img class="vat__link-img" src="../../images/header/question-circle.svg" alt="Иконка Знак вопроса">
+            <div class="vat__drop">
+              <div class="vat__drop-title">
+                Возместите 20%
+              </div>
+              <p class="vat__drop-text">Мы применяем общую систему налогообложения. Приобретая товары у
+                нас, Ваша компания сможет
+                дополнительно сэкономить 20% от суммы покупки при оплате налога НДС.
+              </p>
+            </div>
+          </a>
+        </div>
+        <!-- END  VAT -->
+
+      </div>
+    </div>
+  </header>
+
+  <section class="leasing">
+    <div class="container">
+      <ul class="leasing-list">
+        <li class="leasing-list__item">
+          <a class="leasing-list__link" href="../../index.html">ServerGate</a>
+        </li>
+        <li class="leasing-list__item">Лизинг</li>
+      </ul>
+      <h1 class="title-1">Купить оборудование в лизинг –
+        <span class="color-yellow">это просто, удобно, выгодно!</span>
+      </h1>
+      <div class="leasing-subtitle">
+        Доступно финансирование восстановленного оборудования стоимостью
+        <span class="leasing-subtitle__bold">от 50 000 руб.</span>
+      </div>
+
+      <!-- Calc -->
+      <div class="calc">
+        <div class="calc-left">
+          <div class="calc-head">
+            <div class="title-3 calc__title-3">
+              Лизинговый Калькулятор
+            </div>
+            <div class="calc__subtitle">
+              Рассчитайте размер первого взноса и ежемесячных платежей.
+            </div>
+          </div>
+          <div class="calc-terms">
+            <div class="calc__title color-light-grey">
+              Выберите срок лизинга
+            </div>
+            <div class="calc__content">
+              <div class="calc__choice">
+                <div class="button  calc__button calc__button--active calc__term-left active" data-period>12 месяцев
+                </div>
+                <div class="button  calc__button calc__button--active calc__term-right" data-period>24 месяца
+                </div>
+              </div>
+              <div class="calc__note color-light-grey">
+                Обратите внимание, оборудование дорожает на 15% в год.
+              </div>
+            </div>
+          </div>
+          <div class="calc__title color-light-grey">
+            Выберите Стоимость оборудования (в т.ч. НДС), руб.
+          </div>
+
+          <!-- Range-slider -->
+          <div class="range-slider">
+            <!-- Ввод значения -->
+            <div class="range-slider__input-wrapp">
+              <input type="text" data-input-slider class="range-slider__input" value="" oninput="setSl(value)">
+            </div>
+            <!-- Ползунок -->
+            <div class="sl-width">
+              <input type="text" data-range-slider name="my_range" value="" oninput="setInput(value)" />
+            </div>
+          </div>
+
+          <!-- End Range-slider -->
+        </div>
+
+        <div class="calc-right">
+          <div class="leasing-result">
+            <div class="leasing-result-item">
+              <div class="leasing-result__desc">Общая сумма сделки, руб. <br>
+                (с&nbsp;учётом аванса)
+              </div>
+              <div class="leasing-result__number" data-total>
+                1840000 ₽
+              </div>
+            </div>
+            <div class="leasing-result-item">
+              <div class="leasing-result__desc">
+                Авансовый платёж, руб.<br>
+                (30%&nbsp;от&nbsp;общей суммы)
+              </div>
+              <div class="leasing-result__number" data-advance>
+                552000 ₽
+              </div>
+            </div>
+            <div class="leasing-result-item">
+              <div class="leasing-result__desc">
+                Ежемесячный платёж, руб.
+              </div>
+              <div class="leasing-result__number" data-monthly>
+                153334 ₽
+              </div>
+            </div>
+          </div>
+          <button class="button leasing-btn" data-leasing-btn type="button">Отправить заявку на лизинг</button>
+        </div>
+
+      </div>
+      <!-- End Calc -->
+
+      <!-- Leasing-steps -->
+      <div class="leasing-steps">
+        <div class="leasing-steps-left">
+          <div class="title-3 leasing-steps__title-3">
+            <p>шагов</p>
+            <p>к удачной сделке</p>
+          </div>
+          <div class="leasing-steps__subtitle">
+            <p>Приобрести оборудование в лизинг очень легко и доступно.</p>
+            <p>Всего 5 простых шагов - и все готово!</p>
+          </div>
+        </div>
+        <div class="leasing-steps-right">
+          <div class="step-item">
+            <h5 class="title-5 step-item__title">
+              <div class="color-yellow step-item__num">1</div>
+              <div class="color-blue">Выбрать</div>
+              <div>оборудование</div>
+            </h5>
+          </div>
+          <div class="step-item">
+            <h5 class="title-5 step-item__title">
+              <div class="color-yellow step-item__num">2</div>
+              <div class="color-blue">Заполнить</div>
+              <div>заявку</div>
+            </h5>
+          </div>
+          <div class="step-item">
+            <h5 class="title-5 step-item__title">
+              <div class="color-yellow step-item__num">3</div>
+              <div class="color-blue">Подписать</div>
+              <div>договор</div>
+            </h5>
+          </div>
+          <div class="step-item">
+            <h5 class="title-5 step-item__title">
+              <div class="color-yellow step-item__num">4</div>
+              <div class="color-blue">Внести</div>
+              <div>Аванс</div>
+            </h5>
+          </div>
+          <div class="step-item">
+            <h5 class="title-5 step-item__title">
+              <div class="color-yellow step-item__num">5</div>
+              <div class="color-blue">Получить</div>
+              <div>оборудование</div>
+            </h5>
+          </div>
+        </div>
+      </div>
+      <!-- End Leasing-steps -->
+
+      <!-- Panel-->
+      <div class="panel">
+        <!-- ITEM Advantages -->
+        <div class="panel-item">
+          <img class="panel__icon panel__icon-1" src="../../images/leasing/advance.svg" alt="Иконка Advance">
+          <h5 class="title-5 panel__title-h5 leasing_title-h5">
+            <span class="color-blue">Аванс 30%</span>
+            <br class="service__break">
+            <span>на&nbsp;оборудование</span>
+          </h5>
+          <p class="panel__text">
+            Вы можете приобрести необходимое для бизнеса оборудование с минимальными
+            стартовыми вложениями без потерь в качестве.
+          </p>
+        </div>
+        <!-- End ITEM Advantages -->
+
+        <!-- ITEM Advantages -->
+        <div class="panel-item">
+          <svg class="panel__icon panel__icon-2" viewBox="0 0 77 77" width="60" height="60" id="image-piggy">
+            <path id="bpa" fill="#dadfe5"
+              d="M422.661 1722.516c.563.24 1.11.485 1.62.734 10.63 5.123 17.184 15.172 16.692 25.595a23.981 23.981 0 01-11.5 19.213v4.948a3.833 3.833 0 01-3.834 3.832h-8.946a3.833 3.833 0 01-3.833-3.832v-.081a48.15 48.15 0 01-4.45.054c-1.08-.036-2.148-.086-3.217-.136v.163a3.833 3.833 0 01-3.834 3.832h-8.945a3.833 3.833 0 01-3.833-3.832v-2.346a16.645 16.645 0 01-8.34-4.708c-.249-.29-.475-.575-.687-.873a13.453 13.453 0 00-4.446-3.87 19.71 19.71 0 00-2.348-1.014 16.289 16.289 0 01-3.62-1.748l-.18-.118c-1.505-.976-2.35-1.674-2.507-2.555l-2.078-10.45a3.97 3.97 0 013.359-4.726 10.304 10.304 0 005.727-2.112c.862-.87 1.706-1.81 2.522-2.72l.438-.485a15.692 15.692 0 01-1.897-7.154 2.565 2.565 0 012.075-2.607 22.187 22.187 0 013.054-.383 19.588 19.588 0 01.227-3.64 2.562 2.562 0 012.541-2.145c2.083.012 7.002.371 10.138 3.239a35.34 35.34 0 012.398-1.014c.077.177.985 1.768 1.242 2.286a32.51 32.51 0 00-4.779 2.172 40.894 40.894 0 00-2.778 1.74c.341.316.655.66.937 1.03a6.34 6.34 0 011.014 6.834 8.298 8.298 0 01-7.148 4.153 7.7 7.7 0 01-5.452-2.44l-.107.119c-.835.93-1.702 1.894-2.608 2.81-1.789 1.802-4.907 2.542-7.207 2.844-.384.052-.728.26-.95.577a1.414 1.414 0 00-.239 1.114l2.045 10.314c.437.398.915.751 1.424 1.053l.23.152a14.182 14.182 0 003.088 1.469 22 22 0 012.644 1.15 16.021 16.021 0 015.31 4.62c.18.252.361.479.556.705a13.23 13.23 0 006.402 3.715v-1.376a1.278 1.278 0 012.556 0v6.388c0 .705.572 1.277 1.277 1.277h8.945c.706 0 1.278-.572 1.278-1.277v-3.833a1.278 1.278 0 012.556 0v1.114c1.098.05 2.194.101 3.3.138 1.497.057 2.95.014 4.367-.07v-1.182a1.278 1.278 0 012.556 0v3.833c0 .705.572 1.277 1.277 1.277h8.945c.707 0 1.279-.572 1.279-1.277v-7.666c0-.705.572-1.277 1.277-1.277a1.26 1.26 0 011.212.95 21.287 21.287 0 009.01-16.29c.447-9.396-5.54-18.493-15.25-23.179a36.392 36.392 0 00-1.908-.848c.369-.636.639-1.044 1.403-2.18zm-4.738 5.439a22.79 22.79 0 015.927 3.145 1.278 1.278 0 11-1.534 2.044c-9.618-7.211-25.621-3.647-25.78-3.61a1.278 1.278 0 11-.576-2.49 35.845 35.845 0 012.507-.455c.099-.003 2.656-.323 3.58-.397a42.212 42.212 0 0112.562.792c1.056.226 2.276.65 3.314.97zm-35.715-2.783a12.26 12.26 0 014.173 1.058 44.67 44.67 0 013.673-2.354 14.627 14.627 0 00-7.64-1.969 16.152 16.152 0 00-.206 3.265zm-5.127 2.852c.308 6.33 3.514 9.213 6.364 9.213a5.78 5.78 0 004.857-2.735 3.831 3.831 0 00-.766-4.158 7.941 7.941 0 00-6.39-2.683c-.04.008-.097.008-.119.008-.021 0-.04-.012-.063-.012a19.2 19.2 0 00-3.869.367zm3.56 14.882a2.016 2.016 0 110 4.032 2.016 2.016 0 010-4.032z"
+              transform="translate(-364 -1700)" />
+            <path id="bpb" fill="#ff9000"
+              d="M414.61 1726.984c4.31-2.231 8.228-8.543 6.892-14.349a12.756 12.756 0 00-12.476-9.89 12.76 12.76 0 00-12.248 9.118c-1.612 5.416.679 11.033 5.27 14.329.092-.004-2.94.768-2.969.761-3.117-2.831-5.08-6.91-5.08-11.453 0-6.599 4.132-12.22 9.942-14.456 5.044-1.775 10.786-.835 15.027 2.771a15.326 15.326 0 013.693 18.701c-.371.668-1.175 1.942-1.403 2.18-.937 1.252-2.008 2.431-3.335 3.259-.083-.036-3.348-.956-3.314-.97zm-3.108-8.732h-3.61v1.204h3.61c.338 0 .623.119.855.357.232.238.348.523.348.855 0 .332-.116.614-.348.846a1.163 1.163 0 01-.855.348h-3.61v2.406c0 .338-.115.624-.347.855a1.151 1.151 0 01-.846.348 1.15 1.15 0 01-.846-.348 1.162 1.162 0 01-.348-.855v-2.406h-1.203a1.16 1.16 0 01-.855-.348 1.15 1.15 0 01-.348-.846c0-.332.116-.617.348-.855.231-.238.517-.357.855-.357h1.203v-1.204h-1.203a1.16 1.16 0 01-.855-.347 1.15 1.15 0 01-.348-.846c0-.332.116-.617.348-.856.231-.238.517-.357.855-.357h1.203v-8.422c0-.325.116-.607.348-.846.232-.238.51-.357.836-.357h4.813c1.09 0 2.099.27 3.027.808a5.926 5.926 0 012.19 2.19c.532.922.799 1.927.799 3.018 0 1.09-.267 2.096-.8 3.017a5.923 5.923 0 01-2.19 2.19 5.917 5.917 0 01-3.026.808zm0-9.624h-3.61v7.218h3.61c1.002 0 1.855-.354 2.557-1.062a3.5 3.5 0 001.052-2.557 3.47 3.47 0 00-1.052-2.547c-.702-.702-1.555-1.052-2.557-1.052z"
+              transform="translate(-364 -1700)" />
+          </svg>
+          <h5 class="title-5 panel__title-h5">
+            <span class="color-blue">Экономия</span>
+            <br class="service__break">
+            <span>на&nbsp;налогах</span>
+          </h5>
+          <p class="panel__text">
+            Все платежи по лизингу это услуги которые считаются в затраты. Оплачивая лизинг, вы&nbsp;снижаете налог на
+            прибыль и&nbsp;НДС.
+          </p>
+        </div>
+        <!-- End ITEM Advantages -->
+
+        <!-- ITEM Advantages -->
+        <div class="panel-item">
+          <img class="panel__icon panel__icon-3" src="../../images/leasing/calc.svg" alt="Иконка Advance">
+          <h5 class="title-5 panel__title-h5">
+            <span class="color-blue">Дешевые</span>
+            <br class="service__break">
+            <span>деньги</span>
+          </h5>
+          <p class="panel__text">
+            Ставки удорожания по лизингу значительно ниже, чем брать кредит на покупку оборудования.
+          </p>
+        </div>
+        <!-- End ITEM Advantages -->
+
+        <!-- ITEM Advantages -->
+        <div class="panel-item">
+          <img class="panel__icon panel__icon-4" src="../../images/leasing/quick.svg" alt="Иконка Advance">
+          <h5 class="title-5 panel__title-h5">
+            <span class="color-blue">Срочная</span>
+            <br class="service__break">
+            <span>покупка</span>
+          </h5>
+          <p class="panel__text">
+            Срок приобретения в лизинг всего 3 рабочих дня, включая день отгрузки товара.
+          </p>
+        </div>
+        <!-- End ITEM Advantages -->
+
+        <!-- ITEM Advantages -->
+        <div class="panel-lastitem">
+          <div class="panel-lastitem__wrap">
+            <img class="panel__icon panel__icon-5" src="../../images/leasing/worker.svg" alt="Иконка Advance">
+            <h5 class="title-5">
+              <span>Никаких</span>
+              <br class="service__break">
+              <span class="color-blue">забот</span>
+            </h5>
+          </div>
+
+          <div>
+            <p class="panel-lastitem__text">
+              Наши сотрудники помогут Вам в оформлении всех необходимых документов и будут сопровождать Вас на каждом
+              этапе сделки.
+            </p>
+            <p class="panel-lastitem__lasttext">Если есть вопросы - звоните нам прямо сейчас<br>
+              <a href="tel:88002222266">8 800 222 22 66</a>
+            </p>
+          </div>
+          <div class="panel-lastitem__btn">
+            <button class="button leasing-button" data-leasing-btn type="button">Оставить заявку на лизинг</button>
+          </div>
+        </div>
+        <!-- End ITEM Advantages -->
+
+      </div>
+      <!-- End Panel-->
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-top-left">
+          <a href="#header" class="logo footer__logo">
+            <img src="../../images/footer/image-logo.svg" alt="Иконка Логотип Server Gate">
+          </a>
+          <ul class="footer__icons">
+            <li class="footer__icon">
+              <a href="#">
+                <img src="../../images/footer/image-vk.svg" alt="Социальная иконка VKontakte">
+              </a>
+            </li>
+            <li class="footer__icon">
+              <a href="#">
+                <img src="../../images/footer/image-fb.svg" alt="Социальная иконка Facebook">
+              </a>
+            </li>
+            <li class="footer__icon">
+              <a href="#">
+                <img src="../../images/footer/image-insta.svg" alt="Социальная иконка Instagram">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-top-right">
+          <div class="nav-menu">
+            <ul class="nav-menu__items nav-menu-half">
+              <li class="nav-menu__item">
+                <a class="color-white" href="../../pages/servers/servers.html">Серверы</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="../../pages/parts/parts.html">Комплектующие</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="#">Сетевое оборудование</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="#">Услуги</a>
+              </li>
+            </ul>
+            <ul class="nav-menu__items nav-menu-half">
+              <li class="nav-menu__item">
+                <a class="color-white" href="#">Лизинг оборудования</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="#">Гарантия</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="#">Доставка</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="#">Оплата</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="../../pages/about/about.html">О нас</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="../../pages/contacts/contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-contacts">
+            <div class="footer-contacts__header">
+              Контакты
+            </div>
+            <ul>
+              <li class="footer-contacts__item">
+                <img src="../../images/footer/image-loc.svg" alt="Иконка Image-loc">
+                117420, г. Москва,<br>
+                ул. Профсоюзная, д. 57, оф. 700
+              </li>
+              <li class="footer-contacts__item">
+                <img src="../../images/footer/image-wapp.svg" alt="Иконка Image-wapp">
+                <a href="tel:88002004488">8 800 200 44-88</a>
+              </li>
+              <li class="footer-contacts__item">
+                <img src="../../images/footer/image-clock.svg" alt="Иконка Image-clock">
+                Режим работы<br>
+                ПН-ПТ: 9.00 - 19.00
+              </li>
+              <li class="footer-contacts__item">
+                <img src="../../images/footer/image-mail.svg" alt="Иконка Image-mail">
+                <a class="footer-contacts__link" href="mailto:sales@servergate.ru">
+                  sales@servergate.ru
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          © 2019, ООО “Сервер Гейт”
+        </div>
+        <ul class="footer-bottom-right">
+          <li>
+            <a href="#" class="footer-right__link">Политика конфиденциальности</a>
+          </li>
+          <li>
+            <a href="#" class="footer-right__link">Публичная оферта</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальное Окно -->
+  <div class="modal" data-modal>
+
+    <div class="modal__content">
+
+      <!-- Кнопка Cross -->
+      <div class="modal__cross" data-cross></div>
+      <!-- End Кнопка Cross -->
+
+      <h3 class="modal__title-3 title-3">Отправить заявку на лизинг</h3>
+      <p class="modal__subtitle">
+        После получения заявки наш менеджер свяжется с&nbsp;Вами для уточнения деталей сделки
+      </p>
+
+      <!-- Form -->
+      <form action="#!" class="form" data-leasing-form>
+        <!-- Создаем скрытое поле, чтобы указать откуда  придет письмо - с какого сайта, на какой адрес оно должно прийти, -->
+        <input type="hidden" name="project_name" value="server-gate.ru">
+        <input type="hidden" name="admin_email" value="ludm.nvkz@gmail.com">
+        <input type="hidden" name="email_from" value="info@server-gate.ru">
+        <!--  доменное имя,т.е. имя сайта, с которого эта почта будет приходить -->
+
+        <div class="form__row">
+          <input class="form__input" type="text" placeholder="Ваше имя" name="name">
+        </div>
+        <div class="form__row">
+          <input class="form__input" type="text" placeholder="Ваш телефон" name="phone">
+        </div>
+        <div class="form__row">
+          <input class="form__input" type="text" placeholder="Ваш E-mail" name="email">
+        </div>
+
+        <div class="form__btn-wrap">
+          <input class="button form__button" type="submit" value="Отправить">
+        </div>
+
+        <!-- Checkbox -->
+        <label class="checkbox">
+          <input class="checkbox__default" id="check" type="checkbox" name="agreement" value="true">
+          <span class="checkbox__custom"></span>
+          <span class="checkbox__custom-text">
+            Даю согласие на
+            <a class="checkbox__custom-link" href="#!">обработку</a>
+            персональных данных
+          </span>
+        </label>
+
+      </form>
+      <!-- End Form -->
+
+      <!-- Ответ -->
+      <div data-form-answer>
+        <!--  Текст ответа в php-файле  -->
+      </div>
+      <!-- End Ответ -->
+
+    </div>
+  </div>
+  <!-- End Модальное Окно -->
+
+  <script src="../../libs/jquery/jquery-3.4.1.min.js"></script>
+  <script src="../../js/gamburger.js"></script>
+  <!-- Библиотека Отправка Формы -->
+  <script src="../../libs/jquery.validate/jquery.validate.js"></script>
+  <!-- Библиотека Ползунок диапазона -->
+  <script src="../../js/ion.rangeSlider.min.js"></script>
+  <!-- Библиотека CDN - Input-Mask Разделитель разрядов -->
+  <script src="https://unpkg.com/imask"></script>
+  <!-- Range-slider Custom  --  Ползунок диапазона   -->
+  <script src="../../js/range-slider.js"></script>
+  <!-- Модальное окно Custom -->
+  <script src="../../js/modal.js"></script>
+
+</body>
+
+</html>
