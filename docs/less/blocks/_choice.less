@@ -1,5 +1,6 @@
-.main {
+.choice {
   position: relative;
+  background: var(--grey-background);
 
   &::before {
     @media (min-width: 1024px) {
@@ -7,29 +8,23 @@
       content: '';
       width: 100%;
       height: 740px;
-      background-image: url(../images/choice/serv-bg.jpg);
-      background-image: -webkit-image-set(
+      background: url(../images/choice/serv-bg.jpg);
+      background: -webkit-image-set(
         url(../images/choice/serv-bg.jpg) 1x,
         url(../images/choice/serv-bg@2x.jpg) 2x
       );
-      background-image: image-set(
+      background: image-set(
         '../images/choice/serv-bg.jpg',
         '../images/choice/serv-bg@2x.jpg' 2x
       );
-      background-color: var(--grey-background);
       background-size: cover;
       background-position: -335px;
-      z-index: -1;
     }
 
     @media (min-width: 1250px) {
       background-position: center;
     }
   }
-}
-
-.choice {
-  margin-bottom: 29px;
 }
 
 .choice-head {
@@ -64,22 +59,21 @@
 }
 
 .choice-list__item {
-  position: relative;
   display: flex;
 
   &:last-child {
-    padding-left: 52px;
+    padding-left: 30px;
   }
 
   @media (min-width: 390px) {
     &:last-child {
-      padding-left: 43px;
+      padding-left: 22px;
     }
   }
 
   @media (min-width: 768px) {
     &:last-child {
-      padding-left: 73px;
+      padding-left: 50px;
     }
   }
 }
@@ -91,6 +85,7 @@
   font-weight: 600;
   font-family: 'RF Rufo', sans-serif;
   text-transform: uppercase;
+  line-height: 1.6;
 
   &::after {
     position: absolute;
@@ -98,12 +93,12 @@
     width: 100%;
     height: 3px;
     left: 0;
-    bottom: -7px;
+    bottom: -1px;
     background-color: var(--yellow);
 
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.2s ease 0.2s; //  ????
+    transition: opacity 0.2s ease 0.2s;
   }
 
   &:hover {
@@ -112,6 +107,11 @@
 
   @media (min-width: 390px) {
     font-size: 24px;
+    line-height: 1.45;
+  }
+
+  @media (min-width: 1250px) {
+    line-height: 1.6;
   }
 }
 
@@ -126,19 +126,20 @@
 }
 
 .choice-list__icon {
-  position: absolute;
-  top: -1px;
-  left: 30px;
+  display: inline-block;
+  vertical-align: top;
+
+  margin-top: 2px;
+  margin-right: 3px;
   width: 17px;
   height: 21px;
 
   @media (min-width: 390px) {
-    top: 1px;
-    left: 20px;
+    vertical-align: text-top;
   }
 
   @media (min-width: 768px) {
-    left: 50px;
+    vertical-align: baseline;
   }
 }
 
