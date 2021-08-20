@@ -44,7 +44,7 @@
     })
 
     //     Запрещаем скролл у html, когда открыто мобильное меню
-    mobileMenu.addEventListener('click', function () {
+    mobileMenu.addEventListener(' ', function () {
 
         this.classList.remove('active')
         // overlayElement.classList.remove('active')          

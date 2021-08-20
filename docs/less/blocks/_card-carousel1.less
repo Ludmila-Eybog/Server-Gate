@@ -33,7 +33,7 @@
   display: inline-block;
   position: absolute;
   top: 15px;
-  right: 9px;
+  right: 10px;
 
   width: 191px;
   height: 40px;
@@ -56,6 +56,8 @@
 
   @media (min-width: 1024px) {
     padding: 0;
+    top: 11px;
+
     width: 30px;
     height: 30px;
     border: none;
@@ -66,8 +68,6 @@
     }
 
     &:hover {
-      top: 11px;
-      right: 8px;
       fill: var(--white);
       background-color: var(--yellow);
 
@@ -75,10 +75,6 @@
         display: block;
       }
     }
-  }
-
-  @media (min-width: 1024px) {
-    top: 11px;
   }
 }
 
@@ -93,14 +89,14 @@
   }
 }
 
-//  ---   Выпадашка у иконки CARD-SETTINGS - слайд карусели1
+//  ---   Верхняя Выпадашка у иконки CARD-SETTINGS - слайд карусели1
 .tippy-box {
   display: none;
 
   @media (min-width: 1024px) {
     display: block;
     padding: 5px;
-    width: 180px;
+    width: 176px;
     border-radius: 4px;
     background-color: var(--white);
     box-shadow: 0 11px 43px rgba(10, 54, 88, 0.3);
@@ -109,8 +105,8 @@
 
 .tippy-content {
   font-size: 13px;
+  font-weight: 400;
   font-family: 'Arimo', Arial, sans-serif;
-  font-weight: 500;
   color: #828282;
   letter-spacing: 0.5px;
   line-height: 1.4;
@@ -122,7 +118,23 @@
   color: var(--white);
 }
 
-//   ---   END  Выпадашка у иконки CARD-SETTINGS - слайд карусели1
+//   ---   END  Верхняя Выпадашка у иконки CARD-SETTINGS - слайд карусели1
+
+//   ---   Нижняя Выпадашка у кнопки BUY-КУПИТЬ - слайд карусели1
+.tippy-box[data-theme~='buy-drop'] {
+  display: block;
+  padding-top: 6px;
+  width: 145px;
+  background-color: var(--white);
+  text-align: center;
+  box-shadow: 0px 11px 43px rgba(10, 54, 88, 0.3);
+}
+
+.tippy-arrow[data-theme~='buy-drop'] {
+  width: 10px;
+  height: 10px;
+}
+//   ---   End Нижняя Выпадашка у кнопки BUY-КУПИТЬ - слайд карусели1
 
 .card__images {
   display: flex;
@@ -226,13 +238,13 @@
   }
 
   @media (min-width: 1024px) {
-    padding-top: 18px;
+    padding-top: 15px;
     padding-right: 14px;
   }
 
   @media (min-width: 1250px) {
-    padding-top: 21px;
-    padding-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 25px;
   }
 }
 
@@ -387,10 +399,10 @@
   &:hover {
     background-color: var(--yellow-hover);
 
-    .drop-buy {
-      opacity: 1;
-      pointer-events: visible;
-    }
+    // .drop-buy {
+    //   opacity: 1;
+    //   pointer-events: visible;
+    // }
   }
 }
 
@@ -417,43 +429,43 @@
 
 //   ---   Dropdown-Buy
 
-.drop-buy {
-  padding: 14px 14px 10px;
-  position: absolute;
-  top: 60px;
-  left: -45px;
-  right: 5px;
-  border-radius: 4px;
-  background-color: var(--white);
-  box-shadow: rgba(10, 54, 88, 0.23) 0px 0px 49px;
+// .drop-buy {
+  // padding: 14px 14px 10px;
+  // position: absolute;
+  // top: 60px;
+  // left: -45px;
+  // right: 5px;
+  // border-radius: 4px;
+  // background-color: var(--white);
+  // box-shadow: rgba(10, 54, 88, 0.23) 0px 0px 49px;
 
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease 0.2s;
+  // opacity: 0;
+  // pointer-events: none;
+  // transition: opacity 0.2s ease 0.2s;
 
-  &::before {
-    position: absolute;
-    content: '';
-    width: 10px;
-    height: 10px;
-    top: -14px;
-    left: 85px;
-    background-color: var(--white);
-    transform: translateY(100%) rotate(45deg);
-  }
+  // &::before {
+  //   position: absolute;
+  //   content: '';
+  //   width: 10px;
+  //   height: 10px;
+  //   top: -14px;
+  //   left: 85px;
+  //   background-color: var(--white);
+  //   transform: translateY(100%) rotate(45deg);
+  // }
 
-  @media (min-width: 390px) {
-    left: -19px;
-    right: -15px;
-  }
-}
+  // @media (min-width: 390px) {
+  //   left: -19px;
+  //   right: -15px;
+  // }
+// }
 
-.drop-buy__text {
-  font-size: 13px;
-  font-weight: 400;
-  font-family: 'Arimo', Arial, sans-serif;
-  color: #828282;
-  text-transform: none;
-  letter-spacing: 0.65px;
-  line-height: 1.45;
-}
+// .drop-buy__text {
+//   font-size: 13px;
+//   font-weight: 400;
+//   font-family: 'Arimo', Arial, sans-serif;
+//   color: #828282;
+//   text-transform: none;
+//   letter-spacing: 0.65px;
+//   line-height: 1.45;
+// }

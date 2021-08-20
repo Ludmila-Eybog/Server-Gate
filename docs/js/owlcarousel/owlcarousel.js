@@ -1,6 +1,6 @@
 // убеждаемся, что вся стр-ца загружена, все картинки загружены, плагин с каруселью загружен
 $(document).ready(function () {
-    // через селектор jquery находит элемент по id #carousel1 (или по классу .owl-carousel) и к нему применяем метод Карусель.owlCarousel
+    // через селектор Jquery находит элемент по id #carousel1 (или по классу .owl-carousel) и к нему применяем метод Карусель.owlCarousel
     $("#carousel1").owlCarousel({
         items: 7,
         nav: true,
@@ -22,7 +22,7 @@ $(document).ready(function () {
             },
             390: {
                 items: 1,
-                stagePadding: 35
+                stagePadding: 35 //   Параметр заполнения сцены добавляет стиль заполнения слева и справа (в пикселях) на оболочку сцены. - Видим одну карточку CARD + кусочек слева и кусочек справа.
             },
             500: {
                 items: 1,
@@ -45,7 +45,7 @@ $(document).ready(function () {
         }
     });
 
-    // через селектор jquery находит элемент по id #carousel2 (или по классу .owl-carousel) и к нему применяется метод Карусель .owlCarousel
+    // через селектор Jquery находит элемент по id #carousel2 (или по классу .owl-carousel) и к нему применяется метод Карусель .owlCarousel
     $("#carousel2").owlCarousel({
         items: 8,
         nav: true,
@@ -63,7 +63,7 @@ $(document).ready(function () {
         }
     });
 
-    // через селектор jquery находит элемент по id #carousel3 (или по классу .owl-carousel) и к нему применяется метод Карусель .owlCarousel
+    // через селектор Jquery находит элемент по id #carousel3 (или по классу .owl-carousel) и к нему применяется метод Карусель .owlCarousel
     $("#carousel3").owlCarousel({
         items: 3,
         nav: true,
@@ -99,7 +99,6 @@ $(document).ready(function () {
 
         var cloned = (owlItems - items) / 2;
 
-        // var item = event.item.index + 1 ; // Position of the current item       --- мой вариант ---
         var item = event.item.index - cloned + 1; // Position of the current item       --- мой вариант ---
 
 
@@ -119,16 +118,27 @@ $(document).ready(function () {
     }
     // -------------------  End COUNTER of Carousel
 
-    // ВЫПАДАЮЩЕЕ ОКНО в Carousel1
+    // Верхнее ВЫПАДАЮЩЕЕ ОКНО в Carousel1
     // With the above scripts loaded, you can call `tippy()` with a CSS
     // selector and a `content` prop:
     tippy('[data-card-settings]', {
         placement: 'bottom',
         content: 'Сконфигурируйте свой сервер на основе данной модели',
         duration: 100,
-        delay: [200, 200],
+        delay: [200, 200]
     });
-    // -------------------  End ВЫПАДАЮЩЕЕ ОКНО в Carousel1
+    // -------------------  End Верхнее ВЫПАДАЮЩЕЕ ОКНО в Carousel1
+
+    // Нижнее ВЫПАДАЮЩЕЕ ОКНО в Carousel1
+    tippy('[data-buy-drop]', {
+        theme: 'buy-drop',
+        placement: 'bottom',
+        content: 'Заказать товар, которого нет в наличии',
+        duration: 100,
+        delay: [200, 200]
+    });
+    // -------------------  End Нижнее ВЫПАДАЮЩЕЕ ОКНО в Carousel1
+
 
     // ОТКЛЮЧЕНИЕ КАРУСЕЛИ
 

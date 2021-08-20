@@ -26,51 +26,7 @@
   }
 }
 
-.owl-prev {
-  position: absolute;
-  content: '';
-  width: 25px;
-  height: 25px;
-  transition: all 0.2s ease;
-
-  &::before {
-    position: absolute;
-    content: '';
-    width: 23px;
-    height: 3px;
-    top: 11px;
-    left: 0px;
-    background-color: var(--blue);
-    transition: all 0.2s ease;
-  }
-
-  &::after {
-    position: absolute;
-    content: '';
-    width: 18px;
-    height: 18px;
-    top: 4px;
-    left: 2px;
-    border-left: 3px solid var(--blue);
-    border-bottom: 3px solid var(--blue);
-    transform: rotate(45deg);
-    transition: all 0.2s ease;
-  }
-
-  &:hover::before {
-    background-color: var(--yellow);
-  }
-
-  &:hover::after {
-    border-left: 3px solid var(--yellow);
-    border-bottom: 3px solid var(--yellow);
-  }
-
-  span {
-    display: none;
-  }
-}
-
+.owl-prev,
 .owl-next {
   position: absolute;
   content: '';
@@ -84,7 +40,6 @@
     width: 23px;
     height: 3px;
     top: 11px;
-    right: 2px;
     background-color: var(--blue);
     transition: all 0.2s ease;
   }
@@ -95,9 +50,6 @@
     width: 17px;
     height: 17px;
     top: 4px;
-    right: 3px;
-    border-top: 3px solid var(--blue);
-    border-right: 3px solid var(--blue);
     transform: rotate(45deg);
     transition: all 0.2s ease;
   }
@@ -109,6 +61,35 @@
   &:hover::before {
     background-color: var(--yellow);
   }
+}
+
+.owl-prev {
+  &::before {
+    left: 2px;
+  }
+
+  &::after {
+    left: 2px;
+    border-left: 3px solid var(--blue);
+    border-bottom: 3px solid var(--blue);
+  }
+
+  &:hover::after {
+    border-left: 3px solid var(--yellow);
+    border-bottom: 3px solid var(--yellow);
+  }
+}
+
+.owl-next {
+  &::before {
+    right: 2px;
+  }
+
+  &::after {
+    right: 3px;
+    border-top: 3px solid var(--blue);
+    border-right: 3px solid var(--blue);
+  }
 
   &:hover::after {
     border-top: 3px solid var(--yellow);
@@ -118,12 +99,7 @@
 
 .choice-carousel .owl-prev {
   left: calc(~'50% - 70px');
-  bottom: 20px;
-  // z-index: -1;
-
-  @media (min-width: 390px) {
-    bottom: 18px;
-  }
+  bottom: 18px;
 
   @media (min-width: 1024px) {
     top: 168px;
@@ -137,12 +113,7 @@
 
 .choice-carousel .owl-next {
   right: calc(~'50% - 70px');
-  bottom: 20px;
-  // z-index: -1;
-
-  @media (min-width: 390px) {
-    bottom: 18px;
-  }
+  bottom: 18px;
 
   @media (min-width: 1024px) {
     top: 168px;
@@ -181,32 +152,32 @@
 // -----  Carousel3 Testimonial
 
 .testimonial-carousel .owl-prev {
-  top: 200px;
   left: 12px;
+  bottom: 140px;
 
   @media (min-width: 1024px) {
-    top: 252px;
     left: -258px;
+    bottom: 25px; 
   }
 
   @media (min-width: 1250px) {
-    top: 233px;
     left: -312px;
+    bottom: 45px; 
   }
 }
 
 .testimonial-carousel .owl-next {
-  top: 200px;
   right: 12px;
+  bottom: 140px;
 
   @media (min-width: 1024px) {
-    top: 252px;
     left: -160px;
     right: auto;
+    bottom: 25px;  
   }
 
   @media (min-width: 1250px) {
-    top: 233px;
     left: -213px;
+    bottom: 45px; 
   }
 }
