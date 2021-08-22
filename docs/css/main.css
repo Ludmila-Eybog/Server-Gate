@@ -632,7 +632,7 @@ button {
     display: block;
     margin-bottom: 2px;
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
     font-family: 'Arimo', Arial, sans-serif;
     color: #333333;
     -webkit-transition: color 0.2s ease;
@@ -983,7 +983,7 @@ button {
       -ms-flex-direction: column;
           flex-direction: column;
   font-size: 15px;
-  font-weight: 500;
+  font-weight: 400;
   font-family: 'Arimo', Arial, sans-serif;
   color: #989ba0;
   -webkit-transition: color 0.2s ease 0.2s;
@@ -2091,7 +2091,7 @@ button {
 }
 .button__text {
   margin-top: -4px;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--white);
   letter-spacing: 0.4px;
 }
