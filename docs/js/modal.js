@@ -39,16 +39,16 @@ const closeModalCross = document.querySelector('[data-cross]')
 closeModalCross.addEventListener('click', closeModal)
 
 function closeModal() {
-  overlayElement.classList.remove('active') 
+  overlayElement.classList.remove('active')
   bodyElement.classList.remove('noscroll')
   // htmlElement.classList.remove('noscroll')
-  
+
   // плавность скрытия окна
   setTimeout(() => {
     modal.classList.remove('active')
     overlayElement.classList.remove('active')
   }, 500)
-  
+
   modal.classList.remove('animation')
   overlayElement.classList.remove('animation')
 
@@ -77,11 +77,11 @@ $('[data-leasing-form]').validate({
     name: 'required', // равнозначно с предыдущей записью
     phone: {
       required: true,
-      digits: true, // только цифры
+      digits: true // только цифры
     },
     email: {
       required: true, // отвечает за заполненность поля, д.б. обязательно заполнено
-      email: true, // корректность заполнения поля, присутствует ли символ @
+      email: true // корректность заполнения поля, присутствует ли символ @
     },
     agreement: {
       required: true
@@ -91,46 +91,45 @@ $('[data-leasing-form]').validate({
   messages: {
     // этот метод будет показывать сообщение, если какое-либо поле заполнено неверно
     name: {
-      required: 'Введите Ваше имя',
+      required: 'Введите Ваше имя'
     },
     phone: {
       required: 'Введите Ваш номер телефона',
-      digits: 'Введите цифры',
+      digits: 'Введите цифры'
     },
     email: {
       required: 'Введите Ваш e-mail',
-      email: 'Отсутствует символ @', // или "Адрес д.б. вида name@domain.com"
+      email: 'Отсутствует символ @' // или "Адрес д.б. вида name@domain.com"
     },
     agreement: {
-      required: 'Поле обязательно к заполнению.',
+      required: 'Поле обязательно к заполнению.'
     }
   },
 
   // Если все прошло успешно, скрипт доходит до функции отправки submitHandler, где функция ajaxFormSubmit в качестве аргумента будет принимать мою форму тег form
   submitHandler: function (form) {
     //  после успешной валидации добавили функцию отправки
-    ajaxFormSubmit()
-  },
-})
+    ajaxFormSubmit();
+  }
+});
 
 //  Функция AJAX запроса на сервер
 // ( AJAX-запрос хорош тем, что при отправке формы на сервер страница не перезагрузится, т.е. мы останемся на той же стр-це)
 function ajaxFormSubmit() {
-  let string = $('[data-leasing-form]').serialize() //Сохраняем методом .serialize() в виде строки-string данные, введенные в форму.
+  let string = $('[data-leasing-form]').serialize(); //Сохраняем методом .serialize() в виде строки-string данные, введенные в форму.
 
   // Формируем ajax запрос
   $.ajax({
     type: 'POST', //Тип запроса - POST
-    url: 'php/mail.php', // Куда отправляем запрос
+    url: '/php/mail.php', // Куда отправляем запрос
     data: string, // Какие данные отправляем, в данном случае отправляем переменную string
 
     // Функция, если все прошло успешно
     success: function (html) {
-      $('[data-leasing-form]').slideUp(800) // плавно исчезает методом .slideUp(800) моя форма
-      $('[data-form-answer]').html(html) // в див прописывается ответ
-      closeModal()
-    },
-  })
+      $('[data-leasing-form]').slideUp(800); // плавно исчезает методом .slideUp(800) моя форма
+      $('[data-form-answer]').html(html); // в див прописывается ответ
+    }
+  });
   // Чтобы по Submit больше ничего не выполнялось - делаем возврат false, чтобы прервать цепочку срабатывания остальных функций
-  return false
+  return false;
 }

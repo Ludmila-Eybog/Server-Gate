@@ -10,9 +10,4 @@
     font-weight: 700;
     font-style: normal;
 }
-@font-face {
-    font-family: 'Arimo';
-    src: local('Arimo Medium'), local('Arimo-Medium'), url('arimomedium.woff2') format('woff2'), url('arimomedium.woff') format('woff');
-    font-weight: 500;
-    font-style: normal;
-}
+

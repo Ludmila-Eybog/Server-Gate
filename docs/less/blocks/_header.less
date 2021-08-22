@@ -70,8 +70,19 @@
     font-size: 13px;
     font-weight: 400;
     font-family: 'Arimo', Arial, sans-serif;
-    color: var(--grey-background);
     letter-spacing: 0.9px;
+
+    &::placeholder {
+      color: #959ca8;
+      opacity: 1;
+    }
+
+    // При клике на поле ввода появляется курсор и placeholder убирает текст "Поиск по номенклатуре"
+    &:focus {
+      &::placeholder {
+        opacity: 0;
+      }
+    }
   }
 
   @media (min-width: 1250px) {

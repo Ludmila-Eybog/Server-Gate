@@ -121,8 +121,8 @@
         </div>
         <div class="header-order">
           <form action="#!" class="header-search" type="GET">
-            <input class="header-search__input" type="text" name="theme" placeholder="Поиск по номенклатуре">
-            <button class="header-search__icon">
+            <input class="header-search__input" type="text" placeholder="Поиск по номенклатуре" name="theme">
+            <button class="header-search__icon" type="submit">
               <svg width="18" height="18" viewBox="0 0 18 18" id="image-search" xmlns="http://www.w3.org/2000/svg">
                 <path
                   d="M1049.516 68c1.843.031 3.375.664 4.593 1.898 1.219 1.235 1.844 2.774 1.875 4.617a6.58 6.58 0 01-.398 2.297 5.999 5.999 0 01-1.149 1.922l.282.281h.797l4.968 4.97-1.5 1.5-4.968-4.97v-.796l-.282-.282c-.562.5-1.203.884-1.922 1.149a6.571 6.571 0 01-2.296.398c-1.845-.03-3.384-.656-4.618-1.875-1.234-1.219-1.867-2.75-1.898-4.594.03-1.843.664-3.382 1.898-4.617 1.234-1.234 2.773-1.867 4.618-1.898zm0 2.015c-1.282.032-2.344.47-3.188 1.313-.844.844-1.266 1.907-1.266 3.187 0 1.282.422 2.344 1.266 3.188.844.844 1.906 1.266 3.188 1.266 1.28 0 2.343-.422 3.187-1.266.844-.844 1.266-1.906 1.266-3.188 0-1.28-.422-2.343-1.266-3.187-.844-.844-1.906-1.281-3.187-1.313z"
@@ -658,71 +658,72 @@
   <!-- Модальное Окно -->
   <div class="modal" data-modal>
 
-    <div class="modal__content">
+    <!-- Кнопка Cross -->
+    <button class="modal__cross" data-cross></button>
+    <!-- End Кнопка Cross -->
 
-      <!-- Кнопка Cross -->
-      <div class="modal__cross" data-cross></div>
-      <!-- End Кнопка Cross -->
+    <!-- Form -->
+    <form action="#" class="form" data-leasing-form>
 
-      <h3 class="modal__title-3 title-3">Отправить заявку на лизинг</h3>
-      <p class="modal__subtitle">
+      <h3 class="form__title-3 title-3">Отправить заявку на лизинг</h3>
+      <p class="form__subtitle">
         После получения заявки наш менеджер свяжется с&nbsp;Вами для уточнения деталей сделки
       </p>
 
-      <!-- Form -->
-      <form action="#!" class="form" data-leasing-form>
-        <!-- Создаем скрытое поле, чтобы указать откуда  придет письмо - с какого сайта, на какой адрес оно должно прийти, -->
-        <input type="hidden" name="project_name" value="server-gate.ru">
-        <input type="hidden" name="admin_email" value="ludm.nvkz@gmail.com">
-        <input type="hidden" name="email_from" value="info@server-gate.ru">
-        <!--  доменное имя,т.е. имя сайта, с которого эта почта будет приходить -->
+      <!-- Создаем скрытое поле, чтобы указать откуда  придет письмо - с какого сайта, на какой адрес оно должно прийти, -->
+      <input type="hidden" name="project_name" value="server-gate.ru">
+      <input type="hidden" name="admin_email" value="ludm.nvkz@gmail.com">
+      <!-- доменное имя хостинга, с которого эта почта будет приходить  -->
+      <input type="hidden" name="email_from" value="info@server-gate.ru">
+      <!--  доменное имя,т.е. имя сайта, с которого эта почта будет приходить -->
 
-        <div class="form__row">
-          <input class="form__input" type="text" placeholder="Ваше имя" name="name">
-        </div>
-        <div class="form__row">
-          <input class="form__input" type="text" placeholder="Ваш телефон" name="phone">
-        </div>
-        <div class="form__row">
-          <input class="form__input" type="text" placeholder="Ваш E-mail" name="email">
-        </div>
-
-        <div class="form__btn-wrap">
-          <input class="button form__button" type="submit" value="Отправить">
-        </div>
-
-        <!-- Checkbox -->
-        <label class="checkbox">
-          <input class="checkbox__default" id="check" type="checkbox" name="agreement" value="true">
-          <span class="checkbox__custom"></span>
-          <span class="checkbox__custom-text">
-            Даю согласие на
-            <a class="checkbox__custom-link" href="#!">обработку</a>
-            персональных данных
-          </span>
-        </label>
-
-      </form>
-      <!-- End Form -->
-
-      <!-- Ответ -->
-      <div data-form-answer>
-        <!--  Текст ответа в php-файле  -->
+      <div class="form__row">
+        <input class="form__input" type="text" placeholder="Ваше имя" name="name">
       </div>
-      <!-- End Ответ -->
+      <div class="form__row">
+        <input class="form__input" type="text" placeholder="Ваш телефон" name="phone">
+      </div>
+      <div class="form__row">
+        <input class="form__input" type="text" placeholder="Ваш E-mail" name="email">
+      </div>
 
+      <div class="form__btn-wrap">
+        <button class="button form__button" type="submit">Отправить</button>
+      </div>
+
+      <!-- Checkbox -->
+      <label class="checkbox">
+        <input class="checkbox__default" id="check" type="checkbox" name="agreement" value="true">
+        <span class="checkbox__custom"></span>
+        <span class="checkbox__custom-text">
+          Даю согласие на
+          <a class="checkbox__custom-link" href="#!">обработку</a>
+          персональных данных
+        </span>
+      </label>
+
+    </form>
+    <!-- End Form -->
+
+    <!-- Ответ -->
+    <div data-form-answer>
+      <!--  Текст ответа в php-файле  -->
     </div>
+    <!-- End Ответ -->
+
   </div>
   <!-- End Модальное Окно -->
 
   <script src="../../libs/jquery/jquery-3.4.1.min.js"></script>
-  <script src="../../js/gamburger.js"></script>
   <!-- Библиотека Отправка Формы -->
   <script src="../../libs/jquery.validate/jquery.validate.js"></script>
   <!-- Библиотека Ползунок диапазона -->
   <script src="../../js/ion.rangeSlider.min.js"></script>
   <!-- Библиотека CDN - Input-Mask Разделитель разрядов -->
   <script src="https://unpkg.com/imask"></script>
+
+  <!-- Gamburger Custom -->
+  <script src="../../js/gamburger.js"></script>
   <!-- Range-slider Custom  --  Ползунок диапазона   -->
   <script src="../../js/range-slider.js"></script>
   <!-- Модальное окно Custom -->
