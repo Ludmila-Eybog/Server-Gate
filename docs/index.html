@@ -119,23 +119,28 @@
 					</a>
 				</div>
 				<div class="header-order">
-					<form action="#!" class="header-search" type="GET">
-						<input class="header-search__input" type="text" placeholder="Поиск по номенклатуре" name="theme">
-						<button class="header-search__icon" type="submit">
+					<form action="#!" class="header-search" type="GET" data-search-active>
+						<input class="header-search__input hidden" data-search-input type="text" placeholder="Поиск по номенклатуре" name="theme" value="">
+						<!-- Кнопка Search -->
+						<button class="header-search__icon" data-search-icon type="submit">
 							<svg width="18" height="18" viewBox="0 0 18 18" id="image-search" xmlns="http://www.w3.org/2000/svg">
 								<path
 									d="M1049.516 68c1.843.031 3.375.664 4.593 1.898 1.219 1.235 1.844 2.774 1.875 4.617a6.58 6.58 0 01-.398 2.297 5.999 5.999 0 01-1.149 1.922l.282.281h.797l4.968 4.97-1.5 1.5-4.968-4.97v-.796l-.282-.282c-.562.5-1.203.884-1.922 1.149a6.571 6.571 0 01-2.296.398c-1.845-.03-3.384-.656-4.618-1.875-1.234-1.219-1.867-2.75-1.898-4.594.03-1.843.664-3.382 1.898-4.617 1.234-1.234 2.773-1.867 4.618-1.898zm0 2.015c-1.282.032-2.344.47-3.188 1.313-.844.844-1.266 1.907-1.266 3.187 0 1.282.422 2.344 1.266 3.188.844.844 1.906 1.266 3.188 1.266 1.28 0 2.343-.422 3.187-1.266.844-.844 1.266-1.906 1.266-3.188 0-1.28-.422-2.343-1.266-3.187-.844-.844-1.906-1.281-3.187-1.313z"
 									transform="translate(-1043 -68)" />
 							</svg>
 						</button>
+						<!-- End Кнопка Search -->
+						<!-- Кнопка Cross -->
+						<button class="" data-search-cross></button>
+						<!-- End Кнопка Cross -->
 					</form>
-					<a href="#!" class="header-config">
+					<a href="./pages/conf/conf.html" class="header-config">
 						<div class="header-config__title">Конфигуратор
 						</div>
 						<div class="header-config__text">Собери свой сервер
 						</div>
 					</a>
-					<a href="#!" class="header-personal header-item">
+					<a href="./pages/orders/orders.html" class="header-personal header-item">
 						<div class="header-personal__icon">
 							<img src="./images/header/personal-icon.svg" alt="Иконка Пользователь">
 						</div>
@@ -219,7 +224,7 @@
 								<div class="cart-total__price">328 300 ₽
 								</div>
 							</li>
-							<button class="button cart__btn">оформить заказ</button>
+							<button class="button btn__cart">оформить заказ</button>
 						</ul>
 						<!-- End Cart Dropdown -->
 
@@ -234,10 +239,10 @@
 						<a class="header-equip__link" href="./pages/servers/servers.html">Серверы</a>
 						<ul class="header-equip__submenu">
 							<li class="header-equip__submenu-item">
-								<a href="#">Серверы в сборе</a>
+								<a href="./pages/parts/parts.html">Серверы в сборе</a>
 							</li>
 							<li class="header-equip__submenu-item">
-								<a href="#">Дисковые полки</a>
+								<a href="./pages/parts/parts.html">Дисковые полки</a>
 							</li>
 						</ul>
 					</li>
@@ -245,31 +250,31 @@
 						<a class="header-equip__link" href="./pages/parts/parts.html">Комплектующие</a>
 						<ul class="header-equip__submenu">
 							<li class="header-equip__submenu-item">
-								<a href="#">Процессоры</a>
+								<a href="./pages/parts/parts.html">Процессоры</a>
 							</li>
 							<li class="header-equip__submenu-item">
-								<a href="#">Оперативная память</a>
+								<a href="./pages/parts/parts.html">Оперативная память</a>
 							</li>
 							<li class="header-equip__submenu-item">
-								<a href="#">Жесткие диски и <span>SSD</span></a>
+								<a href="./pages/parts/parts.html">Жесткие диски и <span>SSD</span></a>
 							</li>
 							<li class="header-equip__submenu-item">
-								<a href="#"><span>RAID</span>-контроллеры и кэш-память</a>
+								<a href="./pages/parts/parts.html"><span>RAID</span>-контроллеры и кэш-память</a>
 							</li>
 							<li class="header-equip__submenu-item">
-								<a href="#">Блоки питания (<span>PSU</span>)</a>
+								<a href="./pages/parts/parts.html">Блоки питания (<span>PSU</span>)</a>
 							</li>
 							<li class="header-equip__submenu-item">
-								<a href="#">Рельсы в стойку</a>
+								<a href="./pages/parts/parts.html">Рельсы в стойку</a>
 							</li>
 							<li class="header-equip__submenu-item">
-								<a href="#">Сетевые контроллеры</a>
+								<a href="./pages/parts/parts.html">Сетевые контроллеры</a>
 							</li>
 							<li class="header-equip__submenu-item">
-								<a href="#">Радиаторы</a>
+								<a href="./pages/parts/parts.html">Радиаторы</a>
 							</li>
 							<li class="header-equip__submenu-item">
-								<a href="#">Запчасти к серверам</a>
+								<a href="./pages/parts/parts.html">Запчасти к серверам</a>
 							</li>
 						</ul>
 					</li>
@@ -425,15 +430,15 @@
 									</li>
 								</ul>
 							</a>
-							<div class="button card__footer">
-								<div class="card__button button__price ">
+							<div class="card__footer">
+								<div class="card__half card__price ">
 									<span>от </span>24 700 ₽
 								</div>
-								<a href="#" class="card__button button__buy button__buy-drop" data-buy-drop data-theme~='buy-drop'>
-									<div class="button__icon">
+								<a href="#" class="card__half card__btn card__btn-drop" data-buy-drop data-theme~='buy-drop'>
+									<div class="btn__icon">
 										<img src="./images/carousel1-card/image-cart-add.svg" alt="Иконка Image-cart-add">
 									</div>
-									<div class="button__text">
+									<div class="btn__text">
 										купить
 									</div>
 
@@ -528,15 +533,15 @@
 									</li>
 								</ul>
 							</a>
-							<div class="button card__footer">
-								<div class="card__button button__price ">
+							<div class="card__footer">
+								<div class="card__half card__price ">
 									<span>от </span>24 700 ₽
 								</div>
-								<a href="#" class="card__button button__buy">
-									<div class="button__icon">
+								<a href="#" class="card__half card__btn">
+									<div class="btn__icon">
 										<img src="./images/carousel1-card/image-cart-add.svg" alt="Иконка Image-cart-add">
 									</div>
-									<div class="button__text">
+									<div class="btn__text">
 										купить
 									</div>
 								</a>
@@ -623,15 +628,15 @@
 									</li>
 								</ul>
 							</a>
-							<div class="button card__footer">
-								<div class="card__button button__price ">
+							<div class="card__footer">
+								<div class="card__half card__price ">
 									<span>от </span>24 700 ₽
 								</div>
-								<a href="#" class="card__button button__buy">
-									<div class="button__icon">
+								<a href="#" class="card__half card__btn">
+									<div class="btn__icon">
 										<img src="./images/carousel1-card/image-cart-add.svg" alt="Иконка Image-cart-add">
 									</div>
-									<div class="button__text">
+									<div class="btn__text">
 										купить
 									</div>
 								</a>
@@ -718,15 +723,15 @@
 									</li>
 								</ul>
 							</a>
-							<div class="button card__footer">
-								<div class="card__button button__price ">
+							<div class="card__footer">
+								<div class="card__half card__price ">
 									<span>от </span>24 700 ₽
 								</div>
-								<a href="#" class="card__button button__buy">
-									<div class="button__icon">
+								<a href="#" class="card__half card__btn">
+									<div class="btn__icon">
 										<img src="./images/carousel1-card/image-cart-add.svg" alt="Иконка Image-cart-add">
 									</div>
-									<div class="button__text">
+									<div class="btn__text">
 										купить
 									</div>
 								</a>
@@ -813,15 +818,15 @@
 									</li>
 								</ul>
 							</a>
-							<div class="button card__footer">
-								<div class="card__button button__price ">
+							<div class="card__footer">
+								<div class="card__half card__price ">
 									<span>от </span>24 700 ₽
 								</div>
-								<a href="#" class="card__button button__buy">
-									<div class="button__icon">
+								<a href="#" class="card__half card__btn">
+									<div class="btn__icon">
 										<img src="./images/carousel1-card/image-cart-add.svg" alt="Иконка Image-cart-add">
 									</div>
-									<div class="button__text">
+									<div class="btn__text">
 										купить
 									</div>
 								</a>
@@ -908,15 +913,15 @@
 									</li>
 								</ul>
 							</a>
-							<div class="button card__footer">
-								<div class="card__button button__price ">
+							<div class="card__footer">
+								<div class="card__half card__price ">
 									<span>от </span>24 700 ₽
 								</div>
-								<a href="#" class="card__button button__buy">
-									<div class="button__icon">
+								<a href="#" class="card__half card__btn">
+									<div class="btn__icon">
 										<img src="./images/carousel1-card/image-cart-add.svg" alt="Иконка Image-cart-add">
 									</div>
-									<div class="button__text">
+									<div class="btn__text">
 										купить
 									</div>
 								</a>
@@ -1002,15 +1007,15 @@
 									</li>
 								</ul>
 							</a>
-							<div class="button card__footer">
-								<div class="card__button button__price ">
+							<div class="card__footer">
+								<div class="card__half card__price ">
 									<span>от </span>24 700 ₽
 								</div>
-								<a href="#" class="card__button button__buy">
-									<div class="button__icon">
+								<a href="#" class="card__half card__btn">
+									<div class="btn__icon">
 										<img src="./images/carousel1-card/image-cart-add.svg" alt="Иконка Image-cart-add">
 									</div>
-									<div class="button__text">
+									<div class="btn__text">
 										купить
 									</div>
 								</a>
@@ -1173,16 +1178,16 @@
 			</div>
 		</section>
 
-		<section class="configurator">
+		<section class="configurator-block">
 			<div class="container">
-				<div class="configurator-content">
+				<div class="configurator-block-content">
 					<h2 class="title-2">Конфигуратор</h2>
-					<div class="configurator-text">
-						<p class="configurator-text__item">Собери свой сервер, под свои задачи и по минимальной цене!</p>
-						<p class="configurator-text__item">Любой Сервер или СХД можно сконфигурировать по-своему, изменив
+					<div class="configurator-block-text">
+						<p class="configurator-block-text__item">Собери свой сервер, под свои задачи и по минимальной цене!</p>
+						<p class="configurator-block-text__item">Любой Сервер или СХД можно сконфигурировать по-своему, изменив
 							комплектующие или их количество на нужное Вам.</p>
 					</div>
-					<a class="button configurator-btn btn-white" href="./pages/conf/conf.html">Сконфигурировать</a>
+					<a class="button configurator-block-btn btn-white" href="./pages/conf/conf.html">Сконфигурировать</a>
 				</div>
 			</div>
 		</section>

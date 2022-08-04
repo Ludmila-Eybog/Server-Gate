@@ -23,7 +23,7 @@
   font-size: 20px;
   font-weight: 600;
   font-family: 'RF Rufo', sans-serif;
-  color: #959ca8;
+  color: var(--grey-forms);
   text-transform: uppercase;
   text-align: center;
 }
@@ -57,7 +57,6 @@
   @media (min-width: 1024px) {
     padding: 0;
     top: 11px;
-
     width: 30px;
     height: 30px;
     border: none;
@@ -117,7 +116,6 @@
   height: 16px;
   color: var(--white);
 }
-
 //   ---   END  Верхняя Выпадашка у иконки CARD-SETTINGS - слайд карусели1
 
 //   ---   Нижняя Выпадашка у кнопки BUY-КУПИТЬ - слайд карусели1
@@ -134,7 +132,7 @@
   width: 10px;
   height: 10px;
 }
-//   ---   End Нижняя Выпадашка у кнопки BUY-КУПИТЬ - слайд карусели1
+//   ---   END Нижняя Выпадашка у кнопки BUY-КУПИТЬ - слайд карусели1
 
 .card__images {
   display: flex;
@@ -154,8 +152,7 @@
     content: '';
     padding-top: 266%;
   }
-
-  //   ---   End   H меняется вслед за W
+  //   ---   END   H меняется вслед за W
 
   &:not(:last-child) {
     margin-right: 1px;
@@ -182,7 +179,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  //   ---   End   H меняется вслед за W
+  //   ---   END   H меняется вслед за W
 
   transition: opacity 0.2s ease;
   pointer-events: none;
@@ -365,6 +362,15 @@
 .card__footer {
   position: relative;
   display: flex;
+
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'RF Rufo', sans-serif;
+  color: var(--white);
+  background-color: var(--blue);
+  border-radius: 0 0 3px 3px;
+  text-transform: uppercase;
+  text-align: center;
 }
 
 .card__footer span {
@@ -378,7 +384,7 @@
   }
 }
 
-.card__button {
+.card__half {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -386,15 +392,16 @@
   height: 50px;
 }
 
-.button__price {
+.card__price {
   padding-bottom: 5px;
   font-size: 30px;
   font-weight: 700;
 }
 
-.button__buy {
+.card__btn {
   padding-right: 3px;
   background-color: var(--yellow);
+  border-radius: 0 0 3px 0;
 
   &:hover {
     background-color: var(--yellow-hover);
@@ -406,22 +413,22 @@
   }
 }
 
-.button__icon {
+.btn__icon {
   margin-right: 9px;
   width: 20px;
 }
 
-.button__text {
+.btn__text {
   margin-top: -4px;
   font-weight: 400;
   color: var(--white);
   letter-spacing: 0.4px;
 }
 
-.button__buy-drop {
+.card__btn-drop {
   background-color: #005c86;
   filter: drop-shadow(rgba(10, 54, 88, 0.23) 0px 0px 49px);
-
+  border-radius: 0 0 3px 0;
   &:hover {
     background-color: #00496a;
   }
@@ -430,34 +437,34 @@
 //   ---   Dropdown-Buy
 
 // .drop-buy {
-  // padding: 14px 14px 10px;
-  // position: absolute;
-  // top: 60px;
-  // left: -45px;
-  // right: 5px;
-  // border-radius: 4px;
-  // background-color: var(--white);
-  // box-shadow: rgba(10, 54, 88, 0.23) 0px 0px 49px;
+// padding: 14px 14px 10px;
+// position: absolute;
+// top: 60px;
+// left: -45px;
+// right: 5px;
+// border-radius: 4px;
+// background-color: var(--white);
+// box-shadow: rgba(10, 54, 88, 0.23) 0px 0px 49px;
 
-  // opacity: 0;
-  // pointer-events: none;
-  // transition: opacity 0.2s ease 0.2s;
+// opacity: 0;
+// pointer-events: none;
+// transition: opacity 0.2s ease 0.2s;
 
-  // &::before {
-  //   position: absolute;
-  //   content: '';
-  //   width: 10px;
-  //   height: 10px;
-  //   top: -14px;
-  //   left: 85px;
-  //   background-color: var(--white);
-  //   transform: translateY(100%) rotate(45deg);
-  // }
+// &::before {
+//   position: absolute;
+//   content: '';
+//   width: 10px;
+//   height: 10px;
+//   top: -14px;
+//   left: 85px;
+//   background-color: var(--white);
+//   transform: translateY(100%) rotate(45deg);
+// }
 
-  // @media (min-width: 390px) {
-  //   left: -19px;
-  //   right: -15px;
-  // }
+// @media (min-width: 390px) {
+//   left: -19px;
+//   right: -15px;
+// }
 // }
 
 // .drop-buy__text {

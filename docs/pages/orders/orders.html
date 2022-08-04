@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Страница Мои заказы "ServerGate"</title>
+  <link rel="stylesheet" href="../../fonts/rf_rufo/stylesheet.css">
+  <link rel="stylesheet" href="../../fonts/arimo/arimo.css">
+  <!-- <link rel="stylesheet" href="../../css/ion.rangeSlider.min.css" /> -->
+  <link rel="stylesheet" href="../../css/main.css">
+</head>
+
+<body>
+  <div class="overlay" data-overlay></div>
+
+  <!-- Окно мобильной навигации -->
+  <nav class="mobile-nav" data-mobile-nav>
+    <div class="mobile-nav-top">
+      <ul class="nav-menu__items">
+        <li class="nav-menu__item">
+          <a class="color-black" href="../../pages/servers/servers.html">Серверы</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="../../pages/parts/parts.html">Комплектующие</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="#">Сетевое оборудование</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="#">Услуги</a>
+        </li>
+      </ul>
+      <div class="nav-menu__item mobile-nav-config">
+        <a class="color-blue" href="../../pages/conf/conf.html">Конфигуратор</a>
+      </div>
+      <ul class="nav-menu__items">
+        <li class="nav-menu__item">
+          <a class="color-black" href="../../pages/leasing/leasing.html">Лизинг оборудования</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="#">Гарантия</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="#">Доставка</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="#">Оплата</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="../../pages/about/about.html">О нас</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="../../pages/contacts/contacts.html">Контакты</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mobile-nav-bottom">
+      <p>
+        Не хотите сами искать оборудование? Просто позвоните нам и мы предложим оптимальный вариант под ваши
+        запросы
+      </p>
+      <a href="tel:84952867252">
+        8 495 286 72 52
+      </a>
+    </div>
+  </nav>
+  <!-- End Окно мобильной навигации -->
+
+  <!-- Окно FILTER-MENU -->
+  <div class="filter-wrap hidden" data-filter-menu>
+    <!-- Кнопка закрывающая меню -->
+    <button class="icon-close" data-filter-close type="button">
+      <span class="cross-line">toggle menu</span>
+    </button>
+    <!-- End Кнопка закрывающая меню -->
+
+    <!-- FILTER Mobile -->
+    <div class="filter-title">Настройте фильтр</div>
+    <ul class="filter filter-border">
+      <li class="filter-item-mobile active filter" data-filter-item data-filter="all">
+        <a class="filter-link color-black" href="#">Все заказы</a>
+      </li>
+      <li class="filter-item-mobile filter" data-filter-item data-filter=".open">
+        <a class="filter-link color-black" href="#">Открытые заказы</a>
+      </li>
+      <li class="filter-item-mobile filter" data-filter-item data-filter=".close">
+        <a class="filter-link color-black" href="#">Закрытые заказы</a>
+      </li>
+      <li class="filter-item-mobile filter" data-filter-item data-filter=".cancel">
+        <a class="filter-link color-black" href="#">Отмененные заказы</a>
+      </li>
+    </ul>
+    <!-- End FILTER Mobile -->
+  </div>
+  <!-- End Окно FILTER-MENU -->
+
+  <header id="header">
+    <div class="nav-wrap">
+      <div class="container">
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a href="../leasing/leasing.html" class="nav-list__link">Лизинг</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#" class="nav-list__link">Гарантия</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#" class="nav-list__link">Доставка</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#" class="nav-list__link">Оплата</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="../../pages/about/about.html" class="nav-list__link">О нас</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="../../pages/contacts/contacts.html" class="nav-list__link">Контакты</a>
+            </li>
+          </ul>
+          <div class="nav-phone">
+            <a href="tel:88002004488" class="nav-phone__link">8 800 200 44 88</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="container-header-width">
+      <div class="header-order-wrap">
+        <div class="header-logo">
+
+          <!-- Gamburger Icon -->
+          <button class="gamburger" data-menu-toggle>
+            <span class="gamburger-line">toggle menu</span>
+          </button>
+          <!-- END Gamburger Icon -->
+
+          <a href="../../index.html#header" class="logo">
+            <div class="logo__icon">
+              <img src="../../images/header/logo.png" alt="Логотип компании">
+            </div>
+            <div class="logo__text color-blue">
+              <div>Server</div>
+              <div>Gate</div>
+            </div>
+          </a>
+        </div>
+        <div class="header-order">
+          <form action="#!" class="header-search" type="GET" data-search-active>
+            <input class="header-search__input hidden" data-search-input type="text" placeholder="Поиск по номенклатуре"
+              name="theme">
+            <!-- Кнопка Search -->
+            <button class="header-search__icon" data-search-icon type="submit">
+              <svg width="18" height="18" viewBox="0 0 18 18" id="image-search" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1049.516 68c1.843.031 3.375.664 4.593 1.898 1.219 1.235 1.844 2.774 1.875 4.617a6.58 6.58 0 01-.398 2.297 5.999 5.999 0 01-1.149 1.922l.282.281h.797l4.968 4.97-1.5 1.5-4.968-4.97v-.796l-.282-.282c-.562.5-1.203.884-1.922 1.149a6.571 6.571 0 01-2.296.398c-1.845-.03-3.384-.656-4.618-1.875-1.234-1.219-1.867-2.75-1.898-4.594.03-1.843.664-3.382 1.898-4.617 1.234-1.234 2.773-1.867 4.618-1.898zm0 2.015c-1.282.032-2.344.47-3.188 1.313-.844.844-1.266 1.907-1.266 3.187 0 1.282.422 2.344 1.266 3.188.844.844 1.906 1.266 3.188 1.266 1.28 0 2.343-.422 3.187-1.266.844-.844 1.266-1.906 1.266-3.188 0-1.28-.422-2.343-1.266-3.187-.844-.844-1.906-1.281-3.187-1.313z"
+                  transform="translate(-1043 -68)" />
+              </svg>
+            </button>
+            <!-- End Кнопка Search -->
+            <!-- Кнопка Cross -->
+            <button class="" data-search-cross></button>
+            <!-- End Кнопка Cross -->
+          </form>
+          <a href="../conf/conf.html" class="header-config">
+            <div class="header-config__title">Конфигуратор
+            </div>
+            <div class="header-config__text">Собери свой сервер
+            </div>
+          </a>
+          <a href="../orders/orders.html" class="header-personal header-item">
+            <div class="header-personal__icon">
+              <img src="../../images/header/personal-icon.svg" alt="Иконка Пользователь">
+            </div>
+            <div class="header-text">
+              Иван Иванов
+            </div>
+          </a>
+
+          <!-- Cart Dropdown -->
+          <div class="cart">
+            <a href="#!" class="header-item">
+              <div class="cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20.16 20">
+                  <path
+                    d="M1283,2157a2,2,0,1,0,2,2A2,2,0,0,0,1283,2157Zm-11.99,2a2,2,0,1,0,1.99-2A2,2,0,0,0,1271.01,2159Zm13.3-14h-12.15l2.24,4.73,0.13,0.27h7.02Zm-13.1-2H1287l0.16,0.96-3.86,7.01a1.991,1.991,0,0,1-1.75,1.03h-7.45l-0.9,1.63-0.03.12a0.254,0.254,0,0,0,.25.25H1285v2h-12a2.006,2.006,0,0,1-2-2,1.933,1.933,0,0,1,.25-0.96l1.35-2.45L1269,2143h-2v-2h3.27Z "
+                    transform="translate(-1267 -2141) " />
+                </svg>
+              </div>
+              <div class="header-text">
+                Корзина
+              </div>
+            </a>
+            <ul class="cart-list">
+              <li class="cart-list__item">
+                <a href="#">
+                  <div class="cart-list__title">
+                    <div class="cart-list__name">DELL POWEREDGE R440</div>
+                    <input class="input-short" type="number" placeholder="0" name="quantity" min="1" max="99" value="1">
+                    <div class="cart-list__price">117 700 ₽
+                    </div>
+                    <div class="cart-list__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 352 512 ">
+                        <path fill="#a6abb2"
+                          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28
+                        32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z ">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cart-list__desc">
+                    <p>2 x Intel Xeon E5-2630v2 (6Cx2.20 GHz)</p>
+                    <p>169 GB (8x16GB 1600MHz, до 384GB)</p>
+                    <p>Raid 0/1/10/40/60</p>
+                    <p>25x300GB SAS 10K (до 25 hdd 2.5)</p>
+                    <p>4х1GB, 2x10GB SFP</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="cart-list__item">
+                <a href="#">
+                  <div class="cart-list__title">
+                    <div class="cart-list__name">HPE PROLIANT DL380E GEN8</div>
+                    <input class="input-short" type="number" placeholder="0" name="quantity" min="1" max="99" value="2">
+                    <div class="cart-list__price">210 600 ₽
+                    </div>
+                    <div class="cart-list__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 352 512 ">
+                        <path fill="#a6abb2"
+                          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28
+                        32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z ">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cart-list__desc">
+                    <p>2 x Intel Xeon E5-2630v2 (6Cx2.20 GHz)</p>
+                    <p>169 GB (8x16GB 1600MHz, до 384GB)</p>
+                    <p>Raid 0/1/10/40/60</p>
+                    <p>25x300GB SAS 10K (до 25 hdd 2.5)</p>
+                    <p>4х1GB, 2x10GB SFP</p>
+                  </div>
+                </a>
+              </li>
+              <li class="cart-total">
+                <div class="cart-total__name">ИТОГО,
+                  <span class="color-light-grey">В ТОМ ЧИСЛЕ НДС 20%</span>
+                </div>
+                <div class="cart-total__price">328 300 ₽
+                </div>
+              </li>
+              <button class="button btn__cart">оформить заказ</button>
+            </ul>
+          </div>
+          <!-- End Cart Dropdown -->
+
+        </div>
+      </div>
+      <div class="header-equip">
+        <ul class="header-equip-menu">
+          <li class="header-equip__item">
+            <a class="header-equip__link" href="../../pages/servers/servers.html">Серверы</a>
+            <ul class="header-equip__submenu">
+              <li class="header-equip__submenu-item">
+                <a href="../parts/parts.html">Серверы в сборе</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../parts/parts.html">Дисковые полки</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header-equip__item ">
+            <a class="header-equip__link" href="../../pages/parts/parts.html">Комплектующие</a>
+            <ul class="header-equip__submenu">
+              <li class="header-equip__submenu-item">
+                <a href="../parts/parts.html">Процессоры</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../parts/parts.html">Оперативная память</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../parts/parts.html">Жесткие диски и <span>SSD</span></a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../parts/parts.html"><span>RAID</span>-контроллеры и кэш-память</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../parts/parts.html">Блоки питания (<span>PSU</span>)</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../parts/parts.html">Рельсы в стойку</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../parts/parts.html">Сетевые контроллеры</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../parts/parts.html">Радиаторы</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../parts/parts.html">Запчасти к серверам</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header-equip__item">
+            <a class="header-equip__link" href="#">Сетевое оборудование</a>
+          </li>
+          <li class="header-equip__item">
+            <a class="header-equip__link" href="#">Услуги</a>
+          </li>
+        </ul>
+
+        <!-- VAT -->
+        <div class="vat">
+          <a class="vat__link color-light-grey" href="#">
+            ЦЕНЫ ВКЛЮЧАЮТ
+            <span class="vat__link-color">НДС 20%</span>
+            <img class="vat__link-img" src="../../images/header/question-circle.svg" alt="Иконка Знак вопроса">
+            <div class="vat__drop">
+              <div class="vat__drop-title">
+                Возместите 20%
+              </div>
+              <p class="vat__drop-text">Мы применяем общую систему налогообложения. Приобретая товары у
+                нас, Ваша компания сможет
+                дополнительно сэкономить 20% от суммы покупки при оплате налога НДС.
+              </p>
+            </div>
+          </a>
+        </div>
+        <!-- END  VAT -->
+
+      </div>
+    </div>
+  </header>
+
+  <section class="orders">
+    <div class="container">
+      <div class="orders-row">
+        <div class="sidebar">
+          <ul class="sidebar-list">
+            <li>
+              <a class="sidebar-list__item" href="#">Корзина</a>
+            </li>
+            <li>
+              <a class="sidebar-list__item" href="#!">
+                <span>Мои</span>
+                заказы</a>
+            </li>
+            <li>
+              <a class="sidebar-list__item" href="#">
+                <span>Мои</span>
+                реквизиты</a>
+            </li>
+            <li>
+              <a class="sidebar-list__item" href="#">Сменить пароль</a>
+            </li>
+          </ul>
+          <div class="sidebar-contacts sidebar-contacts-top">
+            <div class="sidebar-phone">
+              <a href="tel:88002004488" class="sidebar-link">8 800 200 44 88</a>
+            </div>
+            <div class="sidebar-text">
+              Позвоните нам, если вам непонятен статус заказа или есть вопросы по переводу оплаты, или напишите нам
+            </div>
+            <button class="button btn-blue" data-leasing-btn type="button">Написать нам</button>
+          </div>
+        </div>
+
+        <div class="orders-content" data-filter-section>
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item">
+              <a class="breadcrumbs__link" href="../../index.html">ServerGate</a>
+            </li>
+            <li class="breadcrumbs__item">Личный кабинет</li>
+          </ul>
+
+          <h1 class="title-1 orders-title">Мои заказы</h1>
+
+          <!-- FILTER Icon -->
+          <button class="orders-icon" data-filter-open type="button">
+            <img class="icon-filter" src="../../images/orders/icon-filter.svg" alt="Иконка Filter">
+          </button>
+
+          <!-- <button class="icon-close" data-filter-close type="button">
+            <span class="cross-line">toggle menu</span>
+          </button> -->
+
+          <!-- FILTER Desktop -->
+          <ul class="orders-filter">
+            <li class="filter-item active filter" data-filter-item data-filter="all">
+              <a class="filter-link color-black" href="#">Все</a>
+            </li>
+            <li class="filter-item filter" data-filter-item data-filter=".open">
+              <a class="filter-link color-black" href="#">Открытые</a>
+            </li>
+            <li class="filter-item filter" data-filter-item data-filter=".close">
+              <a class="filter-link color-black" href="#">Закрытые</a>
+            </li>
+            <li class="filter-item filter" data-filter-item data-filter=".cancel">
+              <a class="filter-link color-black" href="#">Отмененные</a>
+            </li>
+          </ul>
+
+          <ul class="order-table">
+            <li class="order-item mix open">
+              <div class="order-item__col1">
+                <div class="order-item__number color-black">№ 2565999</div>
+                <a class="order-item__link color-blue" href="#">Детали заказа</a>
+              </div>
+              <div class="order-item__col2">
+                <div class="cell-sum">
+                  <span>На сумму</span>
+                  <div class="order-item__sum color-black">205 550 ₽</div>
+                </div>
+                <div class="cell-sum">
+                  <span>Требуется оплата</span>
+                  <div class="order-item__sum color-yellow">205 550 ₽</div>
+                </div>
+              </div>
+              <div class="order-item__status">
+                <div class="cell-status">
+                  <span>Сформирован</span>
+                  <div class="order-item__date">20.03.2019</div>
+                </div>
+              </div>
+              <div class="order-item__label">
+                <div class="order-item__icon">
+                  <img src="../../images/orders/icon-clock-w.svg" alt="Иконка Icon-clock-w">
+                </div>
+                <div>Ожидает оплаты</div>
+              </div>
+            </li>
+
+            <li class="order-item mix open">
+              <div class="order-item__col1">
+                <div class="order-item__number color-black">№ 2565998</div>
+                <a class="order-item__link color-blue" href="#">Детали заказа</a>
+              </div>
+              <div class="order-item__col2">
+                <div class="cell-sum">
+                  <span>На сумму</span>
+                  <div class="order-item__sum color-black">210 000 ₽</div>
+                </div>
+                <div class="cell-sum">
+                  <span>Требуется оплата</span>
+                  <div class="order-item__sum color-yellow">6 000 ₽</div>
+                </div>
+              </div>
+              <div class="order-item__status">
+                <div class="cell-status">
+                  <span>Сформирован</span>
+                  <div class="order-item__date">20.03.2019</div>
+                </div>
+              </div>
+              <div class="order-item__label">
+                <div class="order-item__icon">
+                  <img src="../../images/orders/icon-clock-w.svg" alt="Иконка Icon-clock-w">
+                </div>
+                <div>Ожидает оплаты</div>
+              </div>
+            </li>
+
+            <li class="order-item mix open">
+              <div class="order-item__col1">
+                <div class="order-item__number color-black">№ 2565964</div>
+                <a class="order-item__link color-blue" href="#">Детали заказа</a>
+              </div>
+              <div class="order-item__col2">
+                <div class="cell-sum">
+                  <span>На сумму</span>
+                  <div class="order-item__sum color-black">169 000 ₽</div>
+                </div>
+                <div class="cell-sum">
+                  <span>Требуется оплата</span>
+                  <div class="order-item__sum">0 ₽</div>
+                </div>
+              </div>
+              <div class="order-item__status">
+                <div class="cell-status">
+                  <span>Сформирован</span>
+                  <div class="order-item__date">25.02.2019</div>
+                </div>
+                <div class="cell-status">
+                  <span>Оплачен</span>
+                  <div class="order-item__date">25.02.2019</div>
+                </div>
+              </div>
+              <div class="order-item__label">
+                <div class="order-item__icon">
+                  <img src="../../images/orders/icon-clock-w.svg" alt="Иконка Icon-clock-w">
+                </div>
+                <div>Собирается</div>
+              </div>
+            </li>
+
+            <li class="order-item mix open">
+              <div class="order-item__col1">
+                <div class="order-item__number color-black">№ 2565802</div>
+                <a class="order-item__link color-blue" href="#">Детали заказа</a>
+              </div>
+              <div class="order-item__col2">
+                <div class="cell-sum">
+                  <span>На сумму</span>
+                  <div class="order-item__sum color-black">374 700 ₽</div>
+                </div>
+                <div class="cell-sum">
+                  <span>Требуется оплата</span>
+                  <div class="order-item__sum">0 ₽</div>
+                </div>
+              </div>
+              <div class="order-item__status">
+                <div class="cell-status">
+                  <span>Сформирован</span>
+                  <div class="order-item__date">25.02.2019</div>
+                </div>
+                <div class="cell-status">
+                  <span>Оплачен</span>
+                  <div class="order-item__date">25.02.2019</div>
+                </div>
+              </div>
+              <div class="order-item__label">
+                <div class="order-item__icon">
+                  <img src="../../images/orders/icon-clock-w.svg" alt="Иконка Icon-clock-w">
+                </div>
+                <div>Отправлен</div>
+              </div>
+            </li>
+
+            <li class="order-item mix close">
+              <div class="order-item__col1">
+                <div class="order-item__number color-black">№ 2564410</div>
+                <a class="order-item__link color-blue" href="#">Детали заказа</a>
+              </div>
+              <div class="order-item__col2">
+                <div class="cell-sum">
+                  <span>На сумму</span>
+                  <div class="order-item__sum color-black">302 400 ₽</div>
+                </div>
+                <div class="cell-sum">
+                  <span>Требуется оплата</span>
+                  <div class="order-item__sum">0 ₽</div>
+                </div>
+              </div>
+              <div class="order-item__status">
+                <div class="cell-status">
+                  <span>Сформирован</span>
+                  <div class="order-item__date">01.03.2019</div>
+                </div>
+                <div class="cell-status">
+                  <span>Оплачен</span>
+                  <div class="order-item__date">02.03.2019</div>
+                </div>
+                <div class="cell-status cell3">
+                  <span>Доставлен</span>
+                  <div class="order-item__date">10.03.2019</div>
+                </div>
+              </div>
+              <div class="order-item__label green">
+                <div class="order-item__icon-angle">Доставлен</div>
+              </div>
+            </li>
+
+            <li class="order-item mix close">
+              <div class="order-item__col1">
+                <div class="order-item__number color-black">№ 2564304</div>
+                <a class="order-item__link color-blue" href="#">Детали заказа</a>
+              </div>
+              <div class="order-item__col2">
+                <div class="cell-sum">
+                  <span>На сумму</span>
+                  <div class="order-item__sum color-black">124 700 ₽</div>
+                </div>
+                <div class="cell-sum">
+                  <span>Требуется оплата</span>
+                  <div class="order-item__sum ">0 ₽</div>
+                </div>
+              </div>
+              <div class="order-item__status">
+                <div class="cell-status">
+                  <span>Сформирован</span>
+                  <div class="order-item__date">26.02.2019</div>
+                </div>
+                <div class="cell-status">
+                  <span>Оплачен</span>
+                  <div class="order-item__date">26.02.2019</div>
+                </div>
+                <div class="cell-status cell3">
+                  <span>Доставлен</span>
+                  <div class="order-item__date">28.02.2019</div>
+                </div>
+              </div>
+              <div class="order-item__label green">
+                <div class="order-item__icon-angle">Доставлен</div>
+              </div>
+            </li>
+
+            <!-- Canceled -->
+            <li class="order-item mix cancel grey-row">
+              <div class="order-item__col1">
+                <div class="order-item__number">№ 2564215</div>
+                <a class="order-item__link grey-row" href="#">Детали заказа</a>
+              </div>
+              <div class="order-item__col2">
+                <div class="cell-sum">
+                  <span>На сумму</span>
+                  <div class="order-item__sum">340 700 ₽</div>
+                </div>
+                <div class="cell-sum">
+                  <span>Требуется оплата</span>
+                  <div class="order-item__sum">340 700 ₽</div>
+                </div>
+              </div>
+              <div class="order-item__status">
+                <div class="cell-status">
+                  <span>Сформирован</span>
+                  <div class="order-item__date">25.02.2019</div>
+                </div>
+
+                <!-- disabled -->
+                <div class="cell-status disabled">
+                  <span>Оплачен</span>
+                  <div class="order-item__date">30.03.2019</div>
+                </div>
+                <!-- End disabled -->
+
+                <div class="cell-status cell3">
+                  <span>Отменен</span>
+                  <div class="order-item__date grey-row">25.02.2019</div>
+                </div>
+              </div>
+              <div class="order-item__label grey">
+                <div class="order-item__icon-cross">Отменен</div>
+              </div>
+            </li>
+            <!-- End Canceled -->
+
+          </ul>
+          <!-- END FILTER Desktop -->
+
+
+          <!-- PAGINATION -->
+          <div class="pagination">
+            <a class="pagination__link pagination__prev" href="#">предыдущая</a>
+            <ul class="pagination__pages">
+              <li class="pagination__page">1</li>
+              <li class="pagination__page">2</li>
+              <li class="pagination__page">3</li>
+            </ul>
+            <a class="pagination__link pagination__next" href="#">следующая</a>
+          </div>
+          <!-- End PAGINATION -->
+        </div>
+
+        <div class="sidebar-contacts sidebar-contacts-bottom">
+          <div class="sidebar-phone">
+            <a href="tel:88002004488" class="sidebar-link">8 800 200 44 88</a>
+          </div>
+          <div class="sidebar-text sidebar-text-bottom">
+            Позвоните нам, если вам непонятен статус заказа или&nbsp;есть вопросы по переводу оплаты,
+            или&nbsp;напишите&nbsp;нам
+          </div>
+          <button class="button btn-blue btn-blue-bottom" data-leasing-btn type="button">Написать нам</button>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-top-left">
+          <a href="#header" class="logo footer__logo">
+            <img src="../../images/footer/image-logo.svg" alt="Иконка Логотип Server Gate">
+          </a>
+          <ul class="footer__icons">
+            <li class="footer__icon">
+              <a href="#">
+                <img src="../../images/footer/image-vk.svg" alt="Социальная иконка VKontakte">
+              </a>
+            </li>
+            <li class="footer__icon">
+              <a href="#">
+                <img src="../../images/footer/image-fb.svg" alt="Социальная иконка Facebook">
+              </a>
+            </li>
+            <li class="footer__icon">
+              <a href="#">
+                <img src="../../images/footer/image-insta.svg" alt="Социальная иконка Instagram">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-top-right">
+          <div class="nav-menu">
+            <ul class="nav-menu__items nav-menu-half">
+              <li class="nav-menu__item">
+                <a class="color-white" href="../../pages/servers/servers.html">Серверы</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="../../pages/parts/parts.html">Комплектующие</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="#">Сетевое оборудование</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="#">Услуги</a>
+              </li>
+            </ul>
+            <ul class="nav-menu__items nav-menu-half">
+              <li class="nav-menu__item">
+                <a class="color-white" href="../leasing/leasing.html">Лизинг оборудования</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="#">Гарантия</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="#">Доставка</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="#">Оплата</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="../../pages/about/about.html">О нас</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="../../pages/contacts/contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-contacts">
+            <div class="footer-contacts__header">
+              Контакты
+            </div>
+            <ul>
+              <li class="footer-contacts__item">
+                <img src="../../images/footer/image-loc.svg" alt="Иконка Image-loc">
+                117420, г. Москва,<br>
+                ул. Профсоюзная, д. 57, оф. 700
+              </li>
+              <li class="footer-contacts__item">
+                <img src="../../images/footer/image-wapp.svg" alt="Иконка Image-wapp">
+                <a href="tel:88002004488">8 800 200 44-88</a>
+              </li>
+              <li class="footer-contacts__item">
+                <img src="../../images/footer/image-clock.svg" alt="Иконка Image-clock">
+                Режим работы<br>
+                ПН-ПТ: 9.00 - 19.00
+              </li>
+              <li class="footer-contacts__item">
+                <img src="../../images/footer/image-mail.svg" alt="Иконка Image-mail">
+                <a class="footer-contacts__link" href="mailto:sales@servergate.ru">
+                  sales@servergate.ru
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          © 2019, ООО “Сервер Гейт”
+        </div>
+        <ul class="footer-bottom-right">
+          <li>
+            <a href="#" class="footer-right__link">Политика конфиденциальности</a>
+          </li>
+          <li>
+            <a href="#" class="footer-right__link">Публичная оферта</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Модальное Окно -->
+  <div class="modal modal-orders" data-modal>
+    <div class="modal-orders-wrap">
+      <!-- Кнопка Cross -->
+      <button class="modal__cross modal__cross-orders" data-cross></button>
+      <!-- End Кнопка Cross -->
+
+      <div class="form-wrap form-wrap-orders">
+        <!-- Form -->
+        <form action="#" class="form" data-leasing-form>
+          <h3 class="form__title-3 title-3">Отправить запрос</h3>
+
+          <!-- Создаем скрытое поле, чтобы указать откуда придет письмо - с какого сайта, на какой адрес оно должно прийти, -->
+          <input type="hidden" name="project_name" value="server-gate.ru">
+          <input type="hidden" name="admin_email" value="ludm.nvkz@gmail.com">
+          <!-- доменное имя хостинга, с которого эта почта будет приходить  -->
+          <input type="hidden" name="email_from" value="info@server-gate.ru">
+          <!--  доменное имя,т.е. имя сайта, с которого эта почта будет приходить -->
+
+          <div class="form__row">
+            <input class="form__input" type="text" placeholder="Ваше имя" name="name">
+          </div>
+          <div class="form__row">
+            <input class="form__input" type="text" placeholder="Ваш телефон или E-mail" name="phone">
+          </div>
+          <div class="form__row-textarea">
+            <textarea class="form__textarea" name="message" placeholder="Сообщение"></textarea>
+          </div>
+          <div class="form__wrap-link">
+            <a class="form__link" href="#">Прикрепить файл</a>
+          </div>
+          <div class="form__btn-wrap">
+            <button class="button form__button" type="submit">Отправить</button>
+          </div>
+
+          <!-- Checkbox -->
+          <label class="checkbox">
+            <input class="checkbox__default" id="check" type="checkbox" name="agreement" value="true">
+            <span class="checkbox__custom"></span>
+            <span class="checkbox__custom-text">
+              Даю согласие на
+              <a class="checkbox__custom-link" href="#!">обработку</a>
+              персональных данных
+            </span>
+          </label>
+        </form>
+        <!-- End Form -->
+
+        <!-- Ответ -->
+        <div data-form-answer>
+          <!--  Текст ответа в php-файле  -->
+        </div>
+        <!-- End Ответ -->
+      </div>
+
+      <!-- Panel -->
+      <div class="panel-orgers">
+        
+        <img class="panel-orgers__icon-callme" src="../../images/orders/icon-callme.svg" alt="Иконка Callme">
+        <div>
+          <p class="panel-orgers__text">Вы также можете связаться с&nbsp;нами по&nbsp;телефону и&nbsp;задать
+            интересующие Вас
+            вопросы</p>
+          <div class="panel-orgers__phone-wrap">
+            <a class="panel-orgers__phone" href="tel:88002222266">8 800 222 22 66</a>
+          </div>
+          <p class="panel-orgers__text">Мы всегда Вам рады!</p>
+        </div>
+      </div>
+      <!-- End Panel -->
+    </div>
+  </div>
+  <!-- End Модальное Окно -->
+
+
+  <script src="../../libs/jquery/jquery-3.4.1.min.js"></script>
+  <!-- Библиотека Отправка Формы -->
+  <script src="../../libs/jquery.validate/jquery.validate.js"></script>
+  <!-- Filtration -->
+  <script src="../../libs/mixitup-v3/mixitup.min.js"></script>
+
+  <!-- Gamburger Custom -->
+  <script src="../../js/gamburger.js"></script>
+  <!-- Модальное окно Custom -->
+  <script src="../../js/modal.js"></script>
+  <!-- Закрывающая кнопка Custom -->
+  <script src="../../js/filter.js"></script>
+
+</body>
+
+</html>

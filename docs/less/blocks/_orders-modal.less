@@ -1,0 +1,199 @@
+// Кнопка Cross-orders
+.modal__cross-orders {
+  background-color: var(--blue);
+
+  @media (min-width: 1024px) {
+    background-color: transparent;
+
+    &:before,
+    &:after {
+      background-color: var(--white);
+    }
+  }
+}
+
+// Модальное Окно с Формой (ORDERS)
+
+.modal-orders {
+  .modal(); // Вставила Mixin
+
+  overflow-y: scroll;
+
+  @media (min-width: 1024px) {
+    overflow-y: unset;
+  }
+}
+
+.modal-orders-wrap {
+  display: block;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    background-color: var(--blue);
+  }
+}
+
+.form-wrap-orders {
+  padding: 80px 20px 25px;
+
+  @media (min-width: 320px) {
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: 325px) {
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: 390px) {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: 529px) {
+    padding-bottom: 75px;
+  }
+
+  @media (min-width: 812px) {
+    padding-bottom: 100px;
+  }
+
+  .form-wrap(); // Вставила Mixin
+}
+
+.form__link {
+  margin-right: 20px;
+  font-size: 16px;
+  color: #0684bd;
+  border-bottom: 1px solid rgba(6, 132, 189, 0.7);
+  // transition: color 0.2s ease;
+
+  &:hover {
+    border-bottom: none;
+  }
+}
+
+.form__wrap-link {
+  margin-bottom: 60px;
+
+  @media (min-width: 1024px) {
+    margin-bottom: 20px;
+  }
+}
+
+.form__row-textarea {
+  margin-bottom: 18px;
+
+  @media (min-width: 390px) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: 1024px) {
+    margin-bottom: 11px;
+  }
+}
+
+.form__textarea {
+  padding: 12px 15px;
+  display: block;
+  width: 100%;
+  height: 122px;
+  // Текст, который вводим
+  font-size: 16px;
+  font-family: 'Arimo', Arial, sans-serif;
+  color: var(--black);
+
+  background-color: var(--grey-background);
+  border: 1px solid #e8ebef;
+  border-radius: 3px;
+  caret-color: var(--black);
+  resize: none;
+
+  // текст, который видим, как только окно открыто
+  &::placeholder {
+    color: var(--grey-forms);
+    opacity: 1;
+    letter-spacing: 0.4px;
+  }
+
+  // При клике на поле ввода появляется курсор и placeholder убирает текст "Сообщение"
+  &:focus {
+    border: 2px solid var(--yellow);
+
+    &::placeholder {
+      opacity: 0;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    background-color: var(--white);
+  }
+}
+
+// PANEL
+
+.panel-orgers {
+  padding: 50px 35px 40px 20px;
+  display: flex;
+  color: var(--white);
+  background-color: var(--blue);
+
+  @media (min-width: 1024px) {
+    padding: 55px;
+    flex-direction: column;
+    justify-content: center;
+    width: 330px;
+  }
+}
+
+.panel-orgers__icon-callme {
+  margin-top: -3px;
+  margin-right: 20px;
+  width: 60px;
+  height: 55px;
+
+  @media (min-width: 390px) {
+    margin-top: 0;
+    margin-right: 25px;
+    width: 89px;
+    height: 82px;
+  }
+
+  @media (min-width: 1024px) {
+    margin: 0 auto 30px;
+    display: block;
+  }
+}
+
+// .panel-orgers__content {  //   ???? убрать
+// }
+
+.panel-orgers__text {
+  font-size: 14px;
+
+  &:nth-child(1) {
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: 390px) {
+    font-size: 16px;
+  }
+}
+
+.panel-orgers__phone-wrap {
+  margin-bottom: 12px;
+}
+
+.panel-orgers__phone {
+  font-size: 32px;
+  font-weight: 600;
+  font-family: 'RF Rufo', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+
+  @media (min-width: 390px) {
+    font-size: 36px;
+  }
+}

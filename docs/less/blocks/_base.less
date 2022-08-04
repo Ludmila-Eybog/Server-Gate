@@ -4,16 +4,9 @@
   box-sizing: border-box;
 }
 
+// Плавная прокрутка
 html {
   scroll-behavior: smooth;
-}
-
-.noscroll {
-  overflow: hidden;
-}
-
-.hidden {
-  display: none;
 }
 
 html,
@@ -28,23 +21,42 @@ body {
 
   &:root {
     --blue: #0684bd;
-    --blue-dark: #0575a8;
     --blue-hover: #0575a8;
     --white: #fff;
     --black: #000;
     --grey-text: #606060;
-    --grey-forms: #969ca4;
     --light-grey: #bac0ca;
+    // --light-grey: #c2c2c2;
+    // --light-grey: #aeb3ba;
+    --grey-span: #7a7a7a;
+    --grey-forms: #969ca4;
+    // --grey-forms: #959ca8;
     --grey-button-arrow: #a7acb5;
     --grey-background: #f4f6f8;
+    --grey-delimiter: #f0f0f0;
     --grey-drop: #353535;
+    --grey-line: #e6e9ec;
+    // --grey-line: #e6eef0;
+    // --grey-line: #e2e5e8;
     --yellow: #ff9000;
     --yellow-hover: #f47402;
   }
 }
 
+.noscroll {
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
 .color-black {
   color: var(--black);
+}
+
+.color-white {
+  color: var(--white);
 }
 
 .color-yellow {
@@ -57,6 +69,10 @@ body {
 
 .color-light-grey {
   color: var(--light-grey);
+}
+
+.grey-row {
+  color: var(--grey-forms);
 }
 
 h1,
@@ -107,6 +123,7 @@ button {
   padding: 0;
   border: none;
   cursor: pointer;
+  // transition: all 0.2s ease;
 }
 
 .button {
@@ -115,6 +132,8 @@ button {
   font-family: 'RF Rufo', sans-serif;
   color: var(--white);
   background-color: var(--blue);
+  border-radius: 3px;
+
   text-transform: uppercase;
   text-align: center;
 }
@@ -123,7 +142,6 @@ button {
   display: inline-block;
   background-color: var(--white);
   border: 2px solid var(--white);
-  border-radius: 3px;
 
   font-size: 22px;
   color: var(--black);
@@ -165,7 +183,7 @@ button {
   letter-spacing: -0.16px;
   text-transform: uppercase;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     margin-bottom: 7px;
   }
 
@@ -215,6 +233,10 @@ button {
   }
 }
 
+.title-4 span {
+  color: var(--grey-span);
+}
+
 .title-5 {
   font-size: 22px;
   font-family: 'RF Rufo', sans-serif;
@@ -232,6 +254,15 @@ button {
   text-align: center;
 }
 
+.flex-spacebetween {
+  display: flex;
+  justify-content: space-between;
+}
+
+.margin-15 {
+  margin-bottom: 15px;
+}
+
 // 4 точки перелома:
 // @media(min-width: 390px) {}
 
@@ -240,3 +271,48 @@ button {
 // @media (min-width: 1024px) {}
 
 // @media(min-width: 1250px) {}
+
+/* ---------- Footer Panel ---------- */
+
+/* ---------- Mixins ---------- */
+// .clearfix() {
+//   &:before,
+//   &:after {
+//     display: table;
+//     content: "";
+//   }
+
+//   &:after {
+//     clear: both;
+//   }
+// }
+
+// .navbar {
+//   .clearfix();
+// }
+// ----------
+
+// взаимодействие глобальных и локальных переменных внутри примеси, которых надо избегать
+@global: 3;
+
+// MIXIN
+// .calc-mixin(@a: 1, @b: 2, @c: @global) {
+//   @d: @a + @b + @c;
+//   content: '@{d}';
+// }
+
+// .abcd {
+//   border: solid 1px #333;
+//   width: 100px;
+//   padding: 10px;
+//   text-align: center;
+
+  // &:after {
+    // Вызов MIXIN
+    // .calc-mixin();
+//   }
+// }
+// ----------
+
+// display: flex;
+//   justify-content: space-between;

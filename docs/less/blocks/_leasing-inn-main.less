@@ -30,16 +30,17 @@
   }
 }
 
-.leasing-list {
+.breadcrumbs {
   display: none;
 
   @media (min-width: 1024px) {
     display: flex;
     margin-bottom: 20px;
+    line-height: 1;
   }
 }
 
-.leasing-list__item {
+.breadcrumbs__item {
   position: relative;
   font-size: 14px;
   color: var(--grey-text);
@@ -61,7 +62,7 @@
     &::after {
       position: absolute;
       content: '';
-      top: 6px;
+      top: 5px;
       right: 0;
       width: 6px;
       height: 6px;
@@ -72,7 +73,7 @@
   }
 }
 
-.leasing-list__link {
+.breadcrumbs__link {
   position: relative;
   color: var(--grey-text);
 

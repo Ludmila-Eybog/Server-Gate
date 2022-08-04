@@ -24,7 +24,6 @@
 
     // когда кликаем, эл-там добавляется 'active'
     mobileMenuToggle.addEventListener('click', function () {
-
         if (this.classList.contains('active')) {
             mobileMenu.classList.add('active')
             // overlayElement.classList.add('active')           
@@ -44,8 +43,7 @@
     })
 
     //     Запрещаем скролл у html, когда открыто мобильное меню
-    mobileMenu.addEventListener(' ', function () {
-
+    mobileMenu.addEventListener('click ', function () {
         this.classList.remove('active')
         // overlayElement.classList.remove('active')          
         mobileMenuToggle.classList.remove('active')
@@ -63,7 +61,7 @@
     })
 })();
 
-
+// --------------------------
 // По клику на ссылку она становится активной
 const links = document.querySelectorAll('[data-link]')
 
@@ -76,6 +74,49 @@ for (let link of links) {
 
 function clearActiveClasses() {
     links.forEach((link) => {
-      link.classList.remove('active')
+        link.classList.remove('active')
     })
-  }
+}
+
+// --------------------------
+// По клику на search (лупу) активен инпут, добав. кнопка cross и вертик. бордер у инпута (при расширении <1024px)
+
+const searchIcon = document.querySelector('[data-search-icon]')
+const searchInput = document.querySelector('[data-search-input]')
+const searchCross = document.querySelector('[data-search-cross]')
+const searchActive = document.querySelector('[data-search-active]')
+
+searchIcon.addEventListener("click", openSearch);
+searchCross.addEventListener('click', closeSearch)
+let inputText = ''
+
+function openSearch(event) {
+    // запретила отправку формы при нажатии на кнопку лупа, инпут не закрывается 
+    event.preventDefault()
+
+    // забираем и отправляем содержимое инпута
+    inputText = searchInput.value
+
+    // очищаем поле инпута
+    searchInput.value = ""
+
+    searchInput.classList.remove('hidden')
+    searchInput.classList.add('header-search__input-active')
+    searchIcon.classList.add('header-search__icon-active')
+    searchCross.classList.add('header-search__cross')
+    searchActive.classList.add('header-search-active')
+}
+
+function closeSearch(event) {
+    // запретила отправку формы по нажатию на кнопку cross при закрытии инпута
+    event.preventDefault()
+
+    // очищаем поле инпута
+    searchInput.value = ""
+
+    searchInput.classList.add("hidden") 
+    searchInput.classList.remove('header-search__input-active')
+    searchIcon.classList.remove('header-search__icon-active')
+    searchCross.classList.remove('header-search__cross')
+    searchActive.classList.remove('header-search-active')
+}

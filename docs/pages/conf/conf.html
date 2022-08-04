@@ -1,12 +1,1418 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Страница Конфигуратор</title>
+  <title>Страница Конфигуратор "ServerGate"</title>
+  <link rel="stylesheet" href="../../fonts/rf_rufo/stylesheet.css">
+  <link rel="stylesheet" href="../../fonts/arimo/arimo.css">
+  <link rel="stylesheet" href="../../css/main.css">
 </head>
+
 <body>
+
+  <!-- Окно мобильной навигации -->
+  <nav class="mobile-nav" data-mobile-nav>
+    <div class="mobile-nav-top">
+      <ul class="nav-menu__items">
+        <li class="nav-menu__item">
+          <a class="color-black" href="../../pages/servers/servers.html">Серверы</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="../../pages/parts/parts.html">Комплектующие</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="#">Сетевое оборудование</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="#">Услуги</a>
+        </li>
+      </ul>
+      <div class="nav-menu__item mobile-nav-config">
+        <a class="color-blue" href="../../pages/conf/conf.html">Конфигуратор</a>
+      </div>
+      <ul class="nav-menu__items">
+        <li class="nav-menu__item">
+          <a class="color-black" href="../../pages/leasing/leasing.html">Лизинг оборудования</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="#">Гарантия</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="#">Доставка</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="#">Оплата</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="../../pages/about/about.html">О нас</a>
+        </li>
+        <li class="nav-menu__item">
+          <a class="color-black" href="../../pages/contacts/contacts.html">Контакты</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="mobile-nav-bottom">
+      <p>
+        Не хотите сами искать оборудование? Просто позвоните нам и мы предложим оптимальный вариант под ваши
+        запросы
+      </p>
+      <a href="tel:84952867252">
+        8 495 286 72 52
+      </a>
+    </div>
+  </nav>
+  <!-- End Окно мобильной навигации -->
+
+  <header id="header">
+    <div class="nav-wrap">
+      <div class="container">
+        <nav class="nav">
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a href="../../pages/leasing/leasing.html" class="nav-list__link">Лизинг</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#" class="nav-list__link">Гарантия</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#" class="nav-list__link">Доставка</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="#" class="nav-list__link">Оплата</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="../../pages/about/about.html" class="nav-list__link">О нас</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="../../pages/contacts/contacts.html" class="nav-list__link">Контакты</a>
+            </li>
+          </ul>
+          <div class="nav-phone">
+            <a href="tel:88002004488" class="nav-phone__link">8 800 200 44 88</a>
+          </div>
+        </nav>
+      </div>
+    </div>
+    <div class="container-header-width">
+      <div class="header-order-wrap">
+        <div class="header-logo">
+
+          <!-- Gamburger Icon -->
+          <button class="gamburger" data-menu-toggle>
+            <span class="gamburger-line">toggle menu</span>
+          </button>
+          <!-- End Gamburger Icon -->
+
+          <a href="../../index.html" class="logo">
+            <div class="logo__icon">
+              <img src="../../images/header/logo.png" alt="Логотип компании">
+            </div>
+            <div class="logo__text color-blue">
+              <div>Server</div>
+              <div>Gate</div>
+            </div>
+          </a>
+        </div>
+        <div class="header-order">
+          <form action="#!" class="header-search" type="GET" data-search-active>
+            <input class="header-search__input hidden" data-search-input type="text" placeholder="Поиск по номенклатуре"
+              name="theme">
+            <!-- Кнопка Search -->
+            <button class="header-search__icon" data-search-icon type="submit">
+              <svg width="18" height="18" viewBox="0 0 18 18" id="image-search" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1049.516 68c1.843.031 3.375.664 4.593 1.898 1.219 1.235 1.844 2.774 1.875 4.617a6.58 6.58 0 01-.398 2.297 5.999 5.999 0 01-1.149 1.922l.282.281h.797l4.968 4.97-1.5 1.5-4.968-4.97v-.796l-.282-.282c-.562.5-1.203.884-1.922 1.149a6.571 6.571 0 01-2.296.398c-1.845-.03-3.384-.656-4.618-1.875-1.234-1.219-1.867-2.75-1.898-4.594.03-1.843.664-3.382 1.898-4.617 1.234-1.234 2.773-1.867 4.618-1.898zm0 2.015c-1.282.032-2.344.47-3.188 1.313-.844.844-1.266 1.907-1.266 3.187 0 1.282.422 2.344 1.266 3.188.844.844 1.906 1.266 3.188 1.266 1.28 0 2.343-.422 3.187-1.266.844-.844 1.266-1.906 1.266-3.188 0-1.28-.422-2.343-1.266-3.187-.844-.844-1.906-1.281-3.187-1.313z"
+                  transform="translate(-1043 -68)" />
+              </svg>
+            </button>
+            <!-- End Кнопка Search -->
+            <!-- Кнопка Cross -->
+            <button class="" data-search-cross></button>
+            <!-- End Кнопка Cross -->
+          </form>
+          <a href="../../pages/conf/conf.html" class="header-config">
+            <div class="header-config__title">Конфигуратор
+            </div>
+            <div class="header-config__text">Собери свой сервер
+            </div>
+          </a>
+          <a href="../orders/orders.html" class="header-personal header-item">
+            <div class="header-personal__icon">
+              <img src="../../images/header/personal-icon.svg" alt="Иконка Пользователь">
+            </div>
+            <div class="header-text">
+              Личный кабинет
+            </div>
+          </a>
+
+          <!-- Cart -->
+          <div class="cart">
+            <a href="#!" class="header-item">
+              <div class="cart-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20.16 20">
+                  <path
+                    d="M1283,2157a2,2,0,1,0,2,2A2,2,0,0,0,1283,2157Zm-11.99,2a2,2,0,1,0,1.99-2A2,2,0,0,0,1271.01,2159Zm13.3-14h-12.15l2.24,4.73,0.13,0.27h7.02Zm-13.1-2H1287l0.16,0.96-3.86,7.01a1.991,1.991,0,0,1-1.75,1.03h-7.45l-0.9,1.63-0.03.12a0.254,0.254,0,0,0,.25.25H1285v2h-12a2.006,2.006,0,0,1-2-2,1.933,1.933,0,0,1,.25-0.96l1.35-2.45L1269,2143h-2v-2h3.27Z "
+                    transform="translate(-1267 -2141) " />
+                </svg>
+              </div>
+              <div class="header-text">
+                Корзина
+              </div>
+            </a>
+
+            <!-- Cart Dropdown -->
+            <ul class="cart-list">
+              <li class="cart-list__item">
+                <a href="#">
+                  <div class="cart-list__title">
+                    <div class="cart-list__name">DELL POWEREDGE R440</div>
+                    <input class="input-short" type="number" placeholder="0" name="quantity" min="1" max="99" value="1">
+                    <div class="cart-list__price">117 700 ₽
+                    </div>
+                    <div class="cart-list__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 352 512 ">
+                        <path fill="#a6abb2"
+                          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28
+                        32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z ">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cart-list__desc">
+                    <p>2 x Intel Xeon E5-2630v2 (6Cx2.20 GHz)</p>
+                    <p>169 GB (8x16GB 1600MHz, до 384GB)</p>
+                    <p>Raid 0/1/10/40/60</p>
+                    <p>25x300GB SAS 10K (до 25 hdd 2.5)</p>
+                    <p>4х1GB, 2x10GB SFP</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="cart-list__item">
+                <a href="#">
+                  <div class="cart-list__title">
+                    <div class="cart-list__name">HPE PROLIANT DL380E GEN8</div>
+                    <input class="input-short" type="number" placeholder="0" name="quantity" min="1" max="99" value="2">
+                    <div class="cart-list__price">210 600 ₽
+                    </div>
+                    <div class="cart-list__icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 352 512 ">
+                        <path fill="#a6abb2"
+                          d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28
+                        32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z ">
+                        </path>
+                      </svg>
+                    </div>
+                  </div>
+                  <div class="cart-list__desc">
+                    <p>2 x Intel Xeon E5-2630v2 (6Cx2.20 GHz)</p>
+                    <p>169 GB (8x16GB 1600MHz, до 384GB)</p>
+                    <p>Raid 0/1/10/40/60</p>
+                    <p>25x300GB SAS 10K (до 25 hdd 2.5)</p>
+                    <p>4х1GB, 2x10GB SFP</p>
+                  </div>
+                </a>
+              </li>
+              <li class="cart-total">
+                <div class="cart-total__name">ИТОГО,
+                  <span class="color-light-grey">В ТОМ ЧИСЛЕ НДС 20%</span>
+                </div>
+                <div class="cart-total__price">328 300 ₽
+                </div>
+              </li>
+              <button class="button btn__cart">оформить заказ</button>
+            </ul>
+            <!-- End Cart Dropdown -->
+
+          </div>
+          <!-- End Cart -->
+
+        </div>
+      </div>
+      <div class="header-equip">
+        <ul class="header-equip-menu">
+          <li class="header-equip__item">
+            <a class="header-equip__link" href="../../pages/servers/servers.html">Серверы</a>
+            <ul class="header-equip__submenu">
+              <li class="header-equip__submenu-item">
+                <a href="../../pages/parts/parts.html">Серверы в сборе</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../../pages/parts/parts.html">Дисковые полки</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header-equip__item ">
+            <a class="header-equip__link" href="./pages/parts/parts.html">Комплектующие</a>
+            <ul class="header-equip__submenu">
+              <li class="header-equip__submenu-item">
+                <a href="../../pages/parts/parts.html">Процессоры</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../../pages/parts/parts.html">Оперативная память</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../../pages/parts/parts.html">Жесткие диски и <span>SSD</span></a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../../pages/parts/parts.html"><span>RAID</span>-контроллеры и кэш-память</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../../pages/parts/parts.html">Блоки питания (<span>PSU</span>)</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../../pages/parts/parts.html">Рельсы в стойку</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../../pages/parts/parts.html">Сетевые контроллеры</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../../pages/parts/parts.html">Радиаторы</a>
+              </li>
+              <li class="header-equip__submenu-item">
+                <a href="../../pages/parts/parts.html">Запчасти к серверам</a>
+              </li>
+            </ul>
+          </li>
+          <li class="header-equip__item ">
+            <a class="header-equip__link" href="#">Сетевое оборудование</a>
+          </li>
+          <li class="header-equip__item ">
+            <a class="header-equip__link" href="#">Услуги</a>
+          </li>
+        </ul>
+
+        <!-- VAT -->
+        <div class="vat">
+          <a class="vat__link color-light-grey" href="#">
+            ЦЕНЫ ВКЛЮЧАЮТ
+            <span class="vat__link-color">НДС 20%</span>
+            <img class="vat__link-img" src="../../images/header/question-circle.svg" alt="Иконка Знак вопроса">
+            <div class="vat__drop">
+              <div class="vat__drop-title">
+                Возместите 20%
+              </div>
+              <p class="vat__drop-text">Мы применяем общую систему налогообложения. Приобретая товары у
+                нас, Ваша компания сможет
+                дополнительно сэкономить 20% от суммы покупки при оплате налога НДС.
+              </p>
+            </div>
+          </a>
+        </div>
+        <!-- END  VAT -->
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="configurator-main">
+      <div class="container">
+        <div class="configurator-main-wrap">
+          <div class="configurator-main-left">
+            <div class="configurator-main-title-wrap">
+              <div class="configurator-main-title">
+                <ul class="breadcrumbs">
+                  <li class="breadcrumbs__item">
+                    <a class="breadcrumbs__link" href="../../index.html">ServerGate</a>
+                  </li>
+                  <li class="breadcrumbs__item">Конфигуратор</li>
+                </ul>
+                <h1 class="title-1">Конфигуратор
+                </h1>
+              </div>
+              <div class="configurator-main-call">
+                <img class="configurator-main-icon" src="../../images/carousel2/image-support.svg" alt="Иконка Support">
+                <div class="configurator-main-help">
+                  <p class="configurator-main-text">Не можете выбрать комплектующие самостоятельно? Мы поможем!</p>
+                  <a class="configurator-main-phone" shref="tel:88002004488">8 800 200 44 88</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Selection Platform -->
+            <div class="configurator-platform">
+              <div class="configurator-platform-subtitle">На основе модели</div>
+              <div class="configurator-platform-wrap">
+                <div class="configurator-platform-text">
+                  <h2 class="configurator-platform-title">
+                    HP PROLIANT DL360p GEN8
+                    <span>восстановленный</span>
+                  </h2>
+                  <a class="configurator-platform-link" href="#">Изменить выбор
+                    <span>платформы</span>
+                    <img class="configurator-platform-icon" src="../../images/config-aside/image-arr-back.svg"
+                      alt="Иконка Arrow-back">
+                  </a>
+                </div>
+                <div class="configurator-platform-img">
+                  <div class="card__images">
+                    <div class="card__img-wrap card__img-wrap-1">
+                      <div class="card__img card__img-1">
+                        <img src="../../images/carousel1-card/serv-1.jpg " alt="Сервер-1">
+                      </div>
+                    </div>
+                    <div class="card__img-wrap card__img-wrap-2">
+                      <div class="card__img card__img-2">
+                        <img src="../../images/carousel1-card/serv-2.jpg" alt="Сервер-2">
+                      </div>
+                    </div>
+                    <div class="card__img-wrap card__img-wrap-3">
+                      <div class="card__img card__img-3">
+                        <img src="../../images/carousel1-card/serv-3.jpg" alt="Сервер-3">
+                      </div>
+                    </div>
+                    <div class="card__img-wrap card__img-wrap-4">
+                      <div class="card__img card__img-4">
+                        <img src="../../images/carousel1-card/serv-4.jpg" alt="Сервер-4">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- END Selection Platform -->
+
+            <!-- CPU-Quantity-->
+            <div class="config-section">
+              <h4 class="title-4 title4-up" data-hide="1">Количество процессоров</h4>
+
+              <div class="config-wrap config-wrap-flex" data-section="1">
+                <!-- Radio -->
+                <label class="radio-half">
+                  <input class="radio__default" type="radio" name="cpu-quantity" value="1">
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label">x1</span>
+                </label>
+                <!-- End Radio -->
+
+                <!-- Radio -->
+                <label class="radio-half">
+                  <input class="radio__default" type="radio" name="cpu-quantity" value="2">
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label">x2</span>
+                </label>
+                <!-- End Radio -->
+              </div>
+
+            </div>
+            <!-- End CPU-Quantity -->
+
+            <!-- CPU -->
+            <div class="config-section">
+              <h4 class="title-4 title4-up" data-hide="2">CPU</h4>
+
+              <div class="config-wrap" data-section="2">
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="cpu" value="8700" data-cpu>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">2 × Intel Xeon E5-2603 (4C 10M Cache 1.80 GHz)</span>
+                  <span class="radio__price">8 700 ₽</span>
+                </label>
+                <!-- End Radio -->
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="cpu" value="9000" data-cpu>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">2 × Intel Xeon E5-2620 (6C 15M Cache 2.00 GHz)</span>
+                  <span class="radio__price">9 000 ₽</span>
+                </label>
+                <!-- End Radio -->
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="cpu" value="12500" data-cpu>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">2 × Intel Xeon E5-2630 (6C 15M Cache 2.30 GHz)</span>
+                  <span class="radio__price">12 500 ₽</span>
+                </label>
+                <!-- End Radio -->
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="cpu" value="18000" data-cpu>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">2 × Intel Xeon E5-2630L (6C 15M Cache 2.00 GHz)</span>
+                  <span class="radio__price">18 000 ₽</span>
+                </label>
+                <!-- End Radio -->
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="cpu" value="21000" data-cpu>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">2 × Intel Xeon E5-2640 (6C 15M Cache 2.50 GHz)</span>
+                  <span class="radio__price">21 000 ₽</span>
+                </label>
+                <!-- End Radio -->
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="cpu" value="32000" data-cpu>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">2 × Intel Xeon E5-2650 (8C 20M Cache 2.00 GHz)</span>
+                  <span class="radio__price">32 000 ₽</span>
+                </label>
+                <!-- End Radio -->
+
+                <!-- Show more -->
+                <div class="show-more-container">
+                  <input type="checkbox" id="show" />
+
+                  <ul class="show-more-list">
+                    <li>
+                      <!-- Radio -->
+                      <label class="radio">
+                        <input class="radio__default" type="radio" name="cpu" value="34700" data-cpu>
+                        <span class="radio__custom radio__custom-sizes position-center"></span>
+                        <span class="radio__label padding-right-160">2 × Intel Xeon E5-2650 v2 (8C 20M Cache 2.60
+                          GHz)</span>
+                        <span class="radio__price">34 700 ₽</span>
+                      </label>
+                      <!-- End Radio -->
+                    </li>
+                    <li>
+                      <!-- Radio -->
+                      <label class="radio">
+                        <input class="radio__default" type="radio" name="cpu" value="36700" data-cpu>
+                        <span class="radio__custom radio__custom-sizes position-center"></span>
+                        <span class="radio__label padding-right-160">2 × Intel Xeon E5-2660 v2 (8C 20M Cache 2.80
+                          GHz)</span>
+                        <span class="radio__price">36 700 ₽</span>
+                      </label>
+                      <!-- End Radio -->
+                    </li>
+                    <li>
+                      <!-- Radio -->
+                      <label class="radio">
+                        <input class="radio__default" type="radio" name="cpu" value="38000" data-cpu>
+                        <span class="radio__custom radio__custom-sizes position-center"></span>
+                        <span class="radio__label padding-right-160">2 × Intel Xeon E5-2660 v2 (8C 20M Cache 3.00
+                          GHz)</span>
+                        <span class="radio__price">38 000 ₽</span>
+                      </label>
+                      <!-- End Radio -->
+                    </li>
+                    <li>
+                      <!-- Radio -->
+                      <label class="radio">
+                        <input class="radio__default" type="radio" name="cpu" value="42000" data-cpu>
+                        <span class="radio__custom radio__custom-sizes position-center"></span>
+                        <span class="radio__label padding-right-160">2 × Intel Xeon E5-2660 v2 (8C 20M Cache 3.20
+                          GHz)</span>
+                        <span class="radio__price">42 000 ₽</span>
+                      </label>
+                      <!-- End Radio -->
+                    </li>
+                  </ul>
+
+                  <label class="show-more-toggle" for="show">
+                    <span class="show-more-title">Показать еще</span>
+                  </label>
+                </div>
+                <!-- End Show more -->
+              </div>
+            </div>
+            <!-- End CPU -->
+
+            <!-- RAM -->
+            <div class="config-section">
+              <h4 class="title-4 title4-up" data-hide="3">RAM
+                <span>/ ВСЕГО 192 ГБ</span>
+              </h4>
+
+              <div class="config-wrap" data-section="3">
+                <!-- Row INFO -->
+                <div class="config-info">
+                  <img class="icon-info" src="../../images/config/image-info.svg" alt="Иконка Ιmage-info">
+                  <div class="info-text background-color">Вы можете выбрать несколько вариантов
+                    из предложенных.
+                    <br>Всего может быть не более 24 модулей
+                    в данной конфигурации.</div>
+                  <div class="info-quantity info-quantity-top">2 ГБ
+                    <span>/ 192 ГБ</span>
+                  </div>
+                  <div class="info-quantity info-quantity-bottom">1 шт.
+                    <span>/ 24 шт.</span>
+                  </div>
+                </div>
+                <!-- End Row INFO -->
+                <!-- Checkbox -->
+                <label class="config-checkbox">
+                  <input class="checkbox__default" type="checkbox" name="ram" value="300" data-ram>
+                  <span class="config-checkbox__custom checkbox__custom-sizes position-top"></span>
+                  <span class="checkbox__label padding-right-220">Оперативная память 2Gb DDR3 ECC REG 1333Mhz</span>
+                  <span class="checkbox__wrap-quantity">
+                    <!-- Поле ввода -->
+                    <input type="number" class="checkbox__quantity" placeholder="" name="ram-quantity" min="1" max="99"
+                      value="1">
+                    <!-- End Поле ввода -->
+                    <span>шт.</span>
+                  </span>
+                  <span class="checkbox__price">300 ₽/шт.</span>
+                </label>
+                <!-- End Checkbox -->
+                <!-- Checkbox -->
+                <label class="config-checkbox">
+                  <input class="checkbox__default" type="checkbox" name="ram" value="2800" data-ram>
+                  <span class="config-checkbox__custom checkbox__custom-sizes position-top"></span>
+                  <span class="checkbox__label padding-right-220">Оперативная память 8Gb DDR3 ECC REG 1333Mhz</span>
+                  <span class="checkbox__wrap-quantity">
+                    <!-- Поле ввода -->
+                    <input type="number" class="checkbox__quantity" placeholder="" name="ram-quantity" min="1" max="99"
+                      value="1">
+                    <!-- End Поле ввода -->
+                    <span>шт.</span>
+                  </span>
+                  <span class="checkbox__price">2 800 ₽/шт.</span>
+                </label>
+                <!-- End Checkbox -->
+                <!-- Checkbox -->
+                <label class="config-checkbox">
+                  <input class="checkbox__default" type="checkbox" name="ram" value="7000" data-ram>
+                  <span class="config-checkbox__custom checkbox__custom-sizes position-top"></span>
+                  <span class="checkbox__label padding-right-220">Оперативная память 16Gb DDR3 ECC REG 1333Mhz</span>
+                  <span class="checkbox__wrap-quantity">
+                    <!-- Поле ввода -->
+                    <input type="number" class="checkbox__quantity" placeholder="" name="ram-quantity" min="1" max="99"
+                      value="1">
+                    <!-- End Поле ввода -->
+                    <span>шт.</span>
+                  </span>
+                  <span class="checkbox__price">7 000 ₽/шт.</span>
+                </label>
+                <!-- End Checkbox -->
+              </div>
+            </div>
+            <!-- End RAM -->
+
+            <!-- HDD -->
+            <div class="config-section">
+              <h4 class="title-4 title4-up" data-hide="4">HDD 8 BAY
+              </h4>
+
+              <div class="config-wrap" data-section="4">
+                <!-- Row INFO -->
+                <div class="config-info">
+                  <img class="icon-info" src="../../images/config/image-info.svg" alt="Иконка Ιmage-info">
+                  <div class="info-text background-color">Вы можете выбрать несколько вариантов из предложенных HDD.
+                    <br>Всего может быть не более 8 HDD.
+                  </div>
+                  <div class="info-quantity info-quantity-top">0 ГБ
+                    <span>/ 956 ГБ</span>
+                  </div>
+                  <div class="info-quantity info-quantity-bottom">1 шт.
+                    <span>/ 8 шт.</span>
+                  </div>
+                </div>
+                <!-- End Row INFO -->
+                <!-- Checkbox -->
+                <label class="config-checkbox">
+                  <input class="checkbox__default" type="checkbox" name="ram" value="300" data-hdd>
+                  <span class="config-checkbox__custom checkbox__custom-sizes position-top"></span>
+                  <span class="checkbox__label padding-right-220">Салазка HP для HDD 2.5"</span>
+                  <span class="checkbox__wrap-quantity">
+                    <!-- Поле ввода -->
+                    <input type="number" class="checkbox__quantity" placeholder="" name="ram-quantity" min="1" max="99"
+                      value="1">
+                    <!-- End Поле ввода -->
+                    <span>шт.</span>
+                  </span>
+                  <span class="checkbox__price">1 700 ₽/шт.</span>
+                </label>
+                <!-- End Checkbox -->
+                <!-- Checkbox -->
+                <label class="config-checkbox">
+                  <input class="checkbox__default" type="checkbox" name="ram" value="2800" data-hdd>
+                  <span class="config-checkbox__custom checkbox__custom-sizes position-top"></span>
+                  <span class="checkbox__label padding-right-220">HDD б/у 146Gb 10k SAS 2,5" + салазки</span>
+                  <span class="checkbox__wrap-quantity">
+                    <!-- Поле ввода -->
+                    <input type="number" class="checkbox__quantity" placeholder="" name="ram-quantity" min="1" max="99"
+                      value="1">
+                    <!-- End Поле ввода -->
+                    <span>шт.</span>
+                  </span>
+                  <span class="checkbox__price">2 800 ₽/шт.</span>
+                </label>
+                <!-- End Checkbox -->
+                <!-- Checkbox -->
+                <label class="config-checkbox">
+                  <input class="checkbox__default" type="checkbox" name="ram" value="7000" data-hdd>
+                  <span class="config-checkbox__custom checkbox__custom-sizes position-top"></span>
+                  <span class="checkbox__label padding-right-220">HDD б/у 146Gb 15k SAS 2,5" + салазки</span>
+                  <span class="checkbox__wrap-quantity">
+                    <!-- Поле ввода -->
+                    <input type="number" class="checkbox__quantity" placeholder="" name="ram-quantity" min="1" max="99"
+                      value="1">
+                    <!-- End Поле ввода -->
+                    <span>шт.</span>
+                  </span>
+                  <span class="checkbox__price">7 000 ₽/шт.</span>
+                </label>
+                <!-- End Checkbox -->
+                <!-- Checkbox -->
+                <label class="config-checkbox">
+                  <input class="checkbox__default" type="checkbox" name="ram" value="18000" data-hdd>
+                  <span class="config-checkbox__custom checkbox__custom-sizes position-top"></span>
+                  <span class="checkbox__label padding-right-220">HDD б/у 500Gb 7.2k SATA 2.5" + салазки</span>
+                  <span class="checkbox__wrap-quantity">
+                    <!-- Поле ввода -->
+                    <input type="number" class="checkbox__quantity" placeholder="" name="ram-quantity" min="1" max="99"
+                      value="1">
+                    <!-- End Поле ввода -->
+                    <span>шт.</span>
+                  </span>
+                  <span class="checkbox__price">18 000 ₽/шт.</span>
+                </label>
+                <!-- End Checkbox -->
+              </div>
+            </div>
+            <!-- End HDD -->
+
+            <!-- RAID-controller integrated -->
+            <div class="config-section">
+              <h4 class="title-4 title4-up" data-hide="5">RAID контроллер интегрированный в материнскую плату</h4>
+
+              <div class="config-wrap" data-section="5">
+                <div class="radio">
+                  <img class="icon-check" src="../../images/config/image-check.svg" alt="Иконка Ιmage-check">
+                  <span class="config__included background-color padding-right-160">Интегрированный RAID контроллер HP
+                    P420i
+                    + FBWC</span>
+                  <span class="config__included-price">0 ₽</span>
+                </div>
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="raid-integr" value="0" data-raid-integr>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">1Gb кеш память контроллера</span>
+                  <span class="radio__price">0 ₽</span>
+                </label>
+                <!-- End Radio -->
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="raid-integr" value="1000" data-raid-integr>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">2Gb кеш память контроллера</span>
+                  <span class="radio__price">1 000 ₽</span>
+                </label>
+                <!-- End Radio -->
+              </div>
+            </div>
+            <!-- End RAID-controller integrated -->
+
+            <!-- RAID-controller built into -->
+            <div class="config-section">
+              <h4 class="title-4 title4-up" data-hide="6">RAID контроллер, встраиваемый в специальный разъем</h4>
+
+              <div class="config-wrap" data-section="6">
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="raid-built" value="0" data-raid-built>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">Без контроллера</span>
+                  <span class="radio__price">0 ₽</span>
+                </label>
+                <!-- End Radio -->
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="raid-built" value="1000" data-raid-built>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">HPE P440 AR 2Gb FBWC</span>
+                  <span class="radio__price">1 000 ₽</span>
+                </label>
+                <!-- End Radio -->
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="raid-built" value="1000" data-raid-built>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">HPE P240 AR</span>
+                  <span class="radio__price">1 000 ₽</span>
+                </label>
+                <!-- End Radio -->
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="raid-built" value="1000" data-raid-built>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">DELL H710 512Mb FBWC</span>
+                  <span class="radio__price">1 000 ₽</span>
+                </label>
+                <!-- End Radio -->
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="raid-built" value="1000" data-raid-built>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">DELL H710p 1Gb FBWC</span>
+                  <span class="radio__price">1 000 ₽</span>
+                </label>
+                <!-- End Radio -->
+              </div>
+            </div>
+            <!-- End RAID-controller built into -->
+
+            <!-- Network-CARD integrated -->
+            <div class="config-section">
+              <h4 class="title-4 title4-up" data-hide="7">Сетевая карта, интегрированная в материнскую плату</h4>
+
+              <div class="config-wrap padding10" data-section="7">
+                <div class="radio">
+                  <img class="icon-check" src="../../images/config/image-check.svg" alt="Иконка Ιmage-check">
+                  <span class="config__included background-color padding-right-160">Интегрированная сетевая карта HP
+                    10Gb 2
+                    port SFP+</span>
+                  <span class="config__included-price">0 ₽</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Network-CARD integrated -->
+
+            <!-- Network-CARD built into -->
+            <div class="config-section">
+              <h4 class="title-4 title4-up" data-hide="8">Сетевая карта, встраиваемая в специальный разъем</h4>
+
+              <div class="config-wrap" data-section="8">
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="network-card-built" value="0" data-card-built>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">Без сетевой карты</span>
+                  <span class="radio__price">0 ₽</span>
+                </label>
+                <!-- End Radio -->
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="network-card-built" value="1000" data-card-built>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">HP 331FLR 4 port Ethernet 1GB</span>
+                  <span class="radio__price">1 000 ₽</span>
+                </label>
+                <!-- End Radio -->
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="network-card-built" value="1000" data-card-built>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">HP 530FLR 2 port SFP+ 10GB</span>
+                  <span class="radio__price">1 000 ₽</span>
+                </label>
+                <!-- End Radio -->
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="network-card-built" value="1000" data-card-built>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">HPE 562FLR-T 2 port SFP+ 10GB</span>
+                  <span class="radio__price">1 000 ₽</span>
+                </label>
+                <!-- End Radio -->
+              </div>
+            </div>
+            <!-- End Network-CARD built into -->
+
+            <!-- PCIe -->
+            <div class="config-section">
+              <h4 class="title-4 title4-up" data-hide="9">Дополнительные PCIe устройства</h4>
+
+              <div class="config-wrap" data-section="9">
+                <!-- Row INFO -->
+                <div class="config-info">
+                  <img class="icon-info" src="../../images/config/image-info.svg" alt="Иконка Ιmage-info">
+                  <div class="info-text background-color">Вы можете выбрать несколько вариантов из предложенных.
+                    <br>Всего может быть не более 4 модулей в данной конфигурации.</div>
+                  <div class="info-quantity info-quantity-top">1 шт.
+                    <span> / 4 шт.</span>
+                  </div>
+                </div>
+                <!-- End Row INFO -->
+                <!-- Checkbox -->
+                <label class="config-checkbox">
+                  <input class="checkbox__default" type="checkbox" name="ram" value="300" data-pcie>
+                  <span class="config-checkbox__custom checkbox__custom-sizes position-top"></span>
+                  <span class="checkbox__label padding-right-220">HP H220 Host Bus Adapter</span>
+                  <span class="checkbox__wrap-quantity">
+                    <!-- Поле ввода -->
+                    <input type="number" class="checkbox__quantity" placeholder="" name="ram-quantity" min="1" max="99"
+                      value="1">
+                    <!-- End Поле ввода -->
+                    <span>шт.</span>
+                  </span>
+                  <span class="checkbox__price">500 ₽/шт.</span>
+                </label>
+                <!-- End Checkbox -->
+                <!-- Checkbox -->
+                <label class="config-checkbox">
+                  <input class="checkbox__default" type="checkbox" name="ram" value="2800" data-pcie>
+                  <span class="config-checkbox__custom checkbox__custom-sizes position-top"></span>
+                  <span class="checkbox__label padding-right-220">HP 523SFP 2 port 10GB</span>
+                  <span class="checkbox__wrap-quantity">
+                    <!-- Поле ввода -->
+                    <input type="number" class="checkbox__quantity" placeholder="" name="ram-quantity" min="1" max="99"
+                      value="1">
+                    <!-- End Поле ввода -->
+                    <span>шт.</span>
+                  </span>
+                  <span class="checkbox__price">500 ₽/шт.</span>
+                </label>
+                <!-- End Checkbox -->
+              </div>
+            </div>
+            <!-- End PCIe -->
+
+            <!-- Additional devices -->
+            <div class="config-section">
+              <h4 class="title-4 title4-up" data-hide="10">Дополнительные устройства</h4>
+
+              <div class="config-wrap" data-section="10">
+                <!-- Row INFO -->
+                <div class="config-info">
+                  <img class="icon-info" src="../../images/config/image-info.svg" alt="Иконка Ιmage-info">
+                  <div class="info-text background-color">Вы можете выбрать несколько вариантов из
+                    предложенных.
+                    <br>Всего может быть не более 4 модулей в данной конфигурации.</div>
+                  <div class="info-quantity info-quantity-top">1 шт.
+                    <span> / 4 шт.</span>
+                  </div>
+                </div>
+                <!-- End Row INFO -->
+                <!-- Checkbox -->
+                <label class="config-checkbox">
+                  <input class="checkbox__default" type="checkbox" name="ram" value="300" data-adddev>
+                  <span class="config-checkbox__custom checkbox__custom-sizes position-top"></span>
+                  <span class="checkbox__label padding-right-220">HP H220 Host Bus Adapter</span>
+                  <span class="checkbox__wrap-quantity">
+                    <!-- Поле ввода -->
+                    <input type="number" class="checkbox__quantity" placeholder="" name="ram-quantity" min="1" max="99"
+                      value="1">
+                    <!-- End Поле ввода -->
+                    <span>шт.</span>
+                  </span>
+                  <span class="checkbox__price">500 ₽/шт.</span>
+                </label>
+                <!-- End Checkbox -->
+                <!-- Checkbox -->
+                <label class="config-checkbox">
+                  <input class="checkbox__default" type="checkbox" name="ram" value="2800" data-adddev>
+                  <span class="config-checkbox__custom checkbox__custom-sizes position-top"></span>
+                  <span class="checkbox__label padding-right-220">HP 523SFP 2 port 10GB</span>
+                  <span class="checkbox__wrap-quantity">
+                    <!-- Поле ввода -->
+                    <input type="number" class="checkbox__quantity" placeholder="" name="ram-quantity" min="1" max="99"
+                      value="1">
+                    <!-- End Поле ввода -->
+                    <span>шт.</span>
+                  </span>
+                  <span class="checkbox__price">500 ₽/шт.</span>
+                </label>
+                <!-- End Checkbox -->
+              </div>
+            </div>
+            <!-- End Additional devices -->
+
+            <!-- Remote Administration -->
+            <div class="config-section">
+              <h4 class="title-4 title4-up" data-hide="11">Модуль удаленного администрирования</h4>
+
+              <div class="config-wrap padding10" data-section="11">
+                <div class="radio">
+                  <img class="icon-check" src="../../images/config/image-check.svg" alt="Иконка Ιmage-check">
+                  <span class="config__included background-color padding-right-160">ILO4 отдельный порт</span>
+                  <span class="config__included-price">0 ₽</span>
+                </div>
+              </div>
+            </div>
+            <!-- End Remote Administration -->
+
+            <!-- Power Supply -->
+            <div class="config-section">
+              <h4 class="title-4 title4-up" data-hide="12">Блок питания</h4>
+
+              <div class="config-wrap" data-section="12">
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="power -supply" value="0" data-power>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">Блок Питания
+                    <span>HP 460w</span>
+                  </span>
+                  <span class="radio__price">0 ₽</span>
+                </label>
+                <!-- End Radio -->
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="power -supply" value="5500" data-power>
+                  <span class="radio__custom radio__custom-sizes position-center"></span>
+                  <span class="radio__label padding-right-160">Блок Питания
+                    <span>HP 460w x2</span>
+                  </span>
+                  <span class="radio__price">5 500 ₽</span>
+                </label>
+                <!-- End Radio -->
+              </div>
+            </div>
+            <!-- End Power Supply -->
+
+            <!-- Installation and Connection -->
+            <div class="config-section">
+              <h4 class="title-4 title4-up" data-hide="13">Монтаж и подключение</h4>
+
+              <div class="config-wrap" data-section="13">
+                <!-- Checkbox -->
+                <label class="config-checkbox">
+                  <input class="checkbox__default" type="checkbox" name="ram" value="5500" data-connect>
+                  <span class="config-checkbox__custom checkbox__custom-sizes position-center"></span>
+                  <span class="checkbox__label padding-right-160">Рельсы для установки в стойку 19 дюймов</span>
+                  <span class="checkbox__price">5 500 ₽</span>
+                </label>
+                <!-- End Checkbox -->
+                <!-- Checkbox -->
+                <label class="config-checkbox">
+                  <input class="checkbox__default" type="checkbox" name="ram" value="3000" data-connect>
+                  <span class="config-checkbox__custom checkbox__custom-sizes position-center"></span>
+                  <span class="checkbox__label padding-right-160">Кабель менеджмент HP CMA</span>
+                  <span class="checkbox__price">3 000 ₽</span>
+                </label>
+                <!-- End Checkbox -->
+                <!-- Checkbox -->
+                <label class="config-checkbox">
+                  <input class="checkbox__default" type="checkbox" name="ram" value="3000" data-connect>
+                  <span class="config-checkbox__custom checkbox__custom-sizes position-center"></span>
+                  <span class="checkbox__label padding-right-160">2x Кабель питания 1.5 метра C13-C14</span>
+                  <span class="checkbox__price">3 000 ₽</span>
+                </label>
+                <!-- End Checkbox -->
+                <!-- Checkbox -->
+                <label class="config-checkbox">
+                  <input class="checkbox__default" type="checkbox" name="ram" value="3000" data-connect>
+                  <span class="config-checkbox__custom checkbox__custom-sizes position-top"></span>
+                  <span class="checkbox__label padding-right-160">2x Кабель питания 3 метра C13-C14 </span>
+                  <span class="checkbox__price">3 000 ₽</span>
+                </label>
+                <!-- End Checkbox -->
+              </div>
+            </div>
+            <!-- End Installation and Connection -->
+
+            <!-- Operating System -->
+            <div class="config-section">
+              <h4 class="title-4 title4-up" data-hide="14">ОС</h4>
+
+              <div class="config-wrap" data-section="14">
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="os" value="0" data-os>
+                  <span class="radio__custom radio__custom-sizes position-top"></span>
+                  <span class="radio__label padding-right-160">Без ОС</span>
+                  <span class="radio__price">0 ₽</span>
+                </label>
+                <!-- End Radio -->
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="os" value="0" data-os>
+                  <span class="radio__custom radio__custom-sizes position-top"></span>
+                  <span class="radio__label radio__label-clarification">Microsoft Windows Server Standard Core
+                    2016 Sngl OLP 2Lic
+                    NL CoreLic</span>
+                  <span class="radio__price radio__price-bottom">уточнит менеджер</span>
+                </label>
+                <!-- End Radio -->
+                <!-- Radio -->
+                <label class="radio">
+                  <input class="radio__default" type="radio" name="os" value="0" data-os>
+                  <span class="radio__custom radio__custom-sizes position-top"></span>
+                  <span class="radio__label radio__label-clarification">OEM Microsoft Windows Server Standard
+                    2016 16 Core</span>
+                  <span class="radio__price radio__price-bottom">уточнит менеджер</span>
+                </label>
+                <!-- End Radio -->
+              </div>
+            </div>
+            <!-- End Operating System -->
+
+            <!-- Configurator-Footer -->
+            <div class="configurator-main-footer">
+              <a class="configurator-platform-link" href="#">Изменить выбор
+                <span>платформы</span>
+                <img class="configurator-platform-icon" src="../../images/config-aside/image-arr-back.svg"
+                  alt="Иконка Arrow-back">
+              </a>
+              <a class="configurator-btn" href="#">
+                <div class="btn__icon">
+                  <img src="../../images/carousel1-card/image-cart-add.svg" alt="Иконка Image-cart-add">
+                </div>
+                <div class="btn__text">
+                  купить
+                </div>
+              </a>
+
+              <div class="configurator-total">
+                <div class="configurator-total-text">
+                  Итого за вашу конфигурацию:
+                </div>
+                <div class="configurator-sum">
+                  <div class="configurator-sum-title"> 130 400 ₽</div>
+                  <div class="configurator-sum-vat">в том числе НДС 20%</div>
+                </div>
+              </div>
+            </div>
+            <!-- End Configurator Footer -->
+          </div>
+
+          <div class="configurator-main-aside">
+            <div class="aside-wrap">
+              <!-- Aside Panel -->
+              <div class="aside-panel">
+                <div class="aside-list">
+                  <div class="aside-title">
+                    <div class="aside-name">HP PROLIANT DL360p GEN8
+                      <span>(Восстановленный)</span>
+                    </div>
+                    <div class="aside-price">117 700 ₽</div>
+                  </div>
+                  <ul>
+                    <li class="aside-list-item">
+                      <div class="aside-list-desc">
+                        Количество процессоров
+                        <span>x1</span>
+                      </div>
+                      <div class="aside-list-price">0 ₽</div>
+                    </li>
+                    <li class="aside-list-item">
+                      <div class="aside-list-desc">
+                        CPU
+                        <span>2 × Intel Xeon E5-2603</span>
+                      </div>
+                      <div class="aside-list-price">8 700 ₽</div>
+                    </li>
+                    <li class="aside-list-item">
+                      <div class="aside-list-desc">
+                        RAM
+                        <span>1 шт. DDR3 / 2 ГБ</span>
+                      </div>
+                      <div class="aside-list-price">300 ₽</div>
+                    </li>
+                    <li class="aside-list-item">
+                      <div class="aside-list-desc">
+                        HDD 8 BAY
+                        <span>Салазка HP для HDD 2.5"</span>
+                      </div>
+                      <div class="aside-list-price">1 700 ₽</div>
+                    </li>
+                    <li class="aside-list-item">
+                      <div class="aside-list-desc">
+                        RAID интегрир.
+                        <span>HP P420i + FBWC</span>
+                      </div>
+                      <div class="aside-list-price">0 ₽</div>
+                    </li>
+                    <li class="aside-list-item">
+                      <div class="aside-list-desc">
+                        RAID встраиваемый
+                        <span>Без контроллера</span>
+                      </div>
+                      <div class="aside-list-price">0 ₽</div>
+                    </li>
+                    <li class="aside-list-item">
+                      <div class="aside-list-desc">
+                        Сетевая карта интегрир.
+                        <span>HP 10Gb 2 port SFP+</span>
+                      </div>
+                      <div class="aside-list-price">0 ₽</div>
+                    </li>
+                    <li class="aside-list-item">
+                      <div class="aside-list-desc">
+                        Сетевая карта вcтраиваемая
+                        <span>Без сетевой карты</span>
+                      </div>
+                      <div class="aside-list-price">0 ₽</div>
+                    </li>
+                    <li class="aside-list-item">
+                      <div class="aside-list-desc">
+                        Сетевая карта вcтраиваемая
+                        <span>Без сетевой карты</span>
+                      </div>
+                      <div class="aside-list-price">0 ₽</div>
+                    </li>
+                    <li class="aside-list-item">
+                      <div class="aside-list-desc">
+                        Доп. PCIe устройства
+                        <span>HP H220 Host Bus Adapter HP 523SFP 2 port 10GB</span>
+                      </div>
+                      <div class="aside-list-price">1 000 ₽</div>
+                    </li>
+                    <li class="aside-list-item">
+                      <div class="aside-list-desc">
+                        Доп. устройства
+                        <span>HP H220 Host Bus Adapter HP 523SFP 2 port 10GB</span>
+                      </div>
+                      <div class="aside-list-price">1 000 ₽</div>
+                    </li>
+                    <li class="aside-list-item">
+                      <div class="aside-list-desc">
+                        Модуль удаленного управ.
+                        <span>ILO4 отдельный порт</span>
+                      </div>
+                      <div class="aside-list-price">0 ₽</div>
+                    </li>
+                    <li class="aside-list-item">
+                      <div class="aside-list-desc">
+                        Блок питания
+                        <span>HP 460w</span>
+                      </div>
+                      <div class="aside-list-price">0 ₽</div>
+                    </li>
+                    <li class="aside-list-item">
+                      <div class="aside-list-desc">
+                        Монтаж и подключение
+                        <span>Рельсы для установки в стойку 19 дюймов</span>
+                      </div>
+                      <div class="aside-list-price">5 500 ₽</div>
+                    </li>
+                    <li class="aside-list-item">
+                      <div class="aside-list-desc">
+                        ОС
+                        <span>Без ОС </span>
+                      </div>
+                      <div class="aside-list-price">0 ₽</div>
+                    </li>
+                  </ul>
+                </div>
+                <!-- End Aside Panel -->
+                <!-- Footer Panel -->
+                <div class="aside-total">
+                  <div class="aside-total-half aside-sum">
+                    <div class="aside-sum-title">130 400 ₽</div>
+                    <div class="aside-sum-vat">в том числе НДС 20%</div>
+                  </div>
+                  <a class="aside-total-half aside-btn">
+                    <div class="aside-btn-icon">
+                      <img src="../../images/carousel1-card/image-cart-add.svg" alt="Иконка">
+                    </div>
+                    <div class="aside-btn-text">
+                      Купить
+                    </div>
+                  </a>
+                </div>
+                <!-- End Footer Panel -->
+              </div>
+              <ul class="aside-offer">
+                <li class="aside-offer-item">
+                  <img src="../../images/config-aside/image-calc.svg" alt="Иконка Image-calc">
+                  <a class="aside-offer-link" href="#">Предлагаем лизинг на 12 мес./24 мес.</a>
+                </li>
+                <li class="aside-offer-item">
+                  <img src="../../images/config-aside/image-serv.svg" alt="Иконка Image-serv">
+                  <a class="aside-offer-link" href="#">Предлагаем аренду в ЦОД</a>
+                </li>
+                <li class="aside-offer-item">
+                  <img src="../../images/config-aside/image-serv.svg" alt="Иконка Image-serv">
+                  <a class="aside-offer-link" href="#">Предлагаем размещение в ЦОД</a>
+                </li>
+              </ul>
+            </div>
+            <!-- False-block for sticky-block .aside-wrap  -->
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Add Options -->
+    <section class="configurator-options">
+      <div class="container">
+        <h4 class="title-4 title4-up margin-15">Дополнительные варианты приобретения</h4>
+
+        <ul class="options-list">
+          <li class="options-list-item">
+            <div class="options-list-wrap">
+              <img class="options-list-icon" src="../../images/config/image-l-calc.svg" alt="Иконка Image-l-calc">
+              <div class="options-list-title width-auto">Приобрести в лизинг</div>
+              <div class="options-list-row">
+                <!-- Radio -->
+                <label class="options-radio-half">
+                  <input class="radio__default" type="radio" name="cpu-quantity" value="1">
+                  <span class="radio__custom radio__custom-sizes options-radio-position background-blue"></span>
+                  <span class="options-radio__label">12 месяцев</span>
+                </label>
+                <!-- End Radio -->
+
+                <!-- Radio -->
+                <label class="options-radio-half">
+                  <input class="radio__default" type="radio" name="cpu-quantity" value="1">
+                  <span class="radio__custom radio__custom-sizes options-radio-position background-blue"></span>
+                  <span class="options-radio__label">24 месяца</span>
+                </label>
+                <!-- End Radio -->
+              </div>
+            </div>
+
+            <div class="options-wrap">
+              <div class="options-payments">
+                <div class="options-payment">26 300 ₽
+                  <span>Единоразовый первый взнос</span>
+                </div>
+                <div class="options-payment">8 100 ₽
+                  <span>Ежемесячный платеж</span>
+                </div>
+              </div>
+              <button class="button options-list__button" type="submit">отправить запрос</button>
+            </div>
+          </li>
+          <li class="options-list-item">
+            <div class="options-list-wrap">
+              <img class="options-list-icon icon__image-data" src="../../images/config/image-data.svg"
+                alt="Иконка Image-l-calc">
+              <div class="options-list-title">Аренда в ЦОД
+                <span>(включая Интернет 100 м/бит)</span>
+              </div>
+            </div>
+
+            <div class="options-wrap">
+              <div class="options-payment">13 700 ₽
+                <span>Ежемесячный платеж</span>
+              </div>
+              <button class="button options-list__button" type="submit">отправить запрос</button>
+            </div>
+          </li>
+          <li class="options-list-item">
+            <div class="options-list-wrap">
+              <img class="options-list-icon icon__image-data-wrench" src="../../images/config/image-data-wrench.svg"
+                alt="Иконка Image-l-calc">
+              <div class="options-list-title">Размещение в ЦОД (Colocation)
+                <span>(включая безлимитный Интернет 100 м/бит)</span>
+                + 2 года полной гарантии на Сервер
+              </div>
+            </div>
+
+            <div class="options-wrap">
+              <div class="options-payment">4 000 ₽
+                <span>Ежемесячный платеж</span>
+              </div>
+              <button class="button options-list__button" type="submit">отправить запрос</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- End Add Options -->
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-top-left">
+          <a href="#header" class="logo footer__logo">
+            <img src="../../images/footer/image-logo.svg" alt="Иконка Логотип Server Gate">
+          </a>
+          <ul class="footer__icons">
+            <li class="footer__icon">
+              <a href="#">
+                <img src="../../images/footer/image-vk.svg" alt="Социальная иконка VKontakte">
+              </a>
+            </li>
+            <li class="footer__icon">
+              <a href="#">
+                <img src="../../images/footer/image-fb.svg" alt="Социальная иконка Facebook">
+              </a>
+            </li>
+            <li class="footer__icon">
+              <a href="#">
+                <img src="../../images/footer/image-insta.svg" alt="Социальная иконка Instagram">
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-top-right">
+          <div class="nav-menu">
+            <ul class="nav-menu__items nav-menu-half">
+              <li class="nav-menu__item">
+                <a class="color-white" href="../../pages/servers/servers.html">Серверы</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="../../pages/parts/parts.html">Комплектующие</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="#">Сетевое оборудование</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="#">Услуги</a>
+              </li>
+            </ul>
+            <ul class="nav-menu__items nav-menu-half">
+              <li class="nav-menu__item">
+                <a class="color-white" href="../../pages/leasing/leasing.html">Лизинг оборудования</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="#">Гарантия</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="#">Доставка</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="#">Оплата</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="../../pages/about/about.html">О нас</a>
+              </li>
+              <li class="nav-menu__item">
+                <a class="color-white" href="../../pages/contacts/contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="footer-contacts">
+            <div class="footer-contacts__header">
+              Контакты
+            </div>
+            <ul>
+              <li class="footer-contacts__item">
+                <img src="../../images/footer/image-loc.svg" alt="Иконка Image-loc">
+                117420, г. Москва,<br>
+                ул. Профсоюзная, д. 57, оф. 700
+              </li>
+              <li class="footer-contacts__item">
+                <img src="../../images/footer/image-wapp.svg" alt="Иконка Image-wapp">
+                <a href="tel:88002004488">8 800 200 44-88</a>
+              </li>
+              <li class="footer-contacts__item">
+                <img src="../../images/footer/image-clock.svg" alt="Иконка Image-clock">
+                Режим работы<br>
+                ПН-ПТ: 9.00 - 19.00
+              </li>
+              <li class="footer-contacts__item">
+                <img src="../../images/footer/image-mail.svg" alt="Иконка Image-mail">
+                <a class="footer-contacts__link" href="mailto:sales@servergate.ru">
+                  sales@servergate.ru
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          © 2019, ООО “Сервер Гейт”
+        </div>
+        <ul class="footer-bottom-right">
+          <li>
+            <a href="#" class="footer-right__link">Политика конфиденциальности</a>
+          </li>
+          <li>
+            <a href="#" class="footer-right__link">Публичная оферта</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
   
+  <script src="../../js/gamburger.js"></script>
+  <script src="../../js/config.js"></script>
+
+  <!-- <script src="./libs/jquery/jquery-3.4.1.min.js"></script> -->
+  <!-- <script src="./libs/owlcarousel2/owl.carousel.min.js"></script>
+	<script src="./js/owlcarousel/owlcarousel.js"></script>-->
+  <!-- Библиотека для выпадашек-подсказок -->
+  <!-- <script src="https://unpkg.com/@popperjs/core@2"></script>
+	<script src="https://unpkg.com/tippy.js@6"></script> -->
 </body>
+
 </html>

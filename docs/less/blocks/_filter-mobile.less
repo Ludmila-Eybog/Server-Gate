@@ -1,0 +1,93 @@
+//   --- FILTER Mobile ---     /
+
+.filter-wrap {
+  position: fixed;
+  padding: 80px 55px 165px;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--white);
+  z-index: 30;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.filter-title {
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-family: 'RF Rufo', sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--black);
+}
+
+.filter li {
+  margin-bottom: 16px;
+}
+
+.filter-border {
+  border-bottom: 1px solid var(--grey-line);
+}
+
+.filter-item-mobile.active {
+  margin-left: -15px;
+  padding: 0 15px;
+  display: inline-block;
+  border-radius: 14px;
+  background-color: var(--yellow);
+}
+
+.filter-item-mobile.active .filter-link {
+  color: var(--white);
+}
+
+.icon-close {
+  position: absolute;
+  margin-right: 8px;
+  width: 50px;
+  height: 50px;
+  top: 0px;
+  left: 0px;
+  background-color: var(--blue);
+  font-size: 0;
+  overflow: hidden;
+  z-index: 20;
+  transition: all 0.2s ease;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.cross-line::before,
+.cross-line::after {
+  position: absolute;
+  content: '';
+  top: 50%;
+  left: 50%;
+  width: 24px;
+  height: 3px;
+  background-color: var(--white);
+  transition: all 0.2s ease;
+}
+
+.cross-line::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.cross-line::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+//   --- End Иконка Гамбургер ---     /
+
+// #menu-toggle {
+//     position: relative;
+//     top: 0px;
+//     left: 0;
+
+//     @media(min-width: 1024px) {
+//         display: none;
+//     }
+// }
