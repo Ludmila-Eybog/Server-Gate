@@ -1,6 +1,6 @@
 .warranty {
   padding-bottom: 5px;
-  background-color: var(--grey-background);
+  background-color: var(--background);
 
   @media (min-width: 1024px) {
     padding-bottom: 60px;
@@ -50,14 +50,12 @@
 }
 
 .warranty-icon-text {
+  .font(@color: var(--accent-main), @weight: 700, @text: lowercase);
+
   position: absolute;
   top: -4px;
   left: 90px;
-
   font-size: 52px;
-  font-weight: 700;
-  font-family: 'RF Rufo', sans-serif;
-  color: var(--blue);
 }
 
 .warranty-icon-text span {
@@ -153,12 +151,11 @@
 }
 
 .warranty-link {
+  .font-arimo(@color: var(--accent-main));
+
   position: relative;
   display: inline-block;
   font-size: 13px;
-  font-weight: 400;
-  font-family: 'Arimo', Arial, sans-serif;
-  color: var(--blue);
   letter-spacing: 0.8px;
 
   &::after {
@@ -168,12 +165,12 @@
     bottom: 0px;
     width: 100%;
     height: 1px;
-    background-color: var(--blue);
+    background-color: var(--accent-main);
     opacity: 0.7;
   }
 
   &:hover {
-    color: var(--blue-hover);
+    color: var(--accent-main-hover);
 
     &::after {
       display: none;

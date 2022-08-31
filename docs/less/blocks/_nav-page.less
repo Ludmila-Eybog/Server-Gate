@@ -4,7 +4,7 @@
   @media (min-width: 1024px) {
     position: relative;
     display: block;
-    background-color: var(--blue);
+    background-color: var(--accent-main);
   }
 }
 
@@ -27,10 +27,9 @@
 }
 
 .nav-list__link {
+  .font-arimo(@color: var(--white));
+
   font-size: 15px;
-  font-weight: 400;
-  font-family: 'Arimo', Arial, sans-serif;
-  color: var(--white);
   line-height: 2.67;
 
   &:hover {
@@ -44,10 +43,9 @@
 }
 
 .nav-phone__link {
+  .font();
+
   font-size: 24px;
-  font-weight: 600;
-  font-family: 'RF Rufo', sans-serif;
-  color: var(--white);
   line-height: 1.67;
 
   &:hover {

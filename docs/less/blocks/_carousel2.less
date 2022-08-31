@@ -1,7 +1,7 @@
 .service {
   padding-top: 29px;
   padding-bottom: 14px;
-  background-color: var(--grey-background);
+  background-color: var(--background);
 
   @media (min-width: 768px) {
     padding-bottom: 28px;
@@ -26,9 +26,10 @@
 }
 
 .service-carousel {
+  .box-shadow (@alpha: 0.12);
+
   padding: 9px 0 9px;
   position: relative;
-  box-shadow: 0 0 27px rgba(10, 54, 88, 0.12);
   border-radius: 3px;
   background-color: var(--white);
 
@@ -67,7 +68,7 @@
     left: 0px;
     bottom: 35px;
     width: 1px;
-    background-color: var(--grey-delimiter);
+    background-color: var(--delimiter);
   }
 }
 

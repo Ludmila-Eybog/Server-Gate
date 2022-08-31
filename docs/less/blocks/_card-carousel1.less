@@ -1,11 +1,8 @@
 .carousel1-card {
+  .box-shadow (@alpha: 0.12);
+
   border-radius: 3px;
   background-color: var(--white);
-  box-shadow: 0px 0px 27px rgba(10, 54, 88, 0.12);
-
-  @media (min-width: 390px) {
-    box-shadow: 0 0 27px rgba(10, 54, 88, 0.12);
-  }
 }
 
 .card__top {
@@ -14,6 +11,8 @@
 }
 
 .card__label {
+  .font(@color: var(--forms));
+
   padding: 0 10px;
   position: absolute;
   top: 15px;
@@ -21,10 +20,6 @@
   background-color: #e7eaee;
 
   font-size: 20px;
-  font-weight: 600;
-  font-family: 'RF Rufo', sans-serif;
-  color: var(--grey-forms);
-  text-transform: uppercase;
   text-align: center;
 }
 
@@ -37,21 +32,19 @@
 
   width: 191px;
   height: 40px;
-  border: 2px solid var(--blue);
+  border: 2px solid var(--accent-main);
   border-radius: 3px;
-  fill: var(--blue);
+  fill: var(--accent-main);
   transition: all 0.2s ease 0s;
 
   &::after {
+    .font(@color: var(--accent-main));
+
     position: absolute;
     content: 'сконфигурировать';
 
-    font-family: 'RF Rufo', sans-serif;
-    font-weight: 600;
     font-size: 22px;
     line-height: 36px;
-    color: var(--blue);
-    text-transform: uppercase;
   }
 
   @media (min-width: 1024px) {
@@ -68,7 +61,7 @@
 
     &:hover {
       fill: var(--white);
-      background-color: var(--yellow);
+      background-color: var(--accent);
 
       .card__text {
         display: block;
@@ -93,20 +86,20 @@
   display: none;
 
   @media (min-width: 1024px) {
+    .box-shadow (@y: 11px, @blur: 43px, @alpha: 0.3);
+
     display: block;
     padding: 5px;
     width: 176px;
     border-radius: 4px;
     background-color: var(--white);
-    box-shadow: 0 11px 43px rgba(10, 54, 88, 0.3);
   }
 }
 
 .tippy-content {
+  .font-arimo(@color: #828282);
+
   font-size: 13px;
-  font-weight: 400;
-  font-family: 'Arimo', Arial, sans-serif;
-  color: #828282;
   letter-spacing: 0.5px;
   line-height: 1.4;
 }
@@ -120,12 +113,14 @@
 
 //   ---   Нижняя Выпадашка у кнопки BUY-КУПИТЬ - слайд карусели1
 .tippy-box[data-theme~='buy-drop'] {
+  .box-shadow (@y: 11px, @blur: 43px, @alpha: 0.3);
+
   display: block;
   padding-top: 6px;
   width: 145px;
   background-color: var(--white);
   text-align: center;
-  box-shadow: 0px 11px 43px rgba(10, 54, 88, 0.3);
+  // box-shadow: 0px 11px 43px rgba(10, 54, 88, 0.3);
 }
 
 .tippy-arrow[data-theme~='buy-drop'] {
@@ -159,7 +154,7 @@
   }
 
   &:hover {
-    border-bottom: 3px solid var(--yellow);
+    border-bottom: 3px solid var(--accent);
     cursor: pointer;
   }
 
@@ -221,7 +216,7 @@
 
   &:hover {
     .card__title {
-      color: var(--blue);
+      color: var(--accent-main);
 
       &:after {
         opacity: 1;
@@ -262,7 +257,7 @@
     left: 0;
     width: 100%;
     height: 2px;
-    background-color: var(--blue);
+    background-color: var(--accent-main);
 
     opacity: 0;
     pointer-events: none;
@@ -347,7 +342,7 @@
   padding-left: 28px;
   font-size: 13px;
   font-family: sans-serif, Arial;
-  color: var(--grey-text);
+  color: var(--text);
   text-align: left;
 
   @media (min-width: 768px) {
@@ -360,16 +355,14 @@
 }
 
 .card__footer {
+  .font();
+
   position: relative;
   display: flex;
 
   font-size: 24px;
-  font-weight: 600;
-  font-family: 'RF Rufo', sans-serif;
-  color: var(--white);
-  background-color: var(--blue);
+  background-color: var(--accent-main);
   border-radius: 0 0 3px 3px;
-  text-transform: uppercase;
   text-align: center;
 }
 
@@ -400,11 +393,11 @@
 
 .card__btn {
   padding-right: 3px;
-  background-color: var(--yellow);
+  background-color: var(--accent);
   border-radius: 0 0 3px 0;
 
   &:hover {
-    background-color: var(--yellow-hover);
+    background-color: var(--accent-hover);
 
     // .drop-buy {
     //   opacity: 1;

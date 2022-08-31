@@ -23,7 +23,7 @@
 
 .leasing {
   padding: 25px 0 30px;
-  background-color: var(--grey-background);
+  background-color: var(--background);
 
   @media (min-width: 1024px) {
     padding: 17px 0 84px;
@@ -43,7 +43,7 @@
 .breadcrumbs__item {
   position: relative;
   font-size: 14px;
-  color: var(--grey-text);
+  color: var(--text);
 
   &:not(:last-child) {
     padding-right: 16px;
@@ -56,7 +56,7 @@
       right: 0;
       width: 10px;
       height: 2px;
-      background-color: var(--light-grey);
+      background-color: var(--text-light);
     }
 
     &::after {
@@ -66,8 +66,8 @@
       right: 0;
       width: 6px;
       height: 6px;
-      border-left: 2px solid var(--light-grey);
-      border-bottom: 2px solid var(--light-grey);
+      border-left: 2px solid var(--text-light);
+      border-bottom: 2px solid var(--text-light);
       transform: rotate(-135deg);
     }
   }
@@ -75,7 +75,7 @@
 
 .breadcrumbs__link {
   position: relative;
-  color: var(--grey-text);
+  color: var(--text);
 
   &::after {
     position: absolute;
@@ -84,7 +84,7 @@
     height: 1px;
     left: 0;
     bottom: 0;
-    background-color: var(--grey-text);
+    background-color: var(--text);
     opacity: 0;
     transition: opacity 0.2s ease 0.2s;
   }
@@ -97,7 +97,7 @@
 .leasing-subtitle {
   margin-bottom: 15px;
   font-size: 15px;
-  color: var(--grey-text);
+  color: var(--text);
   line-height: 1.3;
 
   @media (min-width: 1024px) {
@@ -107,9 +107,7 @@
 }
 
 .leasing-subtitle__bold {
-  font-family: 'Arimo', Arial, sans-serif;
-  font-weight: 700;
-  color: var(--black);
+  .font-arimo(@color: var(--black), @weight: 700);
 }
 
 //   ---   Leasing_steps
@@ -122,7 +120,7 @@
   align-items: center;
 
   border-radius: 3px;
-  background-color: var(--blue);
+  background-color: var(--accent-main);
 
   @media (min-width: 390px) {
     padding: 20px;
@@ -160,7 +158,7 @@
   padding-left: 38px;
   font-size: 32px;
   color: var(--white);
-  text-transform: none;
+  text-transform: lowercase;
 
   &::before {
     position: absolute;
@@ -225,6 +223,8 @@
 }
 
 .step-item {
+  .box-shadow ();
+
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -233,7 +233,6 @@
   height: 90px;
   background-color: var(--white);
   border-radius: 90px;
-  box-shadow: 0 0 27px rgba(10, 54, 88, 0.1);
 
   &:not(:last-child) {
     margin-bottom: 10px;
@@ -321,10 +320,10 @@
   width: 240px;
   height: 46px;
   border-radius: 3px;
-  background-color: var(--yellow);
+  background-color: var(--accent);
 
   &:hover {
-    background-color: var(--yellow-hover);
+    background-color: var(--accent-hover);
   }
 
   @media (min-width: 1024px) {

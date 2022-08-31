@@ -16,14 +16,13 @@
 }
 
 .vat__link {
+  .font(@color: var(--text-light));
+
   position: relative;
   padding-right: 22px;
 
   font-size: 20px;
-  font-weight: 600;
-  font-family: 'RF Rufo', sans-serif;
   line-height: 1;
-  text-transform: uppercase;
   cursor: pointer;
 
   &:hover {
@@ -35,7 +34,7 @@
 }
 
 .vat__link-color {
-  color: var(--yellow);
+  color: var(--accent);
 }
 
 .vat__link-img {
@@ -48,6 +47,8 @@
 //  --- Выпадашка VAT
 
 .vat__drop {
+  .box-shadow (@y: 11px, @blur: 43px, @alpha: 0.3);
+
   padding: 14px 14px 10px;
   width: 260px;
   position: absolute;
@@ -55,7 +56,6 @@
   left: 45px;
   border-radius: 5px;
   background-color: var(--white);
-  box-shadow: 0 11px 43px rgba(10, 54, 88, 0.3);
 
   transition: opacity 0.2s ease 0.2s;
   opacity: 0;
@@ -85,25 +85,22 @@
 }
 
 .vat__drop-title {
+  .font();
+
   margin-bottom: 7px;
   padding: 0 3px 3px;
   display: inline-block;
-  background-color: var(--yellow);
+  background-color: var(--accent);
   font-size: 20px;
-  font-family: 'RF Rufo', sans-serif;
-  font-weight: 600;
   line-height: 1;
   letter-spacing: normal;
-  color: var(--white);
-  text-transform: uppercase;
 }
 
 .vat__drop-text {
+  .font-arimo(@color: #828282);
+
   display: block;
   font-size: 12px;
-  font-weight: 400;
-  font-family: 'Arimo', Arial, sans-serif;
-  color: #828282;
   text-transform: none;
   letter-spacing: 1.1px;
   line-height: 1.5;

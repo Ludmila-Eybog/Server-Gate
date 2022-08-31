@@ -1,6 +1,6 @@
 .choice {
   position: relative;
-  background-color: var(--grey-background);
+  background-color: var(--background);
 
   &::before {
     @media (min-width: 1024px) {
@@ -29,7 +29,7 @@
 
   @media (min-width: 1024px) {
     // background-color: rgba(0, 0, 0, 0);  //  "обнуление" background-а
-    background-color: transparent;  //  равнозначно предыдущему
+    background-color: transparent; //  равнозначно предыдущему
   }
 }
 
@@ -52,7 +52,7 @@
   display: flex;
   align-items: center;
   height: 30px;
-  border-bottom: 1px solid var(--light-grey);
+  border-bottom: 1px solid var(--text-light);
 
   @media (min-width: 390px) {
     padding-bottom: 6px;
@@ -101,12 +101,10 @@
 }
 
 .choice-list__link {
-  position: relative;
+  .font(@color: var(--text-light));
 
+  position: relative;
   font-size: 18px;
-  font-weight: 600;
-  font-family: 'RF Rufo', sans-serif;
-  text-transform: uppercase;
   line-height: 1.6;
 
   &::after {
@@ -116,7 +114,7 @@
     height: 3px;
     left: 0;
     bottom: -1px;
-    background-color: var(--yellow);
+    background-color: var(--accent);
 
     opacity: 0;
     pointer-events: none;
@@ -168,7 +166,7 @@
       height: 1px;
       right: 0;
       bottom: 0px;
-      background-color: var(--blue);
+      background-color: var(--accent-main);
 
       opacity: 1;
       visibility: visible;
@@ -188,10 +186,10 @@
 }
 
 .choice-head-link {
+  .font-arimo(@color: var(--accent-main));
+
   position: relative;
   font-size: 14px;
-  font-family: 'Arimo', Arial, sans-serif;
-  color: var(--blue);
   height: 17px;
 
   &::before {
@@ -201,7 +199,7 @@
     height: 2px;
     top: 50%;
     right: -24px;
-    background-color: var(--light-grey);
+    background-color: var(--text-light);
   }
 
   &:after {
@@ -211,8 +209,8 @@
     height: 8px;
     top: 5px;
     right: -24px;
-    border-left: 2px solid var(--light-grey);
-    border-bottom: 2px solid var(--light-grey);
+    border-left: 2px solid var(--text-light);
+    border-bottom: 2px solid var(--text-light);
     transform: rotate(-135deg);
   }
 }
@@ -222,6 +220,8 @@
   display: none;
 
   @media (min-width: 1024px) {
+    .box-shadow (@alpha: 0.11);
+
     position: relative;
     display: block;
     padding: 0 30px;
@@ -229,12 +229,11 @@
     width: 220px;
     border-radius: 3px;
 
-    background-color: var(--blue);
+    background-color: var(--accent-main);
     background-image: url(../images/choice/image-bg-pat_adapt.svg);
     background-size: 182px 24%;
     background-position: 0 75px;
     background-repeat: no-repeat;
-    box-shadow: rgba(10, 54, 88, 0.11) 0px 0px 27px;
   }
 }
 
@@ -255,12 +254,10 @@
 }
 
 .banner__title {
+  .font();
+
   margin-bottom: 9px;
   font-size: 30px;
-  font-weight: 600;
-  font-family: 'RF Rufo', sans-serif;
-  color: var(--white);
-  text-transform: uppercase;
   line-height: 1;
   letter-spacing: 0.1px;
 

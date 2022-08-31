@@ -12,7 +12,7 @@
 }
 
 .testimonial-wrapper {
-  position: relative;  
+  position: relative;
   display: flex;
   flex-direction: column;
 
@@ -95,7 +95,7 @@
 // Carousel3
 
 .testimonial-carousel {
-  background-color: var(--grey-background);
+  background-color: var(--background);
   border-radius: 3px;
 
   @media (min-width: 1024px) {
@@ -152,7 +152,7 @@
     border-radius: 3px;
 
     &:hover {
-      background-color: var(--blue-hover);
+      background-color: var(--accent-main-hover);
     }
   }
 }
@@ -205,12 +205,11 @@
 }
 
 .testimonial__date {
+  .font(@color: #7a7a7a, @text: lowercase);
+
   position: absolute;
   top: 15px;
   font-size: 18px;
-  font-family: 'RF Rufo', sans-serif;
-  font-weight: 600;
-  color: #7a7a7a;
   line-height: 1;
 
   @media (min-width: 1024px) {
@@ -241,7 +240,7 @@
       bottom: 0;
       background: linear-gradient(
         to top,
-        var(--grey-background) 0,
+        var(--background) 0,
         rgba(244, 246, 248, 0) 100%
       );
     }
@@ -253,11 +252,10 @@
 }
 
 .testimonial__name {
+  .font(@color: var(--black), @text: capitalize);
+
   margin-bottom: 16px;
   font-size: 24px;
-  font-family: 'RF Rufo', sans-serif;
-  font-weight: 600;
-  color: var(--black);
   line-height: 1;
 }
 
@@ -281,9 +279,9 @@
 }
 
 .testimonial__text {
+  .font-arimo(@color: var(--text));
+
   font-size: 13px;
-  font-family: 'Arimo', Arial, sans-serif;
-  font-weight: 400;
   line-height: 1.55;
   letter-spacing: 0.52px;
 

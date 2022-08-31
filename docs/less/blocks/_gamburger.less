@@ -1,68 +1,68 @@
 //   --- Иконка Гамбургер ---     /
 
 .gamburger {
-    position: relative;
-    margin-right: 8px;
-    width: 50px;
-    height: 50px;
-    background-color: var(--blue);
-    font-size: 0;
-    overflow: hidden;
-    z-index: 20;
-    transition: 0.15s;
+  position: relative;
+  margin-right: 8px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent-main);
+  font-size: 0;
+  overflow: hidden;
+  z-index: 20;
+  transition: 0.15s;
 
-    @media (min-width: 1024px) {
-        display: none;
-    }
+  @media (min-width: 1024px) {
+    display: none;
+  }
 }
 
 .gamburger:focus {
-    outline: none;
+  outline: none;
 }
 
 .gamburger-line {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 24px;
-    height: 3px;
-    background-color: var(--white);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 3px;
+  background-color: var(--white);
 }
 
 .gamburger-line::before,
 .gamburger-line::after {
-    position: absolute;
-    content: "";
-    left: 0;
-    width: 24px;
-    height: 3px;
-    background-color: var(--white);
-    transition: 0.2s ease;
+  position: absolute;
+  content: '';
+  left: 0;
+  width: 24px;
+  height: 3px;
+  background-color: var(--white);
+  transition: 0.2s ease;
 }
 
 .gamburger-line::before {
-    top: -7px;
+  top: -7px;
 }
 
 .gamburger-line::after {
-    bottom: -7px;
+  bottom: -7px;
 }
 
 .gamburger.active .gamburger-line {
-    background-color: transparent;
+  background-color: transparent;
 }
 
 .gamburger.active .gamburger-line::before {
-    background-color: var(--white);
-    transform: rotate(45deg);
-    top: 0;
+  background-color: var(--white);
+  transform: rotate(45deg);
+  top: 0;
 }
 
 .gamburger.active .gamburger-line::after {
-    background-color: var(--white);
-    transform: rotate(-45deg);
-    bottom: 0;
+  background-color: var(--white);
+  transform: rotate(-45deg);
+  bottom: 0;
 }
 
 //   --- End Иконка Гамбургер ---     /

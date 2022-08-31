@@ -1,6 +1,6 @@
 // Кнопка Cross-orders
 .modal__cross-orders {
-  background-color: var(--blue);
+  background-color: var(--accent-main);
 
   @media (min-width: 1024px) {
     background-color: transparent;
@@ -31,7 +31,7 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
-    background-color: var(--blue);
+    background-color: var(--accent-main);
   }
 }
 
@@ -63,26 +63,6 @@
   .form-wrap(); // Вставила Mixin
 }
 
-.form__link {
-  margin-right: 20px;
-  font-size: 16px;
-  color: #0684bd;
-  border-bottom: 1px solid rgba(6, 132, 189, 0.7);
-  // transition: color 0.2s ease;
-
-  &:hover {
-    border-bottom: none;
-  }
-}
-
-.form__wrap-link {
-  margin-bottom: 60px;
-
-  @media (min-width: 1024px) {
-    margin-bottom: 20px;
-  }
-}
-
 .form__row-textarea {
   margin-bottom: 18px;
 
@@ -105,22 +85,21 @@
   font-family: 'Arimo', Arial, sans-serif;
   color: var(--black);
 
-  background-color: var(--grey-background);
+  background-color: var(--background);
   border: 1px solid #e8ebef;
   border-radius: 3px;
   caret-color: var(--black);
-  resize: none;
 
   // текст, который видим, как только окно открыто
   &::placeholder {
-    color: var(--grey-forms);
+    color: var(--forms);
     opacity: 1;
     letter-spacing: 0.4px;
   }
 
   // При клике на поле ввода появляется курсор и placeholder убирает текст "Сообщение"
   &:focus {
-    border: 2px solid var(--yellow);
+    border: 2px solid var(--accent);
 
     &::placeholder {
       opacity: 0;
@@ -132,13 +111,44 @@
   }
 }
 
+.form__wrap-link {
+  position: relative;
+  margin-bottom: 60px;
+
+  @media (min-width: 1024px) {
+    margin-bottom: 20px;
+  }
+}
+
+.form__link {
+  // margin-right: 20px;
+  font-size: 16px;
+  color: #0684bd;
+  border-bottom: 1px solid rgba(6, 132, 189, 0.7);
+  // transition: color 0.2s ease;
+
+  &:hover {
+    border-bottom: none;
+  }
+}
+
+// прикрепление файла
+.input-attach {
+  position: absolute;
+  opacity: 0;
+  // width: 0.1px;
+  // height: 0.1px;
+  // overflow: hidden;
+  // z-index: -1;
+}
+
 // PANEL
 
 .panel-orgers {
   padding: 50px 35px 40px 20px;
   display: flex;
   color: var(--white);
-  background-color: var(--blue);
+  background-color: var(--accent-main);
 
   @media (min-width: 1024px) {
     padding: 55px;
@@ -187,11 +197,9 @@
 }
 
 .panel-orgers__phone {
+  .font();
+
   font-size: 32px;
-  font-weight: 600;
-  font-family: 'RF Rufo', sans-serif;
-  color: #fff;
-  text-transform: uppercase;
 
   @media (min-width: 390px) {
     font-size: 36px;

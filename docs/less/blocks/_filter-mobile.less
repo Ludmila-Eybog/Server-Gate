@@ -14,12 +14,10 @@
 }
 
 .filter-title {
+  .font(@color: var(--black), @weight: 700);
+
   margin-bottom: 20px;
   font-size: 30px;
-  font-family: 'RF Rufo', sans-serif;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--black);
 }
 
 .filter li {
@@ -27,7 +25,7 @@
 }
 
 .filter-border {
-  border-bottom: 1px solid var(--grey-line);
+  border-bottom: 1px solid var(--border-line);
 }
 
 .filter-item-mobile.active {
@@ -35,7 +33,7 @@
   padding: 0 15px;
   display: inline-block;
   border-radius: 14px;
-  background-color: var(--yellow);
+  background-color: var(--accent);
 }
 
 .filter-item-mobile.active .filter-link {
@@ -49,7 +47,7 @@
   height: 50px;
   top: 0px;
   left: 0px;
-  background-color: var(--blue);
+  background-color: var(--accent-main);
   font-size: 0;
   overflow: hidden;
   z-index: 20;

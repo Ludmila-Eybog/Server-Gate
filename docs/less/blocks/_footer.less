@@ -1,5 +1,5 @@
 .footer {
-  background-color: var(--blue);
+  background-color: var(--accent-main);
   color: var(--white);
 }
 
@@ -105,22 +105,20 @@
 }
 
 .footer-contacts__header {
+  .font();
+
   margin-bottom: 19px;
   font-size: 20px;
-  font-weight: 600;
-  font-family: 'RF Rufo', sans-serif;
   line-height: 1;
-  text-transform: uppercase;
 }
 
 .footer-contacts__item {
+  .font-arimo(@color: var(--white));
+
   padding-left: 28px;
   position: relative;
   display: block;
-
   font-size: 13px;
-  font-weight: 400;
-  font-family: 'Arimo', Arial, sans-serif;
   line-height: 1.46;
   letter-spacing: 0.85px;
 
@@ -148,14 +146,11 @@
   }
 }
 
-.footer-contacts__item a {
-  font-size: 13px;
-  font-weight: 400;
-  font-family: 'Arimo', Arial, sans-serif;
-}
-
 .footer-contacts__link {
+  .font-arimo(@color: var(--white));
+
   position: relative;
+  font-size: 13px;
 
   &::after {
     position: absolute;
@@ -189,11 +184,11 @@
 }
 
 .footer-bottom-left {
+  .font-arimo(@color: var(--white));
+
   padding-top: 4px;
   padding-bottom: 8px;
   font-size: 13px;
-  font-weight: 400;
-  font-family: 'Arimo', Arial, sans-serif;
   letter-spacing: 0.5px;
 
   @media (min-width: 768px) {
@@ -231,10 +226,10 @@
 }
 
 .footer-right__link {
+  .font-arimo(@color: var(--white));
+
   position: relative;
   font-size: 13px;
-  font-weight: 400;
-  font-family: 'Arimo', Arial, sans-serif;
   letter-spacing: 0.5px;
 
   &::after {

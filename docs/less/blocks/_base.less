@@ -17,29 +17,108 @@ body {
   height: 100%;
   font-family: 'RF Rufo', sans-serif;
   font-family: 'Arimo', Arial, sans-serif;
-  color: var(--grey-text);
+  color: var(--text);
+
+  // CSS-псевдокласс :root находит корневой элемент дерева документа. Применимо к HTML, :root находит элемент <html> и идентичен селектору по тегу html, но его специфичность выше. Использование :root полезно для объявления CSS-переменных.
+  // Т.е., получаем более универсальную форму записи для доступа к корневому элементу страницы. :root используется также для задания переменных в CSS.
+//   -------------------
+  // пример!!!:
+  // :root {
+  //   --main-index: 20px;
+  // }
+  // .block {
+  //   padding: var(--main-index);
+  //   width: calc(var(--main-index) * 10);
+  //   height: calc(var(--main-index) * 8);
+  // }
+  // @media (max-width: 900px) {
+  //   :root {
+  //     --main-index: 10px;
+  //   }
+  // }
+//   -------------------
+
+//   -------------------
+  // пример!!!
+  // :root {
+  //   --trX: 0;
+  //   --trY: 0;
+  //   --rotation: 0deg;
+  //   --scale: 1;
+  //   --base: 50px;
+  // }
+  
+  // .transformator {
+  //   width: var(--base);
+  //   height: var(--base);
+    // background-image: linear-gradient(#2160f3 0%, #2160f3 50%, #ff0000 50%);
+  //   transform: scale(var(--scale)) translate3d(var(--trX), var(--trY), 0) rotate(var(--rotation));
+  //   transition: transform .5s;
+  // }
+  
+  // .controller {
+  //   margin-bottom: var(--base);
+  // }
+  // <div class=controller>
+  //   <button class=scale>scale +10%</button>
+  //   <button class=rotate>rotate 15 deg</button>
+  //   <button class=movex>move X +10px</button>
+  //   <button class=movey>move Y +10px</button>
+  // </div>
+  
+  // <div class=transformator></div>
+
+//   var block = document.querySelector('.transformator'),
+//     bodyStyles = window.getComputedStyle(document.body),
+//     scale = bodyStyles.getPropertyValue('--scale'),
+//     trX = bodyStyles.getPropertyValue('--trX'),
+//     trY = bodyStyles.getPropertyValue('--trY'),
+//     rotation = bodyStyles.getPropertyValue('--rotation');
+
+// document.querySelector('.controller').onclick = function(e) {
+//   if ( e.target.classList.contains('scale') ) {
+//     scale *= 1.1;
+    
+//     block.style.setProperty('--scale', scale);
+//   } else if ( e.target.classList.contains('rotate') ){
+//     rotation = parseInt(rotation) + 15 + 'deg';
+    
+//     block.style.setProperty('--rotation', rotation);
+//   } else if ( e.target.classList.contains('movex') ){
+//     trX = parseInt(trX) + 10 + 'px';
+    
+//     block.style.setProperty('--trX', trX);
+//   } else if ( e.target.classList.contains('movey') ){
+//     trY = parseInt(trY) + 10 + 'px';
+    
+//     block.style.setProperty('--trY', trY);
+//   }
+// }
+//   -------------------
 
   &:root {
-    --blue: #0684bd;
-    --blue-hover: #0575a8;
+    --accent-main: #0684bd;
+    --accent-main-hover: #0575a8;
+    --accent: #ff9000;
+    --accent-hover: #f47402;
     --white: #fff;
     --black: #000;
-    --grey-text: #606060;
-    --light-grey: #bac0ca;
-    // --light-grey: #c2c2c2;
-    // --light-grey: #aeb3ba;
-    --grey-span: #7a7a7a;
-    --grey-forms: #969ca4;
-    // --grey-forms: #959ca8;
-    --grey-button-arrow: #a7acb5;
-    --grey-background: #f4f6f8;
-    --grey-delimiter: #f0f0f0;
-    --grey-drop: #353535;
-    --grey-line: #e6e9ec;
-    // --grey-line: #e6eef0;
-    // --grey-line: #e2e5e8;
-    --yellow: #ff9000;
-    --yellow-hover: #f47402;
+    --text: #606060;
+    --text-light: #bac0ca;
+    // --text-light: #c2c2c2;
+    // --text-light: #aeb3ba;
+    --title-span: #7a7a7a;
+    --forms: #969ca4;
+    // --forms: #959ca8;
+    // --forms: #989ba0;
+    --button-arrow: #a7acb5;
+    --background: #f4f6f8;
+    --delimiter: #f0f0f0;
+    --title-drop: #353535;
+    --border-line: #e6e9ec;
+    // --border-line: #e9e9e9;
+    // --border-line: #e6eef0;
+    // --border-line: #e2e5e8;
   }
 }
 
@@ -51,28 +130,24 @@ body {
   display: none;
 }
 
-.color-black {
-  color: var(--black);
+.color-accent-main {
+  color: var(--accent-main);
+}
+
+.color-accent {
+  color: var(--accent);
 }
 
 .color-white {
   color: var(--white);
 }
 
-.color-yellow {
-  color: var(--yellow);
+.color-black {
+  color: var(--black);
 }
 
-.color-blue {
-  color: var(--blue);
-}
-
-.color-light-grey {
-  color: var(--light-grey);
-}
-
-.grey-row {
-  color: var(--grey-forms);
+.canceled-row {
+  color: var(--forms);
 }
 
 h1,
@@ -127,14 +202,11 @@ button {
 }
 
 .button {
-  font-size: 24px;
-  font-weight: 600;
-  font-family: 'RF Rufo', sans-serif;
-  color: var(--white);
-  background-color: var(--blue);
-  border-radius: 3px;
+  .font ();
 
-  text-transform: uppercase;
+  font-size: 24px;
+  background-color: var(--accent-main);
+  border-radius: 3px;
   text-align: center;
 }
 
@@ -159,6 +231,17 @@ button {
   }
 }
 
+textarea {
+  // изменение размера текстового поля, дергая треугольничек
+  resize: none;
+  // убрать вертикальный скролл в ΙΕ
+  // overflow: auto;
+}
+
+textarea:focus {
+  outline: none;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 15px;
@@ -174,14 +257,12 @@ button {
 }
 
 .title-1 {
+  .font(@color: var(--black), @weight: 700);
+
   margin-bottom: 10px;
-  font-family: 'RF Rufo', sans-serif;
   font-size: 32px;
-  font-weight: 700;
-  color: var(--black);
   line-height: 1;
   letter-spacing: -0.16px;
-  text-transform: uppercase;
 
   @media (min-width: 768px) {
     margin-bottom: 7px;
@@ -195,12 +276,10 @@ button {
 }
 
 .title-2 {
+  .font ();
+
   font-size: 28px;
-  font-family: 'RF Rufo', sans-serif;
-  font-weight: 600;
-  color: var(--white);
   line-height: 1;
-  text-transform: uppercase;
 
   @media (min-width: 768px) {
     font-size: 42px;
@@ -208,12 +287,10 @@ button {
 }
 
 .title-3 {
+  .font(@color: var(--black));
+
   font-size: 28px;
-  font-family: 'RF Rufo', sans-serif;
-  font-weight: 600;
-  color: var(--black);
   line-height: 1;
-  text-transform: uppercase;
 
   @media (min-width: 1024px) {
     font-size: 32px;
@@ -221,11 +298,9 @@ button {
 }
 
 .title-4 {
+  .font(@color: var(--black));
+
   font-size: 24px;
-  font-family: 'RF Rufo', sans-serif;
-  font-weight: 600;
-  color: var(--black);
-  text-transform: uppercase;
   // line-height: 1;
 
   @media (min-width: 1024px) {
@@ -234,16 +309,14 @@ button {
 }
 
 .title-4 span {
-  color: var(--grey-span);
+  color: var(--title-span);
 }
 
 .title-5 {
+  .font(@color: var(--black));
+
   font-size: 22px;
-  font-family: 'RF Rufo', sans-serif;
-  font-weight: 600;
-  color: var(--black);
   line-height: 1;
-  text-transform: uppercase;
 
   @media (min-width: 1024px) {
     font-size: 24px;
@@ -251,6 +324,7 @@ button {
 }
 
 .center {
+  // .centered
   text-align: center;
 }
 
@@ -272,47 +346,8 @@ button {
 
 // @media(min-width: 1250px) {}
 
-/* ---------- Footer Panel ---------- */
+// @media (min-width: 600px) {}
 
-/* ---------- Mixins ---------- */
-// .clearfix() {
-//   &:before,
-//   &:after {
-//     display: table;
-//     content: "";
-//   }
+// @media (min-width: 390px) {}
 
-//   &:after {
-//     clear: both;
-//   }
-// }
 
-// .navbar {
-//   .clearfix();
-// }
-// ----------
-
-// взаимодействие глобальных и локальных переменных внутри примеси, которых надо избегать
-@global: 3;
-
-// MIXIN
-// .calc-mixin(@a: 1, @b: 2, @c: @global) {
-//   @d: @a + @b + @c;
-//   content: '@{d}';
-// }
-
-// .abcd {
-//   border: solid 1px #333;
-//   width: 100px;
-//   padding: 10px;
-//   text-align: center;
-
-  // &:after {
-    // Вызов MIXIN
-    // .calc-mixin();
-//   }
-// }
-// ----------
-
-// display: flex;
-//   justify-content: space-between;

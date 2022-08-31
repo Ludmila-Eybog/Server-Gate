@@ -85,26 +85,43 @@ const searchIcon = document.querySelector('[data-search-icon]')
 const searchInput = document.querySelector('[data-search-input]')
 const searchCross = document.querySelector('[data-search-cross]')
 const searchActive = document.querySelector('[data-search-active]')
+const logo = document.querySelector('.header-logo')
+console.log('logo', logo)
 
 searchIcon.addEventListener("click", openSearch);
 searchCross.addEventListener('click', closeSearch)
+
 let inputText = ''
 
 function openSearch(event) {
     // запретила отправку формы при нажатии на кнопку лупа, инпут не закрывается 
     event.preventDefault()
 
+    const screenWidth = window.screen.width
+    const searchInputText = document.querySelector('[data-search-input]')
+
     // забираем и отправляем содержимое инпута
-    inputText = searchInput.value
+    inputText = searchInputText.value
+
+
+    if (screenWidth < 1024) {
+        searchInput.classList.remove('hidden')
+        searchInput.classList.add('header-search__input-active')
+        searchCross.classList.add('header-search__cross')
+        searchActive.classList.add('header-search-active')
+    }
+
+    if (screenWidth < 600) {
+        searchInput.classList.remove('hidden')
+        searchInput.classList.add('header-search__input-active')
+        searchCross.classList.add('header-search__cross')
+        searchActive.classList.add('header-search-active')
+
+        logo.style.display = 'none'
+    }
 
     // очищаем поле инпута
     searchInput.value = ""
-
-    searchInput.classList.remove('hidden')
-    searchInput.classList.add('header-search__input-active')
-    searchIcon.classList.add('header-search__icon-active')
-    searchCross.classList.add('header-search__cross')
-    searchActive.classList.add('header-search-active')
 }
 
 function closeSearch(event) {
@@ -114,9 +131,10 @@ function closeSearch(event) {
     // очищаем поле инпута
     searchInput.value = ""
 
-    searchInput.classList.add("hidden") 
+    searchInput.classList.add("hidden")
     searchInput.classList.remove('header-search__input-active')
-    searchIcon.classList.remove('header-search__icon-active')
     searchCross.classList.remove('header-search__cross')
     searchActive.classList.remove('header-search-active')
+    
+    logo.style.display = 'flex'
 }

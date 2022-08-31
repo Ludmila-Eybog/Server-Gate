@@ -1,10 +1,11 @@
 .panel {
+  .box-shadow ();
+
   padding: 23px 17px 93px;
   display: flex;
   flex-wrap: wrap;
   border-radius: 3px;
   background-color: var(--white);
-  box-shadow: 0 0 27px rgba(10, 54, 88, 0.1);
 
   @media (min-width: 1024px) {
     padding: 0 10px;
@@ -33,7 +34,7 @@
       left: 0px;
       bottom: 35px;
       width: 1px;
-      background-color: var(--grey-delimiter);
+      background-color: var(--delimiter);
     }
   }
 
@@ -58,7 +59,7 @@
       left: 30px;
       right: 30px;
       height: 1px;
-      background-color: var(--grey-delimiter);
+      background-color: var(--delimiter);
     }
   }
 
@@ -174,22 +175,22 @@
 }
 
 .panel__text {
+  .font-arimo(@color: var(--text));
+
   display: block;
   width: 100%;
-
   font-size: 13px;
-  font-family: 'Arimo', Arial, sans-serif;
   line-height: 1.55;
   letter-spacing: 0.6px;
 }
 
 .panel-lastitem__text {
+  .font-arimo(@color: var(--text));
+
   margin-bottom: 30px;
   padding-right: 70px;
   position: relative;
   font-size: 13px;
-  font-family: 'Arimo', Arial, sans-serif;
-  color: var(--grey-text);
   letter-spacing: 0.5px;
 
   @media (min-width: 1024px) {
@@ -216,10 +217,8 @@
   letter-spacing: -0.2px;
 
   a {
+    .font(@color: var(--black), @weight: 600);
     font-size: 22px;
-    font-weight: 600;
-    font-family: 'RF Rufo', sans-serif;
-    color: var(--black);
     line-height: 1;
     letter-spacing: 0.1px;
   }
@@ -239,9 +238,9 @@
     }
 
     a {
+      .font-arimo(@color: var(--black), @weight: 700);
+
       font-size: 14px;
-      font-weight: 700;
-      font-family: 'Arimo', Arial, sans-serif;
       letter-spacing: -0.5px;
     }
   }

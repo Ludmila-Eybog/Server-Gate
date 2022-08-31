@@ -1,6 +1,6 @@
 .configurator-main {
   padding: 24px 0 35px;
-  background-color: var(--grey-background);
+  background-color: var(--background);
 
   @media (min-width: 1024px) {
     padding-top: 17px;
@@ -83,7 +83,7 @@
 .configurator-main-text {
   display: block;
   font-size: 14px;
-  color: var(--grey-text);
+  color: var(--text);
   line-height: 1.3;
   letter-spacing: -0.3px;
 }
@@ -99,12 +99,11 @@
 
 /* ---------- Selection Platform ---------- */
 .configurator-platform {
+  .box-shadow ();
+
   margin-bottom: 20px;
   padding: 25px 20px 40px;
-  // display: flex;
-  // justify-content: space-between;
   background-color: var(--white);
-  box-shadow: 0 0 27px rgba(10, 54, 88, 0.1);
   border-radius: 3px;
   font-family: 'RF Rufo', sans-serif;
   text-transform: uppercase;
@@ -119,7 +118,7 @@
   margin-bottom: 78px;
   font-size: 24px;
   font-weight: 600;
-  color: var(--light-grey);
+  color: var(--text-light);
   line-height: 1.3;
 
   @media (min-width: 768px) {
@@ -159,7 +158,7 @@
   font-size: 32px;
   font-weight: 600;
   // line-height: 34px;
-  color: var(--blue);
+  color: var(--accent-main);
 
   @media (min-width: 768px) {
     margin-bottom: 58px;
@@ -178,7 +177,7 @@
 
 .configurator-platform-title span {
   display: block;
-  color: var(--light-grey);
+  color: var(--text-light);
   text-align: center;
   text-transform: lowercase;
   line-height: 0.8;
@@ -190,12 +189,12 @@
 }
 
 .configurator-platform-link {
+  .font-arimo(@color: var(--accent-main));
+
   position: relative;
   padding-left: 22px;
   display: block;
   font-size: 14px;
-  font-family: 'Arimo', Arial, sans-serif;
-  color: var(--blue);
   text-transform: capitalize;
   // border-bottom: 1px solid rgba(6, 132, 189, 0.7);
   order: 3;
@@ -208,7 +207,7 @@
     right: 0;
     bottom: 0px;
     height: 1px;
-    background-color: var(--blue);
+    background-color: var(--accent-main);
     opacity: 0.7;
   }
 
@@ -287,14 +286,14 @@
   }
 
   &:hover {
-    border-bottom: 3px solid var(--yellow);
+    border-bottom: 3px solid var(--accent);
   }
 
   @media (min-width: 768px) {
     border-bottom: 5px solid #d7dde3;
 
     &:hover {
-      border-bottom: 5px solid var(--yellow);
+      border-bottom: 5px solid var(--accent);
     }
   }
 
@@ -342,12 +341,12 @@
   width: 100%;
   height: 46px;
   color: var(--white);
-  background-color: var(--yellow);
+  background-color: var(--accent);
   border-radius: 3px;
   order: 2;
 
   &:hover {
-    background-color: var(--yellow-hover);
+    background-color: var(--accent-hover);
   }
 
   @media (min-width: 1024px) {
@@ -408,7 +407,7 @@
 .configurator-sum-vat {
   font-size: 18px;
   font-weight: 600;
-  color: var(--grey-text);
+  color: var(--text);
   line-height: 1;
 }
 
@@ -434,7 +433,7 @@
 
 /* ---------- Aside Panel ---------- */
 .aside-panel {
-  box-shadow: 0 0 27px rgba(10, 54, 88, 0.1);
+  .box-shadow ();
 }
 .aside-list {
   padding: 20px 19px 4px;
@@ -448,13 +447,11 @@
 }
 
 .aside-name {
+  .font(@color: var(--accent-main));
+
   width: 120px;
   font-size: 22px;
-  font-family: 'RF Rufo', sans-serif;
-  font-weight: 600;
-  color: var(--blue);
   line-height: 20px;
-  text-transform: uppercase;
 }
 
 .aside-name span {
@@ -462,30 +459,28 @@
 }
 
 .aside-price {
+  .font(@color: var(--forms));
+
   font-size: 22px;
-  font-family: 'RF Rufo', sans-serif;
-  font-weight: 600;
-  color: var(--grey-forms);
   // flex-shrink: 0;
 }
 
 .aside-list-item {
+  .font-arimo(@color: var(--black), @weight: 700);
+
   padding: 4px 2px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid var(--grey-line);
+  border-top: 1px solid var(--border-line);
   font-size: 12px;
-  font-family: 'Arimo', Arial, sans-serif;
-  font-weight: 700;
-  color: var(--black);
   line-height: 14px;
   // flex-shrink: 1;
 }
 
 .aside-list-desc span {
   display: table; // перенесла span на строку ниже
-  color: var(--grey-text);
+  color: var(--text);
   font-weight: 400;
 }
 
@@ -506,7 +501,7 @@
 }
 
 .aside-sum {
-  background-color: var(--blue);
+  background-color: var(--accent-main);
   border-radius: 0 0 0 3px;
   text-align: center;
 }
@@ -529,11 +524,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--yellow);
+  background-color: var(--accent);
   border-radius: 0 0 3px 0;
 
   &:hover {
-    background-color: var(--yellow-hover);
+    background-color: var(--accent-hover);
   }
 }
 
@@ -591,8 +586,8 @@
 
 .aside-offer-link {
   margin-left: 28px;
-  color: var(--blue);
-  border-bottom: 1px dotted var(--blue);
+  color: var(--accent-main);
+  border-bottom: 1px dotted var(--accent-main);
   height: 17px;
 }
 
@@ -656,10 +651,11 @@
 }
 
 .config-wrap {
+  .box-shadow ();
+
   margin-bottom: 20px;
   padding: 10px;
   background-color: var(--white);
-  box-shadow: 0 0 27px rgba(10, 54, 88, 0.1);
   border-radius: 3px;
 
   @media (min-width: 1250px) {
@@ -697,7 +693,7 @@
 
     .radio__label,
     .checkbox__label {
-      background-color: var(--blue);
+      background-color: var(--accent-main);
       color: var(--white);
     }
 
@@ -801,8 +797,8 @@
   left: 1px;
   width: 13px;
   height: 7px;
-  border-left: 2px solid var(--blue);
-  border-bottom: 2px solid var(--blue);
+  border-left: 2px solid var(--accent-main);
+  border-bottom: 2px solid var(--accent-main);
   transform: rotate(-45deg);
 }
 
@@ -818,8 +814,8 @@
   padding: 10px;
   padding-left: 45px;
   font-size: 14px;
-  color: var(--grey-text);
-  background-color: var(--grey-background);
+  color: var(--text);
+  background-color: var(--background);
   border-radius: 3px;
   transition: all 0.2s ease;
   line-height: 18px;
@@ -869,15 +865,14 @@
 .radio__price,
 .config__included-price,
 .checkbox__price {
+  .font(@color: var(--black), @weight: 700);
+
   position: absolute;
   right: 10px;
   bottom: 13px;
   line-height: 1;
 
   font-size: 22px;
-  font-weight: 700;
-  font-family: 'RF Rufo', sans-serif;
-  color: var(--black);
   transition: color 0.2s ease;
 
   @media (min-width: 768px) {
@@ -908,16 +903,14 @@
 }
 
 .checkbox__quantity {
+  .font-arimo(@color: #c2c2c2);
+  .input();
+
   margin-right: 2px;
   width: 50px;
   height: 25px;
-  background-color: var(--white);
-  border: 1px solid #e2e5e8;
-  border-radius: 3px;
 
   font-size: 14px;
-  font-family: 'Arimo', Arial, sans-serif;
-  color: #c2c2c2;
   text-align: center;
   transition: color 0.2s ease;
 }
@@ -955,7 +948,7 @@
 
 .radio__default:checked ~ .radio__label,
 .checkbox__default:checked ~ .checkbox__label {
-  background-color: var(--blue);
+  background-color: var(--accent-main);
   color: var(--white);
 }
 
@@ -995,14 +988,12 @@
 }
 
 .show-more-title {
+  .font(@color: var(--accent-main));
+
   display: block;
   margin-top: 10px;
   margin-left: 44px;
   font-size: 18px;
-  font-weight: 600;
-  font-family: 'RF Rufo', sans-serif;
-  color: var(--blue);
-  text-transform: uppercase;
   line-height: 1.3;
   cursor: pointer;
 }
@@ -1089,15 +1080,14 @@
 }
 
 .info-quantity {
+  .font(@color: var(--black));
+
   position: absolute;
   right: 0px;
   top: 50%;
   transform: translatey(-50%);
 
   font-size: 18px;
-  font-family: 'RF Rufo', sans-serif;
-  font-weight: 600;
-  color: var(--black);
   transition: color 0.2s ease;
 
   @media (min-width: 1250px) {
@@ -1193,9 +1183,8 @@
 }
 
 .options-list-title {
+  .font-arimo(@color: var(--black), @weight: 700);
   max-width: 320px;
-  font-family: 'Arimo', Arial, sans-serif;
-  font-weight: 700;
   font-size: 15px;
   white-space: pre-line;
   line-height: 1.25;
@@ -1233,7 +1222,7 @@
 
   &:hover {
     .background-blue {
-      border: 2px solid var(--blue);
+      border: 2px solid var(--accent-main);
 
       &::before {
         display: block;
@@ -1260,12 +1249,12 @@
 // }
 
 .radio__default:checked + .background-blue {
-  border: 2px solid var(--blue);
+  border: 2px solid var(--accent-main);
 }
 
 .radio__default:checked + .background-blue::before {
   display: block;
-  background-color: var(--blue);
+  background-color: var(--accent-main);
 }
 
 .options-radio__label {
@@ -1310,11 +1299,10 @@
 }
 
 .options-payment span {
+  .font-arimo();
+
   display: block;
   font-size: 13px;
-  font-family: 'Arimo', Arial, sans-serif;
-  font-weight: 400;
-  color: var(--grey-text);
   line-height: 1;
 }
 
@@ -1325,6 +1313,6 @@
 
 .options-list__button {
   &:hover {
-    background-color: var(--blue-hover);
+    background-color: var(--accent-main-hover);
   }
 }

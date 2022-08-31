@@ -2,7 +2,7 @@
   position: relative;
   padding: 15px 0;
   width: 50px;
-  background-color: var(--blue);
+  background-color: var(--accent-main);
 
   &:hover {
     &::before,
@@ -42,19 +42,18 @@
   height: 20px;
 
   &::before {
+    .font(@weight: 700);
+
     position: absolute;
     top: -8px;
     left: 4px;
     content: '12';
-    color: var(--white);
     font-size: 11px;
-    font-weight: 700;
-    font-family: 'RF Rufo', sans-serif;
     text-align: center;
     width: 17px;
     height: 13px;
     border-radius: 16px;
-    background-color: var(--yellow);
+    background-color: var(--accent);
   }
 }
 
@@ -62,7 +61,7 @@
   fill: var(--white);
 
   @media (min-width: 1024px) {
-    fill: var(--blue);
+    fill: var(--accent-main);
   }
 }
 
@@ -86,15 +85,14 @@
 }
 
 .cart-list__item {
+  .font-arimo(@color: #989ba0);
+
   margin-bottom: 14px;
   padding-bottom: 15px;
   display: flex;
   flex-direction: column;
 
   font-size: 15px;
-  font-weight: 400;
-  font-family: 'Arimo', Arial, sans-serif;
-  color: #989ba0;
   transition: color 0.2s ease 0.2s;
 
   &:not(:last-child) {
@@ -107,6 +105,8 @@
 }
 
 .cart-list__title {
+  .font(@color: var(--title-drop), @weight: 700);
+
   position: relative;
   margin-bottom: 7px;
   display: flex;
@@ -117,25 +117,17 @@
   width: 100%;
   max-width: 200px;
   vertical-align: top;
-
   font-size: 22px;
-  font-weight: 700;
-  font-family: 'RF Rufo', sans-serif;
-  color: var(--grey-drop);
   line-height: 1;
-  text-transform: uppercase;
 }
 
 .input-short {
+  .font-arimo(@color: var(--black));
+  .input();
+
   width: 50px;
   height: 25px;
-  border-radius: 3px;
-  border: 1px solid #e2e5e8;
-  background-color: var(--white);
-
   font-size: 14px;
-  font-weight: 400;
-  font-family: 'Arimo', Arial, sans-serif;
   text-align: center;
 }
 
@@ -144,12 +136,8 @@
   position: relative;
   width: 77px;
   font-size: 22px;
-  font-weight: 700;
-  font-family: 'RF Rufo', sans-serif;
-  color: var(--grey-drop);
   line-height: 1;
   text-align: right;
-  text-transform: uppercase;
 }
 
 .cart-list__icon {
@@ -161,10 +149,12 @@
 .cart-list__desc p {
   font-size: 12px;
   line-height: 1.4;
-  color: var(--grey-forms);
+  color: var(--forms);
 }
 
 .cart-total {
+  .font(@color: var(--title-drop), @weight: 700);
+
   margin-bottom: 18px;
   display: flex;
   justify-content: space-between;
@@ -173,22 +163,17 @@
 .cart-total__name {
   width: 100%;
   max-width: 250px;
-
   font-size: 22px;
-  font-weight: 700;
-  font-family: 'RF Rufo', sans-serif;
-  color: var(--grey-drop);
   line-height: 1;
-  text-transform: uppercase;
+}
+
+.cart-total__name span {
+  color: var(--text-light);
 }
 
 .cart-total__price {
   font-size: 30px;
-  font-weight: 700;
-  font-family: 'RF Rufo', sans-serif;
-  color: var(--grey-drop);
   line-height: 0.55;
-  text-transform: uppercase;
 }
 
 .btn__cart {
@@ -199,6 +184,6 @@
   letter-spacing: -0.25px;
 
   &:hover {
-    background-color: var(--blue-hover);
+    background-color: var(--accent-main-hover);
   }
 }
